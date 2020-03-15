@@ -8,10 +8,10 @@ namespace LojaRoupas.Classes
 {
     class Documento
     {
-        /*- ID int
-        - data
-        - vlrTotal
-        - desconto
-        - qtdItens*/
+        private int ID;
+        private DateTime data;
+        private float vlrTotal;
+        private float desconto;
+        private int qtdItens;
     }
 }

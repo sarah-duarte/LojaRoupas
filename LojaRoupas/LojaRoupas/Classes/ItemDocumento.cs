@@ -8,9 +8,9 @@ namespace LojaRoupas.Classes
 {
     class ItemDocumento
     {
-        /*- ID int
-        - idProduto
-        - qtdItens
-        - totalPreco*/
+        private int ID;
+        private int idProduto;
+        private int qtdItens;
+        private float totalPreco;
     }
 }
