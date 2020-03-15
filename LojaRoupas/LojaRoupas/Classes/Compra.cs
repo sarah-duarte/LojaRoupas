@@ -18,5 +18,13 @@ namespace LojaRoupas.Classes
         {
             this.idFornecedor = idFornecedor;
         }
+        public ItemCompra[] getItensCompra()
+        {
+            return this.itensCompra;
+        }
+        public void setItensCompra(ItemCompra[] itensCompra)
+        {
+            this.itensCompra = itensCompra;
+        }
     }
 }

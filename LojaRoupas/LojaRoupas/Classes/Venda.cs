@@ -18,5 +18,13 @@ namespace LojaRoupas.Classes
         {
             this.idCliente = idCliente;
         }
+        public ItemVenda[] getItensVenda()
+        {
+            return this.itensVenda;
+        }
+        public void setItensVenda(ItemVenda[] itensVenda)
+        {
+            this.itensVenda = itensVenda;
+        }
     }
 }
