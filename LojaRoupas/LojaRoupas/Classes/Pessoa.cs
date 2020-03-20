@@ -13,5 +13,6 @@ namespace LojaRoupas.Classes
         - nome
         - endereço
         - telefone*/
+        private int id;
     }
 }
