@@ -6,89 +6,95 @@ using System.Threading.Tasks;
 
 namespace LojaRoupas.Classes
 {
-    public class Produto
-
+    class Produto
     {
+        /*- ID int        
+        - CodigoBarras
+        - descrição
+        - cor
+        - tamanho
+        - precoCusto
+        - precoVenda
+        - qtdEstoque
+        */
 
-        private string nome_produto;
-
-        private string fornecedor_produto;
-
-        private string fabricante_produto;
-
-        private string obs_produto;
-
-        private double preco_produto;
-
-        private double quantidade_produto;
-
-
-
-        public string Nome_produto
-
-        {
-
-            get { return nome_produto; }
-
-            set { nome_produto = value; }
+        private int    idProduto;
+        private string descProduto;
+        private string corProduto;
+        private string tamProduto;
+        private float  precProduto;
+        private float  precProdutoVenda;
+        private int    qtdProduto;
 
 
 
-        }
-
-
-
-        public string Fornecedor_produto
+        public int getIdProduto()
 
         {
-
-            get { return fornecedor_produto; }
-
-            set { fornecedor_produto = value; }
-
-
-
+            return this.idProduto;
+        }
+        public void setIdProduto(int idProduto)
+        {
+            this.idProduto = idProduto;
         }
 
-        public string Fabricante_produto
+        public string getDescProduto()
 
         {
-            get { return fabricante_produto; }
-
-            set { fabricante_produto = value; }
+            return this.descProduto;
+        }
+        public void setDescProduto(string descProduto)
+        {
+            this.descProduto = descProduto;
         }
 
-        public string Obs_produto
+        public string getCorProduto()
+        {
+            return this.corProduto;
+        }
+        public void setCorProduto(string corProduto)
+        {
+            this.corProduto = corProduto;
+        }
+
+        public string getTamProduto()
+        {
+            return this.tamProduto;
+        }
+        public void setTamProduto(string tamProduto)
+        {
+            this.tamProduto = tamProduto;
+        }
+
+        public float getPrecProduto()
+        {
+            return this.precProduto;
+        }
+        public void setPrecProduto(float precProduto)
+        {
+            this.precProduto = precProduto;
+        }
+
+        public float getPrecProdutoVenda()
+        {
+            return this.precProdutoVenda;
+        }
+        public void setPrecProdutoVendao(float precProdutoVenda)
+        {
+            this.precProdutoVenda = precProdutoVenda;
+        }
+
+        public int getQtdProduto()
 
         {
-
-            get { return obs_produto; }
-
-            set { obs_produto = value; }
-
+            return this.qtdProduto;
         }
-
-        public double Preco_produto
-
+        public void setQtdProduto(int qtdProduto)
         {
-
-            get { return preco_produto; }
-
-            set { preco_produto = value; }
+            this.qtdProduto = qtdProduto;
         }
-
-        public double Quantidade_produto
-
-        {
-
-            get { return quantidade_produto; }
-
-            set { quantidade_produto = value; }
-
-
-
-        }
-
     }
 
 }
+    
+
