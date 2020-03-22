@@ -17,17 +17,20 @@ namespace LojaRoupas.Classes
         private int cnpj;
         private string razaosocial;
         private string endereco;
+        private int telefone;
 
         //SETS
         public void Setid(int id){ this.id = id; }
         public void Setcnpj(int cnpj){ this.cnpj = cnpj; }
         public void Setrazaosocial(string razaosocial){ this.razaosocial = razaosocial; }
         public void SetEndereco(string endereco){ this.endereco = endereco; }
+        public void Settelefone(int telefone) { this.telefone = telefone; }
 
         //GETS
         public int getid(){ return this.id; }
         public int getcnpj(){ return this.cnpj; }
         public string getrazaosocial(){ return this.razaosocial; }
         public string getEndereco(){ return this.endereco; }
+        public int gettelefone() { return this.telefone; }
     }
 }
