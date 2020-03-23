@@ -8,11 +8,6 @@ namespace LojaRoupas.Classes
 {
     class Fornecedor
     {
-        /*- ID int
-        - CNPJ
-        - Razão Social
-        - endereço
-        - telefone*/
         private int id;
         private int cnpj;
         private string razaosocial;
