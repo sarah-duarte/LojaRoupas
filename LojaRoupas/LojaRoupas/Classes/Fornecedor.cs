@@ -14,18 +14,16 @@ namespace LojaRoupas.Classes
         private string endereco;
         private int telefone;
 
-        //SETS
-        public void Setid(int id){ this.id = id; }
-        public void Setcnpj(int cnpj){ this.cnpj = cnpj; }
-        public void Setrazaosocial(string razaosocial){ this.razaosocial = razaosocial; }
-        public void SetEndereco(string endereco){ this.endereco = endereco; }
-        public void Settelefone(int telefone) { this.telefone = telefone; }
-
-        //GETS
-        public int getid(){ return this.id; }
-        public int getcnpj(){ return this.cnpj; }
-        public string getrazaosocial(){ return this.razaosocial; }
+        public void setId(int id){ this.id = id; }
+        public void setCnpj(int cnpj){ this.cnpj = cnpj; }
+        public void setRazaosocial(string razaosocial){ this.razaosocial = razaosocial; }
+        public void setEndereco(string endereco){ this.endereco = endereco; }
+        public void setTelefone(int telefone) { this.telefone = telefone; }
+        
+        public int getId(){ return this.id; }
+        public int getCnpj(){ return this.cnpj; }
+        public string getRazaosocial(){ return this.razaosocial; }
         public string getEndereco(){ return this.endereco; }
-        public int gettelefone() { return this.telefone; }
+        public int getTelefone() { return this.telefone; }
     }
 }

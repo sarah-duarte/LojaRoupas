@@ -8,93 +8,31 @@ namespace LojaRoupas.Classes
 {
     class Produto
     {
-        /*- ID int        
-        - CodigoBarras
-        - descrição
-        - cor
-        - tamanho
-        - precoCusto
-        - precoVenda
-        - qtdEstoque
-        */
-
-        private int    idProduto;
-        private string descProduto;
+        private int    id;
+        private string codigoBarras;
+        private string descricao;
         private string corProduto;
         private string tamProduto;
-        private float  precProduto;
-        private float  precProdutoVenda;
-        private int    qtdProduto;
+        private float  precoCusto;
+        private float  precoVenda;
+        private int    qtdEstProduto;
 
+        public void setIdProduto(int id) { this.id = id; }
+        public void setCodigoBarras(string codigoBarras) { this.codigoBarras = codigoBarras; }
+        public void setDescProduto(string descricao) { this.descricao = descricao; }
+        public void setCorProduto(string corProduto) { this.corProduto = corProduto; }
+        public void setTamProduto(string tamProduto) { this.tamProduto = tamProduto; }
+        public void setPrecoCusto(float precoCusto) { this.precoCusto = precoCusto; }
+        public void setPrecoVendao(float precoVenda) { this.precoVenda = precoVenda; }
+        public void setQtdEstProduto(int qtdEstProduto) { this.qtdEstProduto = qtdEstProduto; }
 
-
-        public int getIdProduto()
-
-        {
-            return this.idProduto;
-        }
-        public void setIdProduto(int idProduto)
-        {
-            this.idProduto = idProduto;
-        }
-
-        public string getDescProduto()
-
-        {
-            return this.descProduto;
-        }
-        public void setDescProduto(string descProduto)
-        {
-            this.descProduto = descProduto;
-        }
-
-        public string getCorProduto()
-        {
-            return this.corProduto;
-        }
-        public void setCorProduto(string corProduto)
-        {
-            this.corProduto = corProduto;
-        }
-
-        public string getTamProduto()
-        {
-            return this.tamProduto;
-        }
-        public void setTamProduto(string tamProduto)
-        {
-            this.tamProduto = tamProduto;
-        }
-
-        public float getPrecProduto()
-        {
-            return this.precProduto;
-        }
-        public void setPrecProduto(float precProduto)
-        {
-            this.precProduto = precProduto;
-        }
-
-        public float getPrecProdutoVenda()
-        {
-            return this.precProdutoVenda;
-        }
-        public void setPrecProdutoVendao(float precProdutoVenda)
-        {
-            this.precProdutoVenda = precProdutoVenda;
-        }
-
-        public int getQtdProduto()
-
-        {
-            return this.qtdProduto;
-        }
-        public void setQtdProduto(int qtdProduto)
-        {
-            this.qtdProduto = qtdProduto;
-        }
+        public int getId(){ return this.id; }
+        public string getCodigoBarras() { return this.codigoBarras; }
+        public string getDescProduto(){ return this.descricao; }
+        public string getCorProduto(){ return this.corProduto; }
+        public string getTamProduto(){ return this.tamProduto; }        
+        public float getPrecoCusto(){ return this.precoCusto; }
+        public float getPrecoVenda(){ return this.precoVenda; }
+        public int getQtdEstProduto(){ return this.qtdEstProduto; }
     }
-
 }
-    
-

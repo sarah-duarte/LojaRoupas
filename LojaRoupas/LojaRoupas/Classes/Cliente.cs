@@ -8,18 +8,8 @@ namespace LojaRoupas.Classes
 {
     class Cliente : Pessoa
     {
-        private int comprasrealizadas;
-
-        //SET
-        public void Setcomprasrealizadas(int comprasrealizadas)
-        {
-            this.comprasrealizadas = comprasrealizadas;
-        }
-
-        //GET
-        public int getcomprasrealizadas()
-        {
-            return this.comprasrealizadas;
-        }
+        private int comprasRealizadas;
+        public void setComprasRealizadas(int comprasRealizadas){ this.comprasRealizadas = comprasRealizadas; }
+        public int getComprasRealizadas(){ return this.comprasRealizadas; }
     }
 }

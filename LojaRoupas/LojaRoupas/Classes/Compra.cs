@@ -10,21 +10,11 @@ namespace LojaRoupas.Classes
     {
         private int idFornecedor;
         private ItemCompra[] itensCompra;
-        public int getIdFornecedor()
-        {
-            return this.idFornecedor;
-        }
-        public void setIdFornecedor(int idFornecedor)
-        {
-            this.idFornecedor = idFornecedor;
-        }
-        public ItemCompra[] getItensCompra()
-        {
-            return this.itensCompra;
-        }
-        public void setItensCompra(ItemCompra[] itensCompra)
-        {
-            this.itensCompra = itensCompra;
-        }
+        
+        public int getIdFornecedor(){ return this.idFornecedor; }
+        public ItemCompra[] getItensCompra() { return this.itensCompra; }
+
+        public void setIdFornecedor(int idFornecedor){ this.idFornecedor = idFornecedor; }
+        public void setItensCompra(ItemCompra[] itensCompra){ this.itensCompra = itensCompra; }
     }
 }

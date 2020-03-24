@@ -16,21 +16,20 @@ namespace LojaRoupas.Classes
         private int nascimento;
         private string endereco;
 
-        //SETS
-        public void Setid(int id){ this.id = id; }
-        public void SetNome(string nome){ this.nome = nome; }
-        public void Setcpf(int cpf){ this.cpf = cpf; }
-        public void SetEmail(string email){ this.email = email; }
-        public void SetTelefone(int telefone){ this.telefone = telefone; }
-        public void Setnascimento(int nascimento){ this.nascimento = nascimento; }
-        public void SetEndereco(string endereco){ this.endereco = endereco; }
-        //GETS
-        public int getid(){ return this.id; }
+        public void setId(int id){ this.id = id; }
+        public void setNome(string nome){ this.nome = nome; }
+        public void setCpf(int cpf){ this.cpf = cpf; }
+        public void setEmail(string email){ this.email = email; }
+        public void setTelefone(int telefone){ this.telefone = telefone; }
+        public void setNascimento(int nascimento){ this.nascimento = nascimento; }
+        public void setEndereco(string endereco){ this.endereco = endereco; }
+
+        public int getId(){ return this.id; }
         public string getNome(){ return this.nome; }
-        public int getcpf(){ return this.cpf; }
-        public string getemail(){ return this.email; }
+        public int getCpf(){ return this.cpf; }
+        public string getEmail(){ return this.email; }
         public int getTelefone(){ return this.telefone; }
-        public int getnascimento(){ return this.nascimento; }
+        public int getNascimento(){ return this.nascimento; }
         public string getEndereco(){ return this.endereco; }
     }
 }
