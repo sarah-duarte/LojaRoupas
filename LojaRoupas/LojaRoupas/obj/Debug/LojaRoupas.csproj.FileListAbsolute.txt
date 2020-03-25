@@ -7,3 +7,4 @@ C:\Users\Sarah Francis\Documents\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Deb
 C:\Users\Sarah Francis\Documents\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.exe
 C:\Users\Sarah Francis\Documents\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.pdb
 C:\Users\Sarah Francis\Documents\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmPrincipal.resources
+C:\Users\Sarah Francis\Documents\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmProduto.resources

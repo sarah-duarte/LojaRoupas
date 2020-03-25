@@ -21,5 +21,11 @@ namespace LojaRoupas
         {
 
         }
+
+        private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmProduto telaProduto = new frmProduto();
+            telaProduto.ShowDialog();
+        }
     }
 }

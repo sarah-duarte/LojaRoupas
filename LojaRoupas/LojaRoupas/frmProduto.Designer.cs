@@ -37,18 +37,18 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtCodBarras = new System.Windows.Forms.TextBox();
+            this.lblID = new System.Windows.Forms.Label();
+            this.txtDescricao = new System.Windows.Forms.TextBox();
+            this.txtCor = new System.Windows.Forms.TextBox();
+            this.txtTamanho = new System.Windows.Forms.TextBox();
+            this.txtPrcCusto = new System.Windows.Forms.TextBox();
+            this.txtPrcVenda = new System.Windows.Forms.TextBox();
+            this.txtQtdEstoque = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -148,66 +148,66 @@
             this.label8.TabIndex = 7;
             this.label8.Text = "QTD. EM ESTOQUE:";
             // 
-            // textBox1
+            // txtCodBarras
             // 
-            this.textBox1.Location = new System.Drawing.Point(291, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(167, 25);
-            this.textBox1.TabIndex = 8;
+            this.txtCodBarras.Location = new System.Drawing.Point(291, 85);
+            this.txtCodBarras.Name = "txtCodBarras";
+            this.txtCodBarras.Size = new System.Drawing.Size(167, 25);
+            this.txtCodBarras.TabIndex = 8;
             // 
-            // label9
+            // lblID
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label9.Location = new System.Drawing.Point(61, 85);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(46, 22);
-            this.label9.TabIndex = 9;
-            this.label9.Text = "0001";
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblID.ForeColor = System.Drawing.Color.BurlyWood;
+            this.lblID.Location = new System.Drawing.Point(61, 85);
+            this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(46, 22);
+            this.lblID.TabIndex = 9;
+            this.lblID.Text = "0001";
             // 
-            // textBox2
+            // txtDescricao
             // 
-            this.textBox2.Location = new System.Drawing.Point(134, 116);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(559, 25);
-            this.textBox2.TabIndex = 10;
+            this.txtDescricao.Location = new System.Drawing.Point(134, 116);
+            this.txtDescricao.Name = "txtDescricao";
+            this.txtDescricao.Size = new System.Drawing.Size(559, 25);
+            this.txtDescricao.TabIndex = 10;
             // 
-            // textBox3
+            // txtCor
             // 
-            this.textBox3.Location = new System.Drawing.Point(83, 147);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(232, 25);
-            this.textBox3.TabIndex = 11;
+            this.txtCor.Location = new System.Drawing.Point(83, 147);
+            this.txtCor.Name = "txtCor";
+            this.txtCor.Size = new System.Drawing.Size(232, 25);
+            this.txtCor.TabIndex = 11;
             // 
-            // textBox4
+            // txtTamanho
             // 
-            this.textBox4.Location = new System.Drawing.Point(443, 147);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(250, 25);
-            this.textBox4.TabIndex = 12;
+            this.txtTamanho.Location = new System.Drawing.Point(443, 147);
+            this.txtTamanho.Name = "txtTamanho";
+            this.txtTamanho.Size = new System.Drawing.Size(250, 25);
+            this.txtTamanho.TabIndex = 12;
             // 
-            // textBox5
+            // txtPrcCusto
             // 
-            this.textBox5.Location = new System.Drawing.Point(153, 178);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(114, 25);
-            this.textBox5.TabIndex = 13;
+            this.txtPrcCusto.Location = new System.Drawing.Point(153, 178);
+            this.txtPrcCusto.Name = "txtPrcCusto";
+            this.txtPrcCusto.Size = new System.Drawing.Size(114, 25);
+            this.txtPrcCusto.TabIndex = 13;
             // 
-            // textBox6
+            // txtPrcVenda
             // 
-            this.textBox6.Location = new System.Drawing.Point(153, 209);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(114, 25);
-            this.textBox6.TabIndex = 14;
+            this.txtPrcVenda.Location = new System.Drawing.Point(153, 209);
+            this.txtPrcVenda.Name = "txtPrcVenda";
+            this.txtPrcVenda.Size = new System.Drawing.Size(114, 25);
+            this.txtPrcVenda.TabIndex = 14;
             // 
-            // textBox7
+            // txtQtdEstoque
             // 
-            this.textBox7.Location = new System.Drawing.Point(628, 85);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(65, 25);
-            this.textBox7.TabIndex = 15;
+            this.txtQtdEstoque.Location = new System.Drawing.Point(628, 85);
+            this.txtQtdEstoque.Name = "txtQtdEstoque";
+            this.txtQtdEstoque.Size = new System.Drawing.Size(65, 25);
+            this.txtQtdEstoque.TabIndex = 15;
             // 
             // pictureBox1
             // 
@@ -231,27 +231,28 @@
             this.label10.TabIndex = 17;
             this.label10.Text = "CADASTRO DE PRODUTO";
             // 
-            // button1
+            // btnSalvar
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.BurlyWood;
-            this.button1.Location = new System.Drawing.Point(451, 178);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 55);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "SALVAR";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSalvar.ForeColor = System.Drawing.Color.BurlyWood;
+            this.btnSalvar.Location = new System.Drawing.Point(451, 178);
+            this.btnSalvar.Name = "btnSalvar";
+            this.btnSalvar.Size = new System.Drawing.Size(118, 55);
+            this.btnSalvar.TabIndex = 18;
+            this.btnSalvar.Text = "SALVAR";
+            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // button2
+            // btnCancelar
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.BurlyWood;
-            this.button2.Location = new System.Drawing.Point(575, 178);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 55);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "CANCELAR";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.ForeColor = System.Drawing.Color.BurlyWood;
+            this.btnCancelar.Location = new System.Drawing.Point(575, 178);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(118, 55);
+            this.btnCancelar.TabIndex = 19;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.UseVisualStyleBackColor = true;
             // 
             // frmProduto
             // 
@@ -260,18 +261,18 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(724, 264);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtQtdEstoque);
+            this.Controls.Add(this.txtPrcVenda);
+            this.Controls.Add(this.txtPrcCusto);
+            this.Controls.Add(this.txtTamanho);
+            this.Controls.Add(this.txtCor);
+            this.Controls.Add(this.txtDescricao);
+            this.Controls.Add(this.lblID);
+            this.Controls.Add(this.txtCodBarras);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -281,7 +282,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Sylfaen", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmProduto";
             this.Text = "Cadastro de Produto";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -300,17 +301,17 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtCodBarras;
+        private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.TextBox txtDescricao;
+        private System.Windows.Forms.TextBox txtCor;
+        private System.Windows.Forms.TextBox txtTamanho;
+        private System.Windows.Forms.TextBox txtPrcCusto;
+        private System.Windows.Forms.TextBox txtPrcVenda;
+        private System.Windows.Forms.TextBox txtQtdEstoque;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
