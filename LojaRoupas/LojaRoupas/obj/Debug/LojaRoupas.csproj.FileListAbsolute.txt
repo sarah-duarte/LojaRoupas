@@ -1,0 +1,9 @@
+C:\Users\Sarah Francis\Documents\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\LojaRoupas.exe.config
+C:\Users\Sarah Francis\Documents\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\LojaRoupas.exe
+C:\Users\Sarah Francis\Documents\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\LojaRoupas.pdb
+C:\Users\Sarah Francis\Documents\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.csprojAssemblyReference.cache
+C:\Users\Sarah Francis\Documents\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.Properties.Resources.resources
+C:\Users\Sarah Francis\Documents\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.csproj.GenerateResource.cache
+C:\Users\Sarah Francis\Documents\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.exe
+C:\Users\Sarah Francis\Documents\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.pdb
+C:\Users\Sarah Francis\Documents\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmPrincipal.resources
