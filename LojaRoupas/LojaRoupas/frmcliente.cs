@@ -7,39 +7,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LojaRoupas.Classes;
 
-namespace LojaRoupas.Classes
+namespace LojaRoupas
 {
-    public partial class frmcliente : Form
+    public partial class frmCliente : Form
     {
-        public frmcliente()
+        public frmCliente()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void btnSalvar_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
+            Cliente cliente = new Cliente();
+            cliente.setId(int.Parse(lblID.Text));
+            cliente.setCpf(txtCPF.Text);
+            cliente.setNome(txtNome.Text);
+            cliente.setEmail(txtEmail.Text);
+            cliente.setEndereco(txtEndereco.Text);
+            cliente.setNascimento(txtNascimento.Text);
+            cliente.setTelefone(txtTelefone.Text);
         }
     }
 }

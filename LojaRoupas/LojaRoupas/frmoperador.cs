@@ -8,21 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace LojaRoupas.Classes
+namespace LojaRoupas
 {
-    public partial class frmoperador : Form
+    public partial class frmOperador : Form
     {
-        public frmoperador()
+        public frmOperador()
         {
             InitializeComponent();
         }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox6_TextChanged(object sender, EventArgs e)
+        private void btnSalvar_Click(object sender, EventArgs e)
         {
 
         }

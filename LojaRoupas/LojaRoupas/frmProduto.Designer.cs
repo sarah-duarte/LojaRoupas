@@ -235,7 +235,7 @@
             // 
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnSalvar.Location = new System.Drawing.Point(451, 178);
+            this.btnSalvar.Location = new System.Drawing.Point(451, 179);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(118, 55);
             this.btnSalvar.TabIndex = 18;
@@ -247,7 +247,7 @@
             // 
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnCancelar.Location = new System.Drawing.Point(575, 178);
+            this.btnCancelar.Location = new System.Drawing.Point(575, 179);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(118, 55);
             this.btnCancelar.TabIndex = 19;
@@ -284,6 +284,7 @@
             this.Font = new System.Drawing.Font("Sylfaen", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmProduto";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Produto";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

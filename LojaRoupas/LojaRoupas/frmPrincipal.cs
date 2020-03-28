@@ -27,5 +27,17 @@ namespace LojaRoupas
             frmProduto telaProduto = new frmProduto();
             telaProduto.ShowDialog();
         }
+
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCliente telaCliente = new frmCliente();
+            telaCliente.ShowDialog();
+        }
+
+        private void operadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmOperador telaCliente = new frmOperador();
+            telaCliente.ShowDialog();
+        }
     }
 }
