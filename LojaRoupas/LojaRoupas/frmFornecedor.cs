@@ -16,10 +16,5 @@ namespace LojaRoupas
         {
             InitializeComponent();
         }
-
-        private void frmFornecedor_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
