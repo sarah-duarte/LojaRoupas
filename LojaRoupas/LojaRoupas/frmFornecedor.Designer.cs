@@ -52,7 +52,7 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Sylfaen", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label10.Location = new System.Drawing.Point(13, 22);
+            this.label10.Location = new System.Drawing.Point(13, 9);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(453, 39);

@@ -8,3 +8,17 @@ C:\Users\Sarah Francis\Documents\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Deb
 C:\Users\Sarah Francis\Documents\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.pdb
 C:\Users\Sarah Francis\Documents\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmPrincipal.resources
 C:\Users\Sarah Francis\Documents\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmProduto.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\LojaRoupas.exe.config
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\LojaRoupas.exe
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\LojaRoupas.pdb
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.csprojAssemblyReference.cache
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmCliente.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmFornecedor.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmOperador.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmPrincipal.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmProduto.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.Properties.Resources.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.csproj.GenerateResource.cache
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.csproj.CoreCompileInputs.cache
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.exe
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.pdb
