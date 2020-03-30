@@ -16,5 +16,16 @@ namespace LojaRoupas
         {
             InitializeComponent();
         }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            frmFornecedor frm = new frmFornecedor();
+            this.Close;
+        }
     }
 }
