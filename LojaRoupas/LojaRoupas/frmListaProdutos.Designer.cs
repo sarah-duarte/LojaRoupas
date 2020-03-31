@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             this.dgvListaProduto = new System.Windows.Forms.DataGridView();
-            this.produtoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.codigoBarras = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,7 +39,6 @@
             this.precoVenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.qtdEstoque = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProduto)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvListaProduto
@@ -56,15 +54,10 @@
             this.precoCusto,
             this.precoVenda,
             this.qtdEstoque});
-            this.dgvListaProduto.DataSource = this.produtoBindingSource;
             this.dgvListaProduto.Location = new System.Drawing.Point(12, 12);
             this.dgvListaProduto.Name = "dgvListaProduto";
             this.dgvListaProduto.Size = new System.Drawing.Size(745, 348);
             this.dgvListaProduto.TabIndex = 0;
-            // 
-            // produtoBindingSource
-            // 
-            this.produtoBindingSource.DataSource = typeof(LojaRoupas.Classes.Produto);
             // 
             // id
             // 
@@ -124,9 +117,7 @@
             this.Text = "frmListaProdutos";
             this.Load += new System.EventHandler(this.frmListaProdutos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvListaProduto)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.produtoBindingSource)).EndInit();
             this.ResumeLayout(false);
-
         }
 
         #endregion
@@ -140,6 +131,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn precoCusto;
         private System.Windows.Forms.DataGridViewTextBoxColumn precoVenda;
         private System.Windows.Forms.DataGridViewTextBoxColumn qtdEstoque;
-        private System.Windows.Forms.BindingSource produtoBindingSource;
     }
 }

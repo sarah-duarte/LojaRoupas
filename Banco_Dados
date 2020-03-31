@@ -1,0 +1,187 @@
+-- Database: dbLojaRoupas
+
+-- DROP DATABASE "dbLojaRoupas";
+
+CREATE DATABASE "dbLojaRoupas"
+    WITH 
+    OWNER = admin
+    ENCODING = 'UTF8'
+    LC_COLLATE = 'Portuguese_Brazil.1252'
+    LC_CTYPE = 'Portuguese_Brazil.1252'
+    TABLESPACE = pg_default
+    CONNECTION LIMIT = 10;	
+--------------------------------------------------------------------------------
+-- Table: public.tbproduto
+
+-- DROP TABLE public.tbproduto;
+
+CREATE TABLE public.tbproduto
+(
+    id serial NOT NULL,
+    codigobarras "varchar"
+    descricao "varchar"
+    cor "varchar"
+    tamanho "varchar"
+    precocusto double precision,
+    precovenda double precision,
+    qtdestoque integer,
+    PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.tbproduto
+    OWNER to postgres;	
+-----------------------------------------------------------------------------
+-- Table: public.tbcliente
+
+-- DROP TABLE public.tbcliente;
+
+CREATE TABLE public.tbcliente
+(
+    id serial NOT NULL,
+    nome "varchar"
+    cpf "varchar"
+    email "varchar"
+    telefone "varchar"
+    nascimento "varchar"
+    endereco "varchar"
+    comprasrealizadas integer,
+    PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.tbcliente
+    OWNER to postgres;
+-----------------------------------------------------------------------------
+-- Table: public.tboperador
+
+-- DROP TABLE public.tboperador;
+
+CREATE TABLE public.tboperador
+(
+    id serial NOT NULL,
+    nome "varchar"
+    cpf "varchar"
+    email "varchar"
+    telefone "varchar"
+    nascimento "varchar"
+    endereco "varchar"
+    turno "varchar"
+    PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.tboperador
+    OWNER to postgres;
+------------------------------------------------------------------------------
+-- Table: public.tbfornecedor
+
+-- DROP TABLE public.tbfornecedor;
+
+CREATE TABLE public.tbfornecedor
+(
+    id serial NOT NULL,
+    razaosocial "varchar"
+    cnpj "varchar"
+    telefone "varchar"
+    endereco "varchar"
+    PRIMARY KEY (id)
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.tbfornecedor
+    OWNER to postgres;
+------------------------------------------------------------------------------
+-- Table: public.tbcompra
+
+-- DROP TABLE public.tbcompra;
+
+CREATE TABLE public.tbcompra
+(
+    id serial NOT NULL,
+    data "varchar"
+    vlrtotal double precision,
+    desconto double precision,
+    qtditens integer,
+    idfornecedor integer,
+    PRIMARY KEY (id),
+    CONSTRAINT idfornecedor FOREIGN KEY (idfornecedor)
+        REFERENCES public.tbfornecedor (id) MATCH SIMPLE
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.tbcompra
+    OWNER to postgres;
+--------------------------------------------------------------------------------
+-- Table: public.tbitemcompra
+
+-- DROP TABLE public.tbitemcompra;
+
+CREATE TABLE public.tbitemcompra
+(
+    id serial NOT NULL,
+    idproduto integer,
+    qtditens integer,
+    totalpreco double precision,
+    prccompra double precision,
+    PRIMARY KEY (id),
+    CONSTRAINT idproduto FOREIGN KEY (idproduto)
+        REFERENCES public.tbproduto (id) MATCH SIMPLE
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.tbitemcompra
+    OWNER to postgres;
+--------------------------------------------------------------------------------
+-- Table: public.tbvenda
+
+-- DROP TABLE public.tbvenda;
+
+CREATE TABLE public.tbvenda
+(
+    id serial NOT NULL,
+    data "varchar"
+    vlrtotal double precision,
+    desconto double precision,
+    qtditens integer,
+    idcliente integer,
+    idoperador integer,
+    PRIMARY KEY (id),
+    CONSTRAINT idcliente FOREIGN KEY (idcliente)
+        REFERENCES public.tbcliente (id) MATCH SIMPLE
+    CONSTRAINT idoperador FOREIGN KEY (idoperador)
+        REFERENCES public.tboperador (id) MATCH SIMPLE
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.tbvenda
+    OWNER to postgres;
+-----------------------------------------------------------------------------------
+-- Table: public.tbitemvenda
+
+-- DROP TABLE public.tbitemvenda;
+
+CREATE TABLE public.tbitemvenda
+(
+    id serial NOT NULL,
+    idproduto integer,
+    qtditens integer,
+    totalpreco double precision,
+    prcvenda double precision,
+    PRIMARY KEY (id),
+    CONSTRAINT idproduto FOREIGN KEY (idproduto)
+        REFERENCES public.tbproduto (id) MATCH SIMPLE
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE public.tbitemvenda
+    OWNER to postgres;
+---------------------------------------------------------------------------------------
