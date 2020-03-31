@@ -8,8 +8,8 @@ namespace LojaRoupas.Classes
 {
     class ItemVenda : ItemDocumento
     {
-        private float prcVenda;
-        public float getPrcVenda(){ return this.prcVenda; }
-        public void setPrcVenda(float prcVenda){ this.prcVenda = prcVenda; }
+        private Double prcVenda;
+        public Double getPrcVenda(){ return this.prcVenda; }
+        public void setPrcVenda(Double prcVenda){ this.prcVenda = prcVenda; }
     }
 }

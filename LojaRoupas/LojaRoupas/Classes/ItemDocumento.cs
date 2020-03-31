@@ -11,17 +11,16 @@ namespace LojaRoupas.Classes
         private int id;
         private int idProduto;
         private int qtdItens;
-        private float totalPreco;
+        private Double totalPreco;
 
         public void setID(int id) { this.id = id; }
         public void setIdProduto(int idProduto) { this.idProduto = idProduto; }
         public void setQtdItens(int qtdItens) { this.qtdItens = qtdItens; }
-        public void setTotalPreco(int totalPreco) { this.totalPreco = totalPreco; }
+        public void setTotalPreco(Double totalPreco) { this.totalPreco = totalPreco; }
 
         public int getId() { return this.id; }
         public int getIdProduto() { return this.idProduto; }
         public int getQtdItens() { return this.qtdItens; }
-        public float getTotalPreco() { return this.totalPreco; }
-
+        public Double getTotalPreco() { return this.totalPreco; }
     }
 }

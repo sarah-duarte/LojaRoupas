@@ -24,8 +24,10 @@ namespace LojaRoupas
 
         private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmProduto telaProduto = new frmProduto();
-            telaProduto.ShowDialog();
+            //frmProduto telaProduto = new frmProduto();
+            //telaProduto.ShowDialog();
+            frmListaProdutos telaListaProduto = new frmListaProdutos();
+            telaListaProduto.ShowDialog();
         }
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)

@@ -29,5 +29,10 @@ namespace LojaRoupas
             cliente.setNascimento(txtNascimento.Text);
             cliente.setTelefone(txtTelefone.Text);
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

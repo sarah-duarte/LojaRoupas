@@ -150,6 +150,7 @@
             // 
             // txtCodBarras
             // 
+            this.txtCodBarras.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCodBarras.Location = new System.Drawing.Point(291, 85);
             this.txtCodBarras.Name = "txtCodBarras";
             this.txtCodBarras.Size = new System.Drawing.Size(167, 25);
@@ -169,6 +170,7 @@
             // 
             // txtDescricao
             // 
+            this.txtDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDescricao.Location = new System.Drawing.Point(134, 116);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(559, 25);
@@ -176,6 +178,7 @@
             // 
             // txtCor
             // 
+            this.txtCor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCor.Location = new System.Drawing.Point(83, 147);
             this.txtCor.Name = "txtCor";
             this.txtCor.Size = new System.Drawing.Size(232, 25);
@@ -183,6 +186,7 @@
             // 
             // txtTamanho
             // 
+            this.txtTamanho.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtTamanho.Location = new System.Drawing.Point(443, 147);
             this.txtTamanho.Name = "txtTamanho";
             this.txtTamanho.Size = new System.Drawing.Size(250, 25);
@@ -253,6 +257,7 @@
             this.btnCancelar.TabIndex = 19;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // frmProduto
             // 
@@ -286,6 +291,7 @@
             this.Name = "frmProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro de Produto";
+            this.Load += new System.EventHandler(this.frmProduto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
