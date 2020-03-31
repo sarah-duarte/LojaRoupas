@@ -47,5 +47,11 @@ namespace LojaRoupas
             frmFornecedor telaFornecedor = new frmFornecedor();
             telaFornecedor.ShowDialog();
         }
+
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+                frmUsuarios telaUsuarios = new frmUsuarios();
+                telaUsuarios.ShowDialog();   
+        }
     }
 }
