@@ -10,11 +10,6 @@ namespace LojaRoupas
             InitializeComponent();
         }
 
-        private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmListaProdutos telaListaProduto = new frmListaProdutos();
@@ -41,8 +36,8 @@ namespace LojaRoupas
 
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
         {
-                frmUsuarios telaUsuarios = new frmUsuarios();
-                telaUsuarios.ShowDialog();   
+            //frmUsuarios telaUsuarios = new frmUsuarios();
+            //telaUsuarios.ShowDialog();   
         }
     }
 }
