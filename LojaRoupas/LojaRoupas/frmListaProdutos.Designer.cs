@@ -28,24 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.dgvListaProduto = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.codigoBarras = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.descricao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.corProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tamProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precoCusto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.precoVenda = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.qtdEstoque = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaProduto)).BeginInit();
+            this.lstListaProduto = new System.Windows.Forms.ListView();
+            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.codigoBarras = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.descricao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.corProduto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.tamProduto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.precoCusto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.precoVenda = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.qtdEstProduto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnNovo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // dgvListaProduto
+            // lstListaProduto
             // 
-            this.dgvListaProduto.AutoGenerateColumns = false;
-            this.dgvListaProduto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvListaProduto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.lstListaProduto.BackColor = System.Drawing.Color.White;
+            this.lstListaProduto.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.id,
             this.codigoBarras,
             this.descricao,
@@ -53,83 +51,92 @@
             this.tamProduto,
             this.precoCusto,
             this.precoVenda,
-            this.qtdEstoque});
-            this.dgvListaProduto.Location = new System.Drawing.Point(12, 12);
-            this.dgvListaProduto.Name = "dgvListaProduto";
-            this.dgvListaProduto.Size = new System.Drawing.Size(745, 348);
-            this.dgvListaProduto.TabIndex = 0;
+            this.qtdEstProduto});
+            this.lstListaProduto.ForeColor = System.Drawing.Color.Black;
+            this.lstListaProduto.HideSelection = false;
+            this.lstListaProduto.Location = new System.Drawing.Point(12, 12);
+            this.lstListaProduto.Name = "lstListaProduto";
+            this.lstListaProduto.Size = new System.Drawing.Size(635, 457);
+            this.lstListaProduto.TabIndex = 0;
+            this.lstListaProduto.UseCompatibleStateImageBehavior = false;
+            this.lstListaProduto.View = System.Windows.Forms.View.Details;
             // 
             // id
             // 
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "id";
-            this.id.Name = "id";
+            this.id.Text = "ID";
+            this.id.Width = 30;
             // 
             // codigoBarras
             // 
-            this.codigoBarras.DataPropertyName = "codigoBarras";
-            this.codigoBarras.HeaderText = "codigoBarras";
-            this.codigoBarras.Name = "codigoBarras";
+            this.codigoBarras.Text = "Codigo Barras";
+            this.codigoBarras.Width = 103;
             // 
             // descricao
             // 
-            this.descricao.DataPropertyName = "descricao";
-            this.descricao.HeaderText = "descricao";
-            this.descricao.Name = "descricao";
+            this.descricao.Text = "Descrição";
+            this.descricao.Width = 146;
             // 
             // corProduto
             // 
-            this.corProduto.DataPropertyName = "corProduto";
-            this.corProduto.HeaderText = "corProduto";
-            this.corProduto.Name = "corProduto";
+            this.corProduto.Text = "Cor";
+            this.corProduto.Width = 84;
             // 
             // tamProduto
             // 
-            this.tamProduto.DataPropertyName = "tamProduto";
-            this.tamProduto.HeaderText = "tamProduto";
-            this.tamProduto.Name = "tamProduto";
+            this.tamProduto.Text = "Tamanho";
             // 
             // precoCusto
             // 
-            this.precoCusto.DataPropertyName = "precoCusto";
-            this.precoCusto.HeaderText = "precoCusto";
-            this.precoCusto.Name = "precoCusto";
+            this.precoCusto.Text = "Custo";
+            this.precoCusto.Width = 70;
             // 
             // precoVenda
             // 
-            this.precoVenda.DataPropertyName = "precoVenda";
-            this.precoVenda.HeaderText = "precoVenda";
-            this.precoVenda.Name = "precoVenda";
+            this.precoVenda.Text = "Venda";
+            this.precoVenda.Width = 77;
             // 
-            // qtdEstoque
+            // qtdEstProduto
             // 
-            this.qtdEstoque.DataPropertyName = "qtdEstoque";
-            this.qtdEstoque.HeaderText = "qtdEstoque";
-            this.qtdEstoque.Name = "qtdEstoque";
+            this.qtdEstProduto.Text = "Estoque";
+            // 
+            // btnNovo
+            // 
+            this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNovo.ForeColor = System.Drawing.Color.BurlyWood;
+            this.btnNovo.Location = new System.Drawing.Point(653, 12);
+            this.btnNovo.Name = "btnNovo";
+            this.btnNovo.Size = new System.Drawing.Size(118, 55);
+            this.btnNovo.TabIndex = 19;
+            this.btnNovo.Text = "NOVO ITEM";
+            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // frmListaProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(769, 372);
-            this.Controls.Add(this.dgvListaProduto);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.ClientSize = new System.Drawing.Size(780, 481);
+            this.Controls.Add(this.btnNovo);
+            this.Controls.Add(this.lstListaProduto);
             this.Name = "frmListaProdutos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmListaProdutos";
             this.Load += new System.EventHandler(this.frmListaProdutos_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvListaProduto)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         #endregion
-
-        private System.Windows.Forms.DataGridView dgvListaProduto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn codigoBarras;
-        private System.Windows.Forms.DataGridViewTextBoxColumn descricao;
-        private System.Windows.Forms.DataGridViewTextBoxColumn corProduto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tamProduto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precoCusto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn precoVenda;
-        private System.Windows.Forms.DataGridViewTextBoxColumn qtdEstoque;
+        private System.Windows.Forms.ListView lstListaProduto;
+        private System.Windows.Forms.ColumnHeader id;
+        private System.Windows.Forms.ColumnHeader codigoBarras;
+        private System.Windows.Forms.ColumnHeader descricao;
+        private System.Windows.Forms.ColumnHeader corProduto;
+        private System.Windows.Forms.ColumnHeader tamProduto;
+        private System.Windows.Forms.ColumnHeader precoCusto;
+        private System.Windows.Forms.ColumnHeader precoVenda;
+        private System.Windows.Forms.ColumnHeader qtdEstProduto;
+        private System.Windows.Forms.Button btnNovo;
     }
 }

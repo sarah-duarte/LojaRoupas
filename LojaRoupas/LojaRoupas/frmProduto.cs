@@ -27,8 +27,8 @@ namespace LojaRoupas
             produto.setDescProduto(txtDescricao.Text);
             produto.setCorProduto(txtCor.Text);
             produto.setTamProduto(txtTamanho.Text);
-            produto.setPrecoCusto(float.Parse(txtPrcCusto.Text));
-            produto.setPrecoVenda(float.Parse(txtPrcVenda.Text));
+            produto.setPrecoCusto(Double.Parse(txtPrcCusto.Text));
+            produto.setPrecoVenda(Double.Parse(txtPrcVenda.Text));
             produto.setQtdEstProduto(int.Parse(txtQtdEstoque.Text));
             try{
                 produto.cadProduto(produto);

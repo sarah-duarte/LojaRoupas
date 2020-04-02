@@ -73,7 +73,7 @@
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(165, 22);
-            this.label2.TabIndex = 1;
+            this.label2.TabIndex = 2;
             this.label2.Text = "CÓDIGO DE BARRAS:";
             // 
             // label3
@@ -85,7 +85,7 @@
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 22);
-            this.label3.TabIndex = 2;
+            this.label3.TabIndex = 8;
             this.label3.Text = "COR:";
             // 
             // label4
@@ -97,7 +97,7 @@
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 22);
-            this.label4.TabIndex = 3;
+            this.label4.TabIndex = 6;
             this.label4.Text = "DESCRIÇÃO:";
             // 
             // label5
@@ -109,7 +109,7 @@
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 22);
-            this.label5.TabIndex = 4;
+            this.label5.TabIndex = 10;
             this.label5.Text = "TAMANHO:";
             // 
             // label6
@@ -121,7 +121,7 @@
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(120, 22);
-            this.label6.TabIndex = 5;
+            this.label6.TabIndex = 12;
             this.label6.Text = "PRECO CUSTO:";
             // 
             // label7
@@ -133,7 +133,7 @@
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(123, 22);
-            this.label7.TabIndex = 6;
+            this.label7.TabIndex = 14;
             this.label7.Text = "PRECO VENDA:";
             // 
             // label8
@@ -145,7 +145,7 @@
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(156, 22);
-            this.label8.TabIndex = 7;
+            this.label8.TabIndex = 4;
             this.label8.Text = "QTD. EM ESTOQUE:";
             // 
             // txtCodBarras
@@ -154,7 +154,7 @@
             this.txtCodBarras.Location = new System.Drawing.Point(291, 85);
             this.txtCodBarras.Name = "txtCodBarras";
             this.txtCodBarras.Size = new System.Drawing.Size(167, 25);
-            this.txtCodBarras.TabIndex = 8;
+            this.txtCodBarras.TabIndex = 3;
             // 
             // lblID
             // 
@@ -165,7 +165,7 @@
             this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(46, 22);
-            this.lblID.TabIndex = 9;
+            this.lblID.TabIndex = 1;
             this.lblID.Text = "0001";
             // 
             // txtDescricao
@@ -174,7 +174,7 @@
             this.txtDescricao.Location = new System.Drawing.Point(134, 116);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(559, 25);
-            this.txtDescricao.TabIndex = 10;
+            this.txtDescricao.TabIndex = 7;
             // 
             // txtCor
             // 
@@ -182,7 +182,7 @@
             this.txtCor.Location = new System.Drawing.Point(83, 147);
             this.txtCor.Name = "txtCor";
             this.txtCor.Size = new System.Drawing.Size(232, 25);
-            this.txtCor.TabIndex = 11;
+            this.txtCor.TabIndex = 9;
             // 
             // txtTamanho
             // 
@@ -190,7 +190,7 @@
             this.txtTamanho.Location = new System.Drawing.Point(443, 147);
             this.txtTamanho.Name = "txtTamanho";
             this.txtTamanho.Size = new System.Drawing.Size(250, 25);
-            this.txtTamanho.TabIndex = 12;
+            this.txtTamanho.TabIndex = 11;
             // 
             // txtPrcCusto
             // 
@@ -204,14 +204,14 @@
             this.txtPrcVenda.Location = new System.Drawing.Point(153, 209);
             this.txtPrcVenda.Name = "txtPrcVenda";
             this.txtPrcVenda.Size = new System.Drawing.Size(114, 25);
-            this.txtPrcVenda.TabIndex = 14;
+            this.txtPrcVenda.TabIndex = 15;
             // 
             // txtQtdEstoque
             // 
             this.txtQtdEstoque.Location = new System.Drawing.Point(628, 85);
             this.txtQtdEstoque.Name = "txtQtdEstoque";
             this.txtQtdEstoque.Size = new System.Drawing.Size(65, 25);
-            this.txtQtdEstoque.TabIndex = 15;
+            this.txtQtdEstoque.TabIndex = 5;
             // 
             // pictureBox1
             // 
@@ -242,7 +242,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(451, 179);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(118, 55);
-            this.btnSalvar.TabIndex = 18;
+            this.btnSalvar.TabIndex = 16;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -254,7 +254,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(575, 179);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(118, 55);
-            this.btnCancelar.TabIndex = 19;
+            this.btnCancelar.TabIndex = 17;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);

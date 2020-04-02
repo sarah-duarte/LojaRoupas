@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using LojaRoupas.Model;
 
 namespace LojaRoupas.Classes
 {
@@ -26,7 +24,7 @@ namespace LojaRoupas.Classes
         public void setPrecoVenda(Double precoVenda) { this.precoVenda = precoVenda; }
         public void setQtdEstProduto(int qtdEstProduto) { this.qtdEstProduto = qtdEstProduto; }
 
-        public int getId(){ return this.id; }
+        public int getIdProduto(){ return this.id; }
         public string getCodigoBarras() { return this.codigoBarras; }
         public string getDescProduto(){ return this.descricao; }
         public string getCorProduto(){ return this.corProduto; }
@@ -37,17 +35,17 @@ namespace LojaRoupas.Classes
 
         public int NovoId()
         {
-            Conexao conexao = new Conexao();
-            return conexao.GetNovoIdProduto();
+            MProduto conexao = new MProduto();
+            return conexao.GetNovoId();
         }
         public void cadProduto(Produto produto)
         {
-            Conexao conexao = new Conexao();
+            MProduto conexao = new MProduto();
             conexao.InserirProduto(produto);
         }
         public List<Produto> ListaProduto()
         {
-            Conexao conexao = new Conexao();
+            MProduto conexao = new MProduto();
             return conexao.ListaProduto();
         }
     }
