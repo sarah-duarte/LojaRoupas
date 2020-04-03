@@ -42,7 +42,7 @@
             // 
             // lstListaProduto
             // 
-            this.lstListaProduto.BackColor = System.Drawing.Color.White;
+            this.lstListaProduto.BackColor = System.Drawing.Color.Black;
             this.lstListaProduto.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.id,
             this.codigoBarras,
@@ -52,11 +52,12 @@
             this.precoCusto,
             this.precoVenda,
             this.qtdEstProduto});
-            this.lstListaProduto.ForeColor = System.Drawing.Color.Black;
+            this.lstListaProduto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstListaProduto.ForeColor = System.Drawing.Color.BurlyWood;
             this.lstListaProduto.HideSelection = false;
-            this.lstListaProduto.Location = new System.Drawing.Point(12, 12);
+            this.lstListaProduto.Location = new System.Drawing.Point(0, 0);
             this.lstListaProduto.Name = "lstListaProduto";
-            this.lstListaProduto.Size = new System.Drawing.Size(635, 457);
+            this.lstListaProduto.Size = new System.Drawing.Size(780, 481);
             this.lstListaProduto.TabIndex = 0;
             this.lstListaProduto.UseCompatibleStateImageBehavior = false;
             this.lstListaProduto.View = System.Windows.Forms.View.Details;
@@ -101,9 +102,11 @@
             // 
             // btnNovo
             // 
+            this.btnNovo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnNovo.Location = new System.Drawing.Point(653, 12);
+            this.btnNovo.Location = new System.Drawing.Point(650, 34);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(118, 55);
             this.btnNovo.TabIndex = 19;
@@ -121,7 +124,7 @@
             this.Controls.Add(this.lstListaProduto);
             this.Name = "frmListaProdutos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmListaProdutos";
+            this.Text = "Lista de Produtos";
             this.Load += new System.EventHandler(this.frmListaProdutos_Load);
             this.ResumeLayout(false);
 
