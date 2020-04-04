@@ -23,17 +23,17 @@ namespace LojaRoupas.Model
             }
             return ultimoid + 1;
         }
-        public void InserirFornecedor(Fornecedor forncedor)
+        public void InserirFornecedor(Fornecedor fornecedor)
         {
             this.Conect();
 
             sql = "INSERT INTO public.tbfornecedor(razaosocial, cnpj, telefone, endereco)";
             sql = sql + "VALUES(@razaosocial, @cnpj, @telefone, @endereco); ";
             cmd = new NpgsqlCommand(sql, con);
-            cmd.Parameters.AddWithValue("cnpj", forncedor.getCnpj());
-            cmd.Parameters.AddWithValue("razao_social", forncedor.getRazaosocial());
-            cmd.Parameters.AddWithValue("endereco", forncedor.getEndereco());
-            cmd.Parameters.AddWithValue("telefone", forncedor.getTelefone());
+            cmd.Parameters.AddWithValue("cnpj", fornecedor.getCnpj());
+            cmd.Parameters.AddWithValue("razao_social", fornecedor.getRazaosocial());
+            cmd.Parameters.AddWithValue("endereco", fornecedor.getEndereco());
+            cmd.Parameters.AddWithValue("telefone", fornecedor.getTelefone());
             cmd.Prepare();
 
             cmd.ExecuteNonQuery();
@@ -45,7 +45,7 @@ namespace LojaRoupas.Model
         {
             List<Fornecedor> Lista = new List<Fornecedor>();
             this.Conect();
-            sql = "SELECT  id, codigobarras, descricao, cor, tamanho, precocusto, precovenda, qtdestoque FROM tbproduto";
+            sql = "SELECT id, razaosocial, cnpj, telefone, endereco FROM public.tbfornecedor";
             cmd = new NpgsqlCommand(sql, con);
             rdr = cmd.ExecuteReader();
 
@@ -54,10 +54,10 @@ namespace LojaRoupas.Model
                 Console.WriteLine("{0}", rdr.GetInt32(0));
                 Fornecedor fornecedor = new Fornecedor();
                 fornecedor.setId(rdr.GetInt32(0));
-                fornecedor.setCnpj(rdr.GetInt32(1));
+                fornecedor.setCnpj(rdr.GetString(1));
                 fornecedor.setRazaosocial(rdr.GetString(2));
                 fornecedor.setEndereco(rdr.GetString(3));
-                fornecedor.setTelefone(rdr.GetInt32(4));
+                fornecedor.setTelefone(rdr.GetString(4));
 
                 Lista.Add(fornecedor);
             }
