@@ -49,6 +49,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnDesativar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -271,12 +272,25 @@
             this.label7.TabIndex = 69;
             this.label7.Text = "TURNO:";
             // 
+            // btnDesativar
+            // 
+            this.btnDesativar.BackColor = System.Drawing.Color.Transparent;
+            this.btnDesativar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDesativar.ForeColor = System.Drawing.Color.BurlyWood;
+            this.btnDesativar.Location = new System.Drawing.Point(308, 202);
+            this.btnDesativar.Name = "btnDesativar";
+            this.btnDesativar.Size = new System.Drawing.Size(118, 55);
+            this.btnDesativar.TabIndex = 71;
+            this.btnDesativar.Text = "DESATIVAR";
+            this.btnDesativar.UseVisualStyleBackColor = false;
+            // 
             // frmOperador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(692, 274);
+            this.Controls.Add(this.btnDesativar);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtCPF);
@@ -298,6 +312,7 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmOperador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Operador";
@@ -328,5 +343,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnDesativar;
     }
 }

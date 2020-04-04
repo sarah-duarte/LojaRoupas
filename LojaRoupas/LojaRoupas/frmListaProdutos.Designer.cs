@@ -124,6 +124,7 @@
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.lstListaProduto);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "frmListaProdutos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Produtos";
