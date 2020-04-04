@@ -185,3 +185,23 @@ TABLESPACE pg_default;
 ALTER TABLE public.tbitemvenda
     OWNER to postgres;
 ---------------------------------------------------------------------------------------
+
+ALTER TABLE public.tbitemvenda
+    ADD COLUMN idvenda integer;
+ALTER TABLE public.tbitemvenda
+    ADD CONSTRAINT idvenda FOREIGN KEY (idvenda)
+    REFERENCES public.tbvenda (id) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
+	
+-----------------------------------------------------------------------------------------
+
+ALTER TABLE public.tbitemcompra
+    ADD COLUMN idcompra integer;
+ALTER TABLE public.tbitemcompra
+    ADD CONSTRAINT idcompra FOREIGN KEY (idcompra)
+    REFERENCES public.tbcompra (id) MATCH SIMPLE
+    ON UPDATE NO ACTION
+    ON DELETE NO ACTION
+    NOT VALID;
