@@ -6,7 +6,7 @@ using LojaRoupas.Classes;
 
 namespace LojaRoupas.Model
 {
-    class NFornecedor : Conexao
+    class MFornecedor : Conexao
     {
         public override int GetNovoId()
         {
