@@ -26,7 +26,7 @@ namespace LojaRoupas.Model
         {
             this.Conect();
 
-            sql = "INSERT INTO tbcliente(nome, cpf, email, telefone, nascimento, endereco, comprasrealizadas)) ";
+            sql = "INSERT INTO tbcliente(nome, cpf, email, telefone, nascimento, endereco, comprasrealizadas) ";
             sql = sql + "VALUES(@nome, @cpf, @email, @telefone, @nascimento, @endereco, @comprasrealizadas); ";
             cmd = new NpgsqlCommand(sql, con);
             cmd.Parameters.AddWithValue("nome", cliente.getNome());
