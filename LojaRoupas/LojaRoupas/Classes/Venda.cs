@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using LojaRoupas.Model;
 
 namespace LojaRoupas.Classes
 {
@@ -19,5 +16,21 @@ namespace LojaRoupas.Classes
         public int getIdCliente() { return this.idCliente; }
         public int getIdOperador() { return this.idOperador; }
         public List<ItemVenda> getItensVenda(){ return this.itensVenda; }
+
+        public int NovoId()
+        {
+            MVenda conexao = new MVenda();
+            return conexao.GetNovoId();
+        }
+        public void cadVenda(Venda venda)
+        {
+            MVenda conexao = new MVenda();
+            conexao.InserirVenda(venda);
+        }
+        public List<Venda> ListaVenda()
+        {
+            MVenda conexao = new MVenda();
+            return conexao.ListaVenda();
+        }
     }
 }

@@ -67,5 +67,29 @@ namespace LojaRoupas.Model
             }
             return Lista;
         }
+        public Produto getProduto(String codigobarras)
+        {
+            this.Conect();
+            Produto produto = new Produto();
+            sql = "SELECT  id, codigobarras, descricao, cor, tamanho, precocusto, precovenda, qtdestoque FROM tbproduto where codigobarras = @codigobarras";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("codigobarras", codigobarras);
+            cmd.Prepare();
+            rdr = cmd.ExecuteReader();
+
+            while (rdr.Read())
+            {
+                Console.WriteLine("{0}", rdr.GetInt32(0));                
+                produto.setIdProduto(rdr.GetInt32(0));
+                produto.setCodigoBarras(rdr.GetString(1));
+                produto.setDescProduto(rdr.GetString(2));
+                produto.setCorProduto(rdr.GetString(3));
+                produto.setTamProduto(rdr.GetString(4));
+                produto.setPrecoCusto(rdr.GetDouble(5));
+                produto.setPrecoVenda(rdr.GetDouble(6));
+                produto.setQtdEstProduto(rdr.GetInt32(7));
+            }
+            return produto;
+        }
     }
 }

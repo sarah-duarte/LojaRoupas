@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using LojaRoupas.Model;
 
 namespace LojaRoupas.Classes
 {
@@ -11,5 +9,21 @@ namespace LojaRoupas.Classes
         private Double prcVenda;
         public Double getPrcVenda(){ return this.prcVenda; }
         public void setPrcVenda(Double prcVenda){ this.prcVenda = prcVenda; }
+
+        public int NovoId()
+        {
+            MItemVenda conexao = new MItemVenda();
+            return conexao.GetNovoId();
+        }
+        public void cadVenda(ItemVenda itemVenda)
+        {
+            MItemVenda conexao = new MItemVenda();
+            conexao.InserirItemVenda(itemVenda);
+        }
+        public List<ItemVenda> ListaItemVenda(int idVenda)
+        {
+            MItemVenda conexao = new MItemVenda();
+            return conexao.ListaItemVenda(idVenda);
+        }
     }
 }

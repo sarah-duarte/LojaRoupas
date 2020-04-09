@@ -48,5 +48,10 @@ namespace LojaRoupas.Classes
             MProduto conexao = new MProduto();
             return conexao.ListaProduto();
         }
+        public Produto getProduto(String codigobarras)
+        {
+            MProduto conexao = new MProduto();
+            return conexao.getProduto(codigobarras);
+        }
     }
 }
