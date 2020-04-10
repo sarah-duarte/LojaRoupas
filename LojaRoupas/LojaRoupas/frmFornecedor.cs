@@ -19,12 +19,10 @@ namespace LojaRoupas
         {
             InitializeComponent();
         }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
-
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             fornecedor.setId(int.Parse(lblID.Text));
@@ -35,26 +33,13 @@ namespace LojaRoupas
             try
             {
                 fornecedor.cadFornecedor(fornecedor);
-                MessageBox.Show("Forncedor Cadastrado com Sucesso!", "Forcedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close();
+                MessageBox.Show("Forncedor Cadastrado com Sucesso!", "Fornecedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
             }
             catch (IOException erro)
             {
                 MessageBox.Show(erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-        }
-
-        private void frmFornecedor_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnListar_Click(object sender, EventArgs e)
-        {
-            frmListaFornecedor listaFornecedor = new frmListaFornecedor();
-            listaFornecedor.ShowDialog();
-
         }
     }
 }

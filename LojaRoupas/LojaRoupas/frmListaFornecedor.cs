@@ -44,7 +44,6 @@ namespace LojaRoupas
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            this.Close();
             frmFornecedor telaFornecedor = new frmFornecedor();
             telaFornecedor.ShowDialog();
             MontaLista();
@@ -60,6 +59,12 @@ namespace LojaRoupas
         {
             MontaLista();
             AtualizaLista();           
+        }
+
+        private void frmListaFornecedor_Load_1(object sender, EventArgs e)
+        {
+            MontaLista();
+            AtualizaLista();
         }
     }
 }
