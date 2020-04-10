@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using System.IO;
 using LojaRoupas.Classes;
 
 namespace LojaRoupas
@@ -21,7 +22,7 @@ namespace LojaRoupas
         {
             lstListaItensVenda.Clear();
             lstListaItensVenda.View = View.Details;
-            lstListaItensVenda.Columns.Add("CÓDIGO", 66);
+            lstListaItensVenda.Columns.Add("CÓDIGO", 70);
             lstListaItensVenda.Columns.Add("DESCRIÇÃO", 265);
             lstListaItensVenda.Columns.Add("PREÇO", 70);
             lstListaItensVenda.Columns.Add("QTDE", 70);
@@ -73,24 +74,42 @@ namespace LojaRoupas
             AddItemLista(produto);
             lblTotal.Text = "R$ " + GetTotalProdutos().ToString();
             lblQtdItens.Text = GetTotalQtdItens().ToString();
+
+            txtCodBarras.Text = "";
+            txtQtd.Text = "";
         }
         private void ListarClienteComboBox()
         {
-            ListaClientes = cliente.ListaCliente();
-            foreach (Cliente c in ListaClientes)
+            try
             {
-                Console.WriteLine("{0}", c.getId().ToString());
-                cmbCliente.Items.Insert(c.getId() - 1, c.getNome());
+                ListaClientes = cliente.ListaCliente();
+                foreach (Cliente c in ListaClientes)
+                {
+                    Console.WriteLine("{0}", c.getId().ToString());
+                    cmbCliente.Items.Insert(c.getId() - 1, c.getNome());
+                }
             }
-        }
+            catch (IOException erro)
+            {
+                MessageBox.Show(erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+}
         private void ListarOperadorComboBox()
         {
-            ListaOperador = Operador.ListaOperador();
-            foreach (Operador c in ListaOperador)
+            try 
             {
-                Console.WriteLine("{0}", c.getId().ToString());
-                cmbOperador.Items.Insert(c.getId() - 1, c.getNome());
+                ListaOperador = Operador.ListaOperador();
+                foreach (Operador c in ListaOperador)
+                {
+                    Console.WriteLine("{0}", c.getId().ToString());
+                    cmbOperador.Items.Insert(c.getId() - 1, c.getNome());
+                }
             }
+            catch (IOException erro)
+            {
+                MessageBox.Show(erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            
         }
         private void frmVenda_Load(object sender, EventArgs e)
         {
@@ -99,12 +118,34 @@ namespace LojaRoupas
             lblID.Text = Convert.ToString(venda.NovoId());
             MontaLista();
         }
+        private void MontaVenda()
+        {
+            venda.setIdCliente(cmbCliente.SelectedIndex + 1);
+            venda.setIdOperador(cmbOperador.SelectedIndex + 1);
+            venda.setItensVenda(itensVenda);
+            venda.setData("10/04/2020");
+            venda.setQtdItens(GetTotalQtdItens());
+            venda.setVlrTotal(GetTotalProdutos());
+            venda.setDesconto(0);
+        }
+        private void Validacoes()
+        {
+
+        }
         private void btnFinalizarVenda_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Cliente selecionado " + (cmbCliente.SelectedItem).ToString() + " id " + (cmbCliente.SelectedIndex + 1).ToString());
-            MessageBox.Show("Operador selecionado " + (cmbOperador.SelectedItem).ToString() + " id " + (cmbOperador.SelectedIndex + 1).ToString());
+            MontaVenda();
+            try
+            {
+                venda.cadVenda(venda);
+                MessageBox.Show("Venda Realizada com Sucesso!", "Venda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
+            }
+            catch (IOException erro)
+            {
+                MessageBox.Show(erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-
         private void btnCancelar_Click(object sender, EventArgs e) => Close();
     }
 }

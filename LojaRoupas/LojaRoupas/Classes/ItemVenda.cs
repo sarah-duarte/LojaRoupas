@@ -15,7 +15,7 @@ namespace LojaRoupas.Classes
             MItemVenda conexao = new MItemVenda();
             return conexao.GetNovoId();
         }
-        public void cadVenda(ItemVenda itemVenda)
+        public void cadItemVenda(ItemVenda itemVenda)
         {
             MItemVenda conexao = new MItemVenda();
             conexao.InserirItemVenda(itemVenda);

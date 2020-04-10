@@ -26,6 +26,10 @@ namespace LojaRoupas.Classes
         {
             MVenda conexao = new MVenda();
             conexao.InserirVenda(venda);
+            foreach (ItemVenda i in itensVenda)
+            {
+                i.cadItemVenda(i);
+            }
         }
         public List<Venda> ListaVenda()
         {

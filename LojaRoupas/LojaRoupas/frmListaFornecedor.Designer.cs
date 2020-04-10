@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaFornecedor));
-            this.listView1 = new System.Windows.Forms.ListView();
+            this.lstListaFornecedor = new System.Windows.Forms.ListView();
             this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.razaosocial = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.endereco = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -39,24 +39,23 @@
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // listView1
+            // lstListaFornecedor
             // 
-            this.listView1.BackColor = System.Drawing.SystemColors.ControlText;
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lstListaFornecedor.BackColor = System.Drawing.SystemColors.ControlText;
+            this.lstListaFornecedor.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.id,
             this.razaosocial,
             this.endereco,
             this.telefone});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.ForeColor = System.Drawing.Color.BurlyWood;
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(800, 450);
-            this.listView1.TabIndex = 0;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
+            this.lstListaFornecedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstListaFornecedor.ForeColor = System.Drawing.Color.BurlyWood;
+            this.lstListaFornecedor.HideSelection = false;
+            this.lstListaFornecedor.Location = new System.Drawing.Point(0, 0);
+            this.lstListaFornecedor.Name = "lstListaFornecedor";
+            this.lstListaFornecedor.Size = new System.Drawing.Size(800, 450);
+            this.lstListaFornecedor.TabIndex = 0;
+            this.lstListaFornecedor.UseCompatibleStateImageBehavior = false;
+            this.lstListaFornecedor.View = System.Windows.Forms.View.Details;
             // 
             // id
             // 
@@ -133,7 +132,7 @@
             this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnNovo);
-            this.Controls.Add(this.listView1);
+            this.Controls.Add(this.lstListaFornecedor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListaFornecedor";
             this.Text = "Lista de Forncedores";
@@ -143,7 +142,7 @@
 
         #endregion
 
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView lstListaFornecedor;
         private System.Windows.Forms.ColumnHeader id;
         private System.Windows.Forms.ColumnHeader razaosocial;
         private System.Windows.Forms.ColumnHeader endereco;

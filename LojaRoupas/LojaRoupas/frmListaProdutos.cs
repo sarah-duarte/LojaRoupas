@@ -11,7 +11,6 @@ namespace LojaRoupas
         {
             InitializeComponent();
         }
-
         private void AtualizaLista()
         {
             Produto produto = new Produto();
@@ -30,7 +29,6 @@ namespace LojaRoupas
                 lstListaProduto.Items.Add(item);
             }
         }
-
         private void MontaLista()
         {
             lstListaProduto.Clear();
@@ -44,13 +42,11 @@ namespace LojaRoupas
             lstListaProduto.Columns.Add("Venda", 77);
             lstListaProduto.Columns.Add("Estoque", 60);
         }
-
         private void frmListaProdutos_Load(object sender, EventArgs e)
         {
             MontaLista();
             AtualizaLista();
         }
-
         private void btnNovo_Click(object sender, EventArgs e)
         {
             frmProduto telaProduto = new frmProduto();
@@ -58,10 +54,14 @@ namespace LojaRoupas
             MontaLista();
             AtualizaLista();
         }
-
-        private void lstListaProduto_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e)
         {
-
+            Close();
+        }
+        private void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            MontaLista();
+            AtualizaLista();
         }
     }
 }
