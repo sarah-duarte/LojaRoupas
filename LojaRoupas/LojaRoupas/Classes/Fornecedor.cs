@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using LojaRoupas.Model;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,5 +26,21 @@ namespace LojaRoupas.Classes
         public string getRazaosocial(){ return this.razaosocial; }
         public string getEndereco(){ return this.endereco; }
         public string getTelefone() { return this.telefone; }
+
+        public int NovoId()
+        {
+            MFornecedor conexao = new MFornecedor();
+            return conexao.GetNovoId();
+        }
+        public void cadFornecedor(Fornecedor fornecedor)
+        {
+            MFornecedor conexao = new MFornecedor();
+            conexao.InserirFornecedor(fornecedor);
+        }
+        public List<Fornecedor> ListaFornecedor()
+        {
+            MFornecedor conexao = new MFornecedor();
+            return conexao.ListaProduto();
+        }
     }
 }

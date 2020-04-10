@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
+using LojaRoupas.Classes;
 
 namespace LojaRoupas
-{
+{   
     public partial class frmFornecedor : Form
     {
+        Fornecedor fornecedor = new Fornecedor();
         public frmFornecedor()
         {
             InitializeComponent();
@@ -20,6 +23,38 @@ namespace LojaRoupas
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            fornecedor.setId(int.Parse(lblID.Text));
+            fornecedor.setCnpj(txtCnpj.Text);
+            fornecedor.setRazaosocial(txtRazaoSocial.Text);
+            fornecedor.setEndereco(txtEndereco.Text);
+            fornecedor.setTelefone(txtTelefone.Text);
+            try
+            {
+                fornecedor.cadFornecedor(fornecedor);
+                MessageBox.Show("Forncedor Cadastrado com Sucesso!", "Forcedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            catch (IOException erro)
+            {
+                MessageBox.Show(erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
+
+        private void frmFornecedor_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            frmListaFornecedor listaFornecedor = new frmListaFornecedor();
+            listaFornecedor.ShowDialog();
+
         }
     }
 }

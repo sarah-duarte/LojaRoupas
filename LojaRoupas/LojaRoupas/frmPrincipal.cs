@@ -30,8 +30,8 @@ namespace LojaRoupas
 
         private void fornecedorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmFornecedor telaFornecedor = new frmFornecedor();
-            telaFornecedor.ShowDialog();
+            frmFornecedor fornecedor = new frmFornecedor();
+            fornecedor.ShowDialog();
         }
 
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)

@@ -58,5 +58,10 @@ namespace LojaRoupas
             MontaLista();
             AtualizaLista();
         }
+
+        private void lstListaProduto_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

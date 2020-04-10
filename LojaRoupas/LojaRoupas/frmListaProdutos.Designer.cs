@@ -62,6 +62,7 @@
             this.lstListaProduto.TabIndex = 0;
             this.lstListaProduto.UseCompatibleStateImageBehavior = false;
             this.lstListaProduto.View = System.Windows.Forms.View.Details;
+            this.lstListaProduto.SelectedIndexChanged += new System.EventHandler(this.lstListaProduto_SelectedIndexChanged);
             // 
             // id
             // 
@@ -139,10 +140,10 @@
         private System.Windows.Forms.ColumnHeader codigoBarras;
         private System.Windows.Forms.ColumnHeader descricao;
         private System.Windows.Forms.ColumnHeader corProduto;
+        private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.ColumnHeader tamProduto;
         private System.Windows.Forms.ColumnHeader precoCusto;
         private System.Windows.Forms.ColumnHeader precoVenda;
         private System.Windows.Forms.ColumnHeader qtdEstProduto;
-        private System.Windows.Forms.Button btnNovo;
     }
 }

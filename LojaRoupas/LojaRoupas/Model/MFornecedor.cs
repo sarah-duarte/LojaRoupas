@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using Npgsql;
 using LojaRoupas.Classes;
 
-
 namespace LojaRoupas.Model
 {
     class MFornecedor : Conexao
@@ -30,8 +29,8 @@ namespace LojaRoupas.Model
             sql = "INSERT INTO public.tbfornecedor(razaosocial, cnpj, telefone, endereco)";
             sql = sql + "VALUES(@razaosocial, @cnpj, @telefone, @endereco); ";
             cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("razaosocial", fornecedor.getRazaosocial());
             cmd.Parameters.AddWithValue("cnpj", fornecedor.getCnpj());
-            cmd.Parameters.AddWithValue("razao_social", fornecedor.getRazaosocial());
             cmd.Parameters.AddWithValue("endereco", fornecedor.getEndereco());
             cmd.Parameters.AddWithValue("telefone", fornecedor.getTelefone());
             cmd.Prepare();
