@@ -20,10 +20,11 @@ namespace LojaRoupas.Classes
             MCliente conexao = new MCliente();
             conexao.InserirCliente(cliente);
         }
-        public List<Cliente> ListaProduto()
+        public List<Cliente> ListaCliente()
         {
             MCliente conexao = new MCliente();
             return conexao.ListaCliente();
         }
+
     }
 }

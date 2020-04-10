@@ -9,12 +9,14 @@ namespace LojaRoupas
     {
         List<ItemVenda> itensVenda = new List<ItemVenda>();
         Venda venda = new Venda();
-        
+        List<Cliente> ListaClientes = new List<Cliente>();
+        Cliente cliente = new Cliente();
+        List<Operador> ListaOperador = new List<Operador>();
+        Operador Operador = new Operador();
         public frmVenda()
         {
             InitializeComponent();
         }
-
         private void MontaLista()
         {
             lstListaItensVenda.Clear();
@@ -25,7 +27,6 @@ namespace LojaRoupas
             lstListaItensVenda.Columns.Add("QTDE", 70);
             lstListaItensVenda.Columns.Add("TOTAL", 76);
         }
-
         private void AddItemLista(Produto prod)
         {
             ItemVenda itemV = new ItemVenda();
@@ -37,7 +38,6 @@ namespace LojaRoupas
             itemV.setTotalPreco(prod.getPrecoVenda() * int.Parse(txtQtd.Text));
             itensVenda.Add(itemV);
         }
-
         private Double GetTotalProdutos()
         {
             Double TotalProduto = 0;
@@ -74,11 +74,37 @@ namespace LojaRoupas
             lblTotal.Text = "R$ " + GetTotalProdutos().ToString();
             lblQtdItens.Text = GetTotalQtdItens().ToString();
         }
-
+        private void ListarClienteComboBox()
+        {
+            ListaClientes = cliente.ListaCliente();
+            foreach (Cliente c in ListaClientes)
+            {
+                Console.WriteLine("{0}", c.getId().ToString());
+                cmbCliente.Items.Insert(c.getId() - 1, c.getNome());
+            }
+        }
+        private void ListarOperadorComboBox()
+        {
+            ListaOperador = Operador.ListaOperador();
+            foreach (Operador c in ListaOperador)
+            {
+                Console.WriteLine("{0}", c.getId().ToString());
+                cmbOperador.Items.Insert(c.getId() - 1, c.getNome());
+            }
+        }
         private void frmVenda_Load(object sender, EventArgs e)
         {
+            ListarClienteComboBox();
+            ListarOperadorComboBox();
             lblID.Text = Convert.ToString(venda.NovoId());
             MontaLista();
         }
+        private void btnFinalizarVenda_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Cliente selecionado " + (cmbCliente.SelectedItem).ToString() + " id " + (cmbCliente.SelectedIndex + 1).ToString());
+            MessageBox.Show("Operador selecionado " + (cmbOperador.SelectedItem).ToString() + " id " + (cmbOperador.SelectedIndex + 1).ToString());
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e) => Close();
     }
 }

@@ -46,35 +46,39 @@
             this.label6 = new System.Windows.Forms.Label();
             this.lblDesconto = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnFinalizarVenda = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.lblID = new System.Windows.Forms.Label();
+            this.cmbOperador = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.cmbCliente = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtCodBarras
             // 
             this.txtCodBarras.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCodBarras.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodBarras.Location = new System.Drawing.Point(20, 97);
+            this.txtCodBarras.Location = new System.Drawing.Point(16, 164);
             this.txtCodBarras.MaxLength = 15;
             this.txtCodBarras.Name = "txtCodBarras";
-            this.txtCodBarras.Size = new System.Drawing.Size(226, 32);
+            this.txtCodBarras.Size = new System.Drawing.Size(295, 32);
             this.txtCodBarras.TabIndex = 4;
             // 
             // txtQtd
             // 
             this.txtQtd.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtQtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQtd.Location = new System.Drawing.Point(252, 97);
+            this.txtQtd.Location = new System.Drawing.Point(317, 164);
             this.txtQtd.Name = "txtQtd";
-            this.txtQtd.Size = new System.Drawing.Size(112, 32);
+            this.txtQtd.Size = new System.Drawing.Size(116, 32);
             this.txtQtd.TabIndex = 6;
             // 
             // btnAddItem
             // 
             this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddItem.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnAddItem.Location = new System.Drawing.Point(382, 72);
+            this.btnAddItem.Location = new System.Drawing.Point(451, 139);
             this.btnAddItem.Name = "btnAddItem";
             this.btnAddItem.Size = new System.Drawing.Size(118, 55);
             this.btnAddItem.TabIndex = 17;
@@ -91,7 +95,7 @@
             this.Qtde,
             this.Total});
             this.lstListaItensVenda.HideSelection = false;
-            this.lstListaItensVenda.Location = new System.Drawing.Point(12, 144);
+            this.lstListaItensVenda.Location = new System.Drawing.Point(12, 211);
             this.lstListaItensVenda.Name = "lstListaItensVenda";
             this.lstListaItensVenda.Size = new System.Drawing.Size(557, 294);
             this.lstListaItensVenda.TabIndex = 18;
@@ -140,7 +144,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label1.Location = new System.Drawing.Point(16, 72);
+            this.label1.Location = new System.Drawing.Point(16, 139);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(165, 22);
@@ -152,7 +156,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label3.Location = new System.Drawing.Point(248, 72);
+            this.label3.Location = new System.Drawing.Point(317, 139);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(116, 22);
@@ -163,7 +167,7 @@
             // 
             this.label2.Font = new System.Drawing.Font("Sylfaen", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label2.Location = new System.Drawing.Point(587, 158);
+            this.label2.Location = new System.Drawing.Point(587, 225);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(200, 39);
@@ -175,7 +179,7 @@
             // 
             this.lblTotal.Font = new System.Drawing.Font("Sylfaen", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTotal.ForeColor = System.Drawing.Color.Coral;
-            this.lblTotal.Location = new System.Drawing.Point(587, 197);
+            this.lblTotal.Location = new System.Drawing.Point(587, 269);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(200, 39);
@@ -187,7 +191,7 @@
             // 
             this.lblQtdItens.Font = new System.Drawing.Font("Sylfaen", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQtdItens.ForeColor = System.Drawing.Color.Coral;
-            this.lblQtdItens.Location = new System.Drawing.Point(587, 293);
+            this.lblQtdItens.Location = new System.Drawing.Point(587, 357);
             this.lblQtdItens.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQtdItens.Name = "lblQtdItens";
             this.lblQtdItens.Size = new System.Drawing.Size(200, 39);
@@ -200,7 +204,7 @@
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.Font = new System.Drawing.Font("Sylfaen", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label6.Location = new System.Drawing.Point(587, 254);
+            this.label6.Location = new System.Drawing.Point(587, 313);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(200, 39);
@@ -212,7 +216,7 @@
             // 
             this.lblDesconto.Font = new System.Drawing.Font("Sylfaen", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDesconto.ForeColor = System.Drawing.Color.Coral;
-            this.lblDesconto.Location = new System.Drawing.Point(587, 382);
+            this.lblDesconto.Location = new System.Drawing.Point(587, 445);
             this.lblDesconto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDesconto.Name = "lblDesconto";
             this.lblDesconto.Size = new System.Drawing.Size(200, 39);
@@ -224,7 +228,7 @@
             // 
             this.label8.Font = new System.Drawing.Font("Sylfaen", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label8.Location = new System.Drawing.Point(587, 343);
+            this.label8.Location = new System.Drawing.Point(587, 401);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(200, 39);
@@ -232,27 +236,29 @@
             this.label8.Text = "DESCONTO";
             this.label8.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
-            // button1
+            // btnFinalizarVenda
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.BurlyWood;
-            this.button1.Location = new System.Drawing.Point(516, 72);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 55);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "FINALIZAR VENDA";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnFinalizarVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinalizarVenda.ForeColor = System.Drawing.Color.BurlyWood;
+            this.btnFinalizarVenda.Location = new System.Drawing.Point(669, 16);
+            this.btnFinalizarVenda.Name = "btnFinalizarVenda";
+            this.btnFinalizarVenda.Size = new System.Drawing.Size(118, 55);
+            this.btnFinalizarVenda.TabIndex = 28;
+            this.btnFinalizarVenda.Text = "FINALIZAR VENDA";
+            this.btnFinalizarVenda.UseVisualStyleBackColor = true;
+            this.btnFinalizarVenda.Click += new System.EventHandler(this.btnFinalizarVenda_Click);
             // 
-            // button2
+            // btnCancelar
             // 
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.ForeColor = System.Drawing.Color.BurlyWood;
-            this.button2.Location = new System.Drawing.Point(649, 72);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(118, 55);
-            this.button2.TabIndex = 29;
-            this.button2.Text = "CANCELAR";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.ForeColor = System.Drawing.Color.BurlyWood;
+            this.btnCancelar.Location = new System.Drawing.Point(669, 77);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(118, 55);
+            this.btnCancelar.TabIndex = 29;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblID
             // 
@@ -266,16 +272,62 @@
             this.lblID.TabIndex = 30;
             this.lblID.Text = "0001";
             // 
+            // cmbOperador
+            // 
+            this.cmbOperador.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbOperador.FormattingEnabled = true;
+            this.cmbOperador.Location = new System.Drawing.Point(16, 91);
+            this.cmbOperador.Name = "cmbOperador";
+            this.cmbOperador.Size = new System.Drawing.Size(272, 28);
+            this.cmbOperador.TabIndex = 31;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.BurlyWood;
+            this.label4.Location = new System.Drawing.Point(16, 66);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(95, 22);
+            this.label4.TabIndex = 32;
+            this.label4.Text = "OPERADOR";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.BurlyWood;
+            this.label5.Location = new System.Drawing.Point(294, 66);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 22);
+            this.label5.TabIndex = 34;
+            this.label5.Text = "CLIENTE";
+            // 
+            // cmbCliente
+            // 
+            this.cmbCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbCliente.FormattingEnabled = true;
+            this.cmbCliente.Location = new System.Drawing.Point(294, 91);
+            this.cmbCliente.Name = "cmbCliente";
+            this.cmbCliente.Size = new System.Drawing.Size(275, 28);
+            this.cmbCliente.TabIndex = 33;
+            // 
             // frmVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 518);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.cmbCliente);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.cmbOperador);
             this.Controls.Add(this.lblID);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnFinalizarVenda);
             this.Controls.Add(this.lblDesconto);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lblQtdItens);
@@ -317,8 +369,12 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label lblDesconto;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnFinalizarVenda;
+        private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblID;
+        private System.Windows.Forms.ComboBox cmbOperador;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbCliente;
     }
 }
