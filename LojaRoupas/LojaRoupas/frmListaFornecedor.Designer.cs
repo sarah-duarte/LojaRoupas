@@ -36,7 +36,6 @@
             this.telefone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnAtualizar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstListaFornecedor
@@ -107,29 +106,12 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // btnAtualizar
-            // 
-            this.btnAtualizar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAtualizar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnAtualizar.Location = new System.Drawing.Point(670, 151);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(118, 55);
-            this.btnAtualizar.TabIndex = 22;
-            this.btnAtualizar.Text = "ATUALIZAR";
-            this.btnAtualizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.btnAtualizar.UseVisualStyleBackColor = false;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
-            // 
             // frmListaFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnAtualizar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.lstListaFornecedor);
@@ -150,6 +132,5 @@
         private System.Windows.Forms.ColumnHeader telefone;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnAtualizar;
     }
 }
