@@ -41,5 +41,10 @@ namespace LojaRoupas
                 MessageBox.Show(erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void frmFornecedor_Load(object sender, EventArgs e)
+        {
+            lblID.Text = Convert.ToString(fornecedor.NovoId());
+        }
     }
 }
