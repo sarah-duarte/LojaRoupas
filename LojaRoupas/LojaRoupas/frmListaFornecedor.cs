@@ -36,12 +36,6 @@ namespace LojaRoupas
             lstListaFornecedor.Columns.Add("Endereço", 187);
             lstListaFornecedor.Columns.Add("Telefone", 179);
         }
-        private void frmListaFornecedor_Load(object sender, EventArgs e)
-        {
-            MontaLista();
-            AtualizaLista();
-        }
-
         private void btnNovo_Click(object sender, EventArgs e)
         {
             frmFornecedor telaFornecedor = new frmFornecedor();
@@ -61,7 +55,7 @@ namespace LojaRoupas
             AtualizaLista();           
         }
 
-        private void frmListaFornecedor_Load_1(object sender, EventArgs e)
+        private void frmListaFornecedor_Load(object sender, EventArgs e)
         {
             MontaLista();
             AtualizaLista();

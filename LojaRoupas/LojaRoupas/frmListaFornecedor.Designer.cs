@@ -136,7 +136,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListaFornecedor";
             this.Text = "Lista de Forncedores";
-            this.Load += new System.EventHandler(this.frmListaFornecedor_Load_1);
+            this.Load += new System.EventHandler(this.frmListaFornecedor_Load);
             this.ResumeLayout(false);
 
         }
