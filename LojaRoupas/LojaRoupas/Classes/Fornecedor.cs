@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace LojaRoupas.Classes
 {
-    class Fornecedor
+    class Fornecedor 
     {
         private int id;
         private string cnpj;

@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using LojaRoupas.Model;
+using LojaRoupas.Classes;
+using System.Windows.Forms;
+
 
 namespace LojaRoupas.Classes
 {

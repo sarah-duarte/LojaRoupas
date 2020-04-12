@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LojaRoupas.Classes;
+using System.IO;
+
 
 namespace LojaRoupas
 {
@@ -28,11 +30,27 @@ namespace LojaRoupas
             cliente.setEndereco(txtEndereco.Text);
             cliente.setNascimento(txtNascimento.Text);
             cliente.setTelefone(txtTelefone.Text);
+
+            try
+            {
+                cliente.cadCliente(cliente);
+                MessageBox.Show("Forncedor Cadastrado com Sucesso!", "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
+            }
+            catch (IOException erro)
+            {
+                MessageBox.Show(erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

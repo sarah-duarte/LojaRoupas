@@ -18,8 +18,8 @@ namespace LojaRoupas
 
         private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmCliente telaCliente = new frmCliente();
-            telaCliente.ShowDialog();
+            frmlistaCliente telalistaCliente = new frmlistaCliente();
+            telalistaCliente.ShowDialog();
         }
 
         private void operadorToolStripMenuItem_Click(object sender, EventArgs e)
