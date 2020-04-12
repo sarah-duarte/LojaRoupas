@@ -61,22 +61,36 @@ namespace LojaRoupas
         }
         private void btnAddItem_Click(object sender, EventArgs e)
         {
-            Produto produto = new Produto();
-            produto = produto.getProduto(txtCodBarras.Text);
-            Console.WriteLine("{0}", produto.getIdProduto().ToString());
-            ListViewItem item = new ListViewItem(produto.getCodigoBarras());
-            item.SubItems.Add(produto.getDescProduto() +" "+ produto.getCorProduto() +" "+ produto.getTamProduto());
-            item.SubItems.Add(produto.getPrecoVenda().ToString());
-            item.SubItems.Add(txtQtd.Text);
-            item.SubItems.Add((produto.getPrecoVenda()* int.Parse(txtQtd.Text)).ToString());
-            lstListaItensVenda.Items.Add(item);
+            if (txtQtd.Text != String.Empty & int.Parse(txtQtd.Text) > 0 & txtCodBarras.Text != String.Empty)
+            {
+                Produto produto = new Produto();
+                produto = produto.getProduto(txtCodBarras.Text);
+                if (produto.getIdProduto() > 0)
+                {
+                    Console.WriteLine("{0}", produto.getIdProduto().ToString());
+                    ListViewItem item = new ListViewItem(produto.getCodigoBarras());
+                    item.SubItems.Add(produto.getDescProduto() + " " + produto.getCorProduto() + " " + produto.getTamProduto());
+                    item.SubItems.Add(produto.getPrecoVenda().ToString());
+                    item.SubItems.Add(txtQtd.Text);
+                    item.SubItems.Add((produto.getPrecoVenda() * int.Parse(txtQtd.Text)).ToString());
+                    lstListaItensVenda.Items.Add(item);
 
-            AddItemLista(produto);
-            lblTotal.Text = "R$ " + GetTotalProdutos().ToString();
-            lblQtdItens.Text = GetTotalQtdItens().ToString();
+                    AddItemLista(produto);
+                    lblTotal.Text = "R$ " + GetTotalProdutos().ToString();
+                    lblQtdItens.Text = GetTotalQtdItens().ToString();
 
-            txtCodBarras.Text = "";
-            txtQtd.Text = "";
+                    txtCodBarras.Text = "";
+                    txtQtd.Text = "1";
+                }
+                else
+                {
+                    MessageBox.Show("Produto não encontrado!", "Produto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Você deve adicionar uma quantidade acima de 0 e adicionar um codigo de barras valido!", "Validações", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
         private void ListarClienteComboBox()
         {
@@ -116,6 +130,7 @@ namespace LojaRoupas
             ListarClienteComboBox();
             ListarOperadorComboBox();
             lblID.Text = Convert.ToString(venda.NovoId());
+            txtQtd.Text = "1";
             MontaLista();
         }
         private void MontaVenda()
@@ -128,22 +143,36 @@ namespace LojaRoupas
             venda.setVlrTotal(GetTotalProdutos());
             venda.setDesconto(0);
         }
-        private void Validacoes()
+        private Boolean Validacoes()
         {
-
+            Boolean retorno = true;
+            if (cmbOperador.SelectedIndex == -1)
+            {
+                MessageBox.Show("Um Operador deve ser escolhido!", "Validações", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                retorno = false;
+            }
+            if (itensVenda.Count == 0)
+            {
+                MessageBox.Show("Produto deve ser escolhido!", "Validações", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                retorno = false;
+            }
+            return retorno;
         }
         private void btnFinalizarVenda_Click(object sender, EventArgs e)
         {
-            MontaVenda();
-            try
+            if (Validacoes())
             {
-                venda.cadVenda(venda);
-                MessageBox.Show("Venda Realizada com Sucesso!", "Venda", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Close();
-            }
-            catch (IOException erro)
-            {
-                MessageBox.Show(erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MontaVenda();
+                try
+                {
+                    venda.cadVenda(venda);
+                    MessageBox.Show("Venda Realizada com Sucesso!", "Venda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Close();
+                }
+                catch (IOException erro)
+                {
+                    MessageBox.Show(erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
         }
         private void btnCancelar_Click(object sender, EventArgs e) => Close();

@@ -58,7 +58,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(555, 205);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(118, 55);
-            this.btnCancelar.TabIndex = 39;
+            this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -71,7 +71,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(431, 205);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(118, 55);
-            this.btnSalvar.TabIndex = 38;
+            this.btnSalvar.TabIndex = 9;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -86,7 +86,7 @@
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(372, 39);
-            this.label10.TabIndex = 37;
+            this.label10.TabIndex = 1;
             this.label10.Text = "CADASTRO DE CLIENTE";
             // 
             // pictureBox1
@@ -104,14 +104,14 @@
             this.txtEndereco.Location = new System.Drawing.Point(144, 169);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(459, 20);
-            this.txtEndereco.TabIndex = 33;
+            this.txtEndereco.TabIndex = 8;
             // 
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(116, 143);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(487, 20);
-            this.txtEmail.TabIndex = 30;
+            this.txtEmail.TabIndex = 7;
             // 
             // lblID
             // 
@@ -123,7 +123,7 @@
             this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(46, 22);
-            this.lblID.TabIndex = 29;
+            this.lblID.TabIndex = 2;
             this.lblID.Text = "0001";
             // 
             // txtNome
@@ -131,8 +131,7 @@
             this.txtNome.Location = new System.Drawing.Point(187, 92);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(416, 20);
-            this.txtNome.TabIndex = 28;
-            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
+            this.txtNome.TabIndex = 3;
             // 
             // label8
             // 
@@ -231,7 +230,7 @@
             this.txtNascimento.Mask = "00/00/0000";
             this.txtNascimento.Name = "txtNascimento";
             this.txtNascimento.Size = new System.Drawing.Size(75, 20);
-            this.txtNascimento.TabIndex = 40;
+            this.txtNascimento.TabIndex = 5;
             this.txtNascimento.ValidatingType = typeof(System.DateTime);
             // 
             // txtTelefone
@@ -240,7 +239,7 @@
             this.txtTelefone.Mask = "(99) 00000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(100, 20);
-            this.txtTelefone.TabIndex = 41;
+            this.txtTelefone.TabIndex = 4;
             // 
             // txtCPF
             // 
@@ -248,7 +247,7 @@
             this.txtCPF.Mask = "000.000.000-00";
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(100, 20);
-            this.txtCPF.TabIndex = 42;
+            this.txtCPF.TabIndex = 6;
             // 
             // frmCliente
             // 
@@ -280,6 +279,7 @@
             this.Name = "frmCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Cliente";
+            this.Load += new System.EventHandler(this.frmCliente_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

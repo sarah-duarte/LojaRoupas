@@ -1,19 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using LojaRoupas.Classes;
 
 namespace LojaRoupas
 {
-    public partial class frmlistaCliente : Form
+    public partial class frmListaCliente : Form
     {
-        public frmlistaCliente()
+        public frmListaCliente()
         {
             InitializeComponent();
         }
@@ -39,23 +33,14 @@ namespace LojaRoupas
         {
             lstListaCliente.Clear();
             lstListaCliente.View = View.Details;
-            lstListaCliente.Columns.Add("ID", 42);
-            lstListaCliente.Columns.Add("Nome", 148);
-            lstListaCliente.Columns.Add("CPF", 63);
-            lstListaCliente.Columns.Add("EMAIL", 126);
-            lstListaCliente.Columns.Add("TELEFONE", 119);
-            lstListaCliente.Columns.Add("NASCIMENTO", 117);
-            lstListaCliente.Columns.Add("ENDEREÇO", 156);
-            lstListaCliente.Columns.Add("COMPRAS REALIZADAS", 373);
+            lstListaCliente.Columns.Add("ID", 26);
+            lstListaCliente.Columns.Add("NOME", 158);
+            lstListaCliente.Columns.Add("CPF", 126);
+            lstListaCliente.Columns.Add("EMAIL", 154);
+            lstListaCliente.Columns.Add("TELEFONE", 90);
+            lstListaCliente.Columns.Add("NASCIMENTO", 85);
+            lstListaCliente.Columns.Add("ENDEREÇO", 213);
         }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-
         private void btnNovo_Click(object sender, EventArgs e)
         {
             frmCliente telaCliente = new frmCliente();
@@ -68,12 +53,8 @@ namespace LojaRoupas
         {
             this.Close();
         }
-        private void frmlistaCliente_Load(object sender, EventArgs e)
-        {
-          
-        }
 
-        private void btnAtualiza_Click(object sender, EventArgs e)
+        private void frmListaCliente_Load(object sender, EventArgs e)
         {
             MontaLista();
             AtualizaLista();

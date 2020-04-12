@@ -97,7 +97,7 @@
             this.txtRazaoSocial.Location = new System.Drawing.Point(150, 107);
             this.txtRazaoSocial.Name = "txtRazaoSocial";
             this.txtRazaoSocial.Size = new System.Drawing.Size(525, 20);
-            this.txtRazaoSocial.TabIndex = 22;
+            this.txtRazaoSocial.TabIndex = 1;
             // 
             // label4
             // 
@@ -128,7 +128,7 @@
             this.txtCnpj.Location = new System.Drawing.Point(150, 138);
             this.txtCnpj.Name = "txtCnpj";
             this.txtCnpj.Size = new System.Drawing.Size(278, 20);
-            this.txtCnpj.TabIndex = 25;
+            this.txtCnpj.TabIndex = 2;
             // 
             // label3
             // 
@@ -147,7 +147,7 @@
             this.txtEndereco.Location = new System.Drawing.Point(150, 172);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(580, 20);
-            this.txtEndereco.TabIndex = 27;
+            this.txtEndereco.TabIndex = 3;
             // 
             // label5
             // 
@@ -168,7 +168,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(488, 213);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(118, 55);
-            this.btnSalvar.TabIndex = 31;
+            this.btnSalvar.TabIndex = 5;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -180,7 +180,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(612, 213);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(118, 55);
-            this.btnCancelar.TabIndex = 32;
+            this.btnCancelar.TabIndex = 6;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -191,7 +191,7 @@
             this.txtTelefone.Mask = "(99) 00000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(100, 20);
-            this.txtTelefone.TabIndex = 68;
+            this.txtTelefone.TabIndex = 4;
             // 
             // frmFornecedor
             // 

@@ -15,6 +15,7 @@ namespace LojaRoupas
 {
     public partial class frmCliente : Form
     {
+        Cliente cliente = new Cliente();
         public frmCliente()
         {
             InitializeComponent();
@@ -22,7 +23,6 @@ namespace LojaRoupas
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Cliente cliente = new Cliente();
             cliente.setId(int.Parse(lblID.Text));
             cliente.setCpf(txtCPF.Text);
             cliente.setNome(txtNome.Text);
@@ -30,7 +30,6 @@ namespace LojaRoupas
             cliente.setEndereco(txtEndereco.Text);
             cliente.setNascimento(txtNascimento.Text);
             cliente.setTelefone(txtTelefone.Text);
-
             try
             {
                 cliente.cadCliente(cliente);
@@ -48,9 +47,9 @@ namespace LojaRoupas
             this.Close();
         }
 
-        private void txtNome_TextChanged(object sender, EventArgs e)
+        private void frmCliente_Load(object sender, EventArgs e)
         {
-
+            lblID.Text = Convert.ToString(cliente.NovoId());
         }
     }
 }
