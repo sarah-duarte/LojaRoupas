@@ -26,7 +26,6 @@ namespace LojaRoupas
                 lstListaFornecedor.Items.Add(item);
             }
         }
-
         private void MontaLista()
         {
             lstListaFornecedor.Clear();

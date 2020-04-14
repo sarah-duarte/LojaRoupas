@@ -24,8 +24,8 @@ namespace LojaRoupas
 
         private void operadorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmOperador telaOperador = new frmOperador();
-            telaOperador.ShowDialog();
+            frmListaOperador telaListaOperador = new frmListaOperador();
+            telaListaOperador.ShowDialog();
         }
 
         private void fornecedorToolStripMenuItem_Click(object sender, EventArgs e)

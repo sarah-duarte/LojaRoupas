@@ -46,7 +46,9 @@ namespace LojaRoupas.Model
         {
             List<Venda> Lista = new List<Venda>();
             this.Conect();
-            sql = "SELECT id, data, vlrtotal, desconto, qtditens, idcliente, idoperador FROM tbvenda;";
+            sql = "SELECT v.id as venda, data, vlrtotal, desconto, qtditens, c.nome as cliente, o.nome as operador ";
+            sql = sql + "FROM tbvenda v left join tbcliente c on c.id=v.idcliente";
+            sql = sql + " left join tboperador o on o.id=v.idoperador;";
             cmd = new NpgsqlCommand(sql, con);
             rdr = cmd.ExecuteReader();
 

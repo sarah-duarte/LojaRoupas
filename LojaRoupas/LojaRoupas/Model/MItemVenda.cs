@@ -45,7 +45,8 @@ namespace LojaRoupas.Model
         {
             List<ItemVenda> Lista = new List<ItemVenda>();
             this.Conect();
-            sql = "SELECT id, idproduto, qtditens, totalpreco, prcvenda, idvenda FROM tbitemvenda where idvenda = @idvenda;";
+            sql = "SELECT v.id, qtditens, totalpreco, prcvenda, idvenda, p.codigobarras, concat(p.descricao,' ',p.cor,' ',p.tamanho) as produto";
+            sql = sql + " FROM tbitemvenda v left join tbproduto p on p.id = v.idproduto where v.idvenda = @idvenda;";
             cmd = new NpgsqlCommand(sql, con);
             cmd.Parameters.AddWithValue("idvenda", idVenda);
             cmd.Prepare();
