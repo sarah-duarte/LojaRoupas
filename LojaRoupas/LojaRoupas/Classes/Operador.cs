@@ -4,6 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LojaRoupas.Model;
+using System.Drawing;
+using System.Windows.Forms;
+using LojaRoupas.Classes;
+using System.IO;
+using System.ComponentModel;
+using System.Data;
+
 
 namespace LojaRoupas.Classes
 {
