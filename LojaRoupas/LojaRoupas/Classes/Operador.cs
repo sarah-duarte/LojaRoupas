@@ -35,5 +35,10 @@ namespace LojaRoupas.Classes
             MOperador conexao = new MOperador();
             return conexao.ListaOperador();
         }
+        public String getNomeOperador(int id)
+        {
+            MOperador conexao = new MOperador();
+            return conexao.getNomeOperador(id);
+        }
     }
 }

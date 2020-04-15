@@ -67,5 +67,53 @@ namespace LojaRoupas.Model
             }
             return Lista;
         }
+        public Operador getOperador(int idOperador)
+        {
+            this.Conect();
+            Operador o = new Operador();
+            sql = "SELECT id, nome, cpf, email, telefone, nascimento, endereco, turno FROM tboperador where id = @id;";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("id", idOperador);
+            cmd.Prepare();
+            rdr = cmd.ExecuteReader();
+
+            while (rdr.Read())
+            {
+                Console.WriteLine("{0}", rdr.GetInt32(0));                
+                o.setId(rdr.GetInt32(0));
+                o.setNome(rdr.GetString(1));
+                o.setCpf(rdr.GetString(2));
+                o.setEmail(rdr.GetString(3));
+                o.setTelefone(rdr.GetString(4));
+                o.setNascimento(rdr.GetString(5));
+                o.setEndereco(rdr.GetString(6));
+                o.setTurno(rdr.GetString(7));
+            }
+            return o;
+        }
+        public String getNomeOperador(int idOperador)
+        {
+            this.Conect();
+            Operador o = new Operador();
+            sql = "SELECT id, nome, cpf, email, telefone, nascimento, endereco, turno FROM tboperador where id = @id;";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("id", idOperador);
+            cmd.Prepare();
+            rdr = cmd.ExecuteReader();
+
+            while (rdr.Read())
+            {
+                Console.WriteLine("{0}", rdr.GetInt32(0));
+                o.setId(rdr.GetInt32(0));
+                o.setNome(rdr.GetString(1));
+                o.setCpf(rdr.GetString(2));
+                o.setEmail(rdr.GetString(3));
+                o.setTelefone(rdr.GetString(4));
+                o.setNascimento(rdr.GetString(5));
+                o.setEndereco(rdr.GetString(6));
+                o.setTurno(rdr.GetString(7));
+            }
+            return o.getNome();
+        }
     }
 }

@@ -32,13 +32,12 @@
             this.btnNovo = new System.Windows.Forms.Button();
             this.lstListaVenda = new System.Windows.Forms.ListView();
             this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.codigoBarras = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.descricao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.corProduto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.tamProduto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.precoCusto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.precoVenda = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.qtdEstProduto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.data = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.vlrtotal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.desconto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.qtditens = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.operador = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -53,6 +52,7 @@
             this.btnCancelar.TabIndex = 26;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnNovo
             // 
@@ -63,21 +63,21 @@
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(109, 55);
             this.btnNovo.TabIndex = 25;
-            this.btnNovo.Text = "NOVO ITEM";
+            this.btnNovo.Text = "REALIZAR VENDA";
             this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // lstListaVenda
             // 
             this.lstListaVenda.BackColor = System.Drawing.Color.Black;
             this.lstListaVenda.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.id,
-            this.codigoBarras,
-            this.descricao,
-            this.corProduto,
-            this.tamProduto,
-            this.precoCusto,
-            this.precoVenda,
-            this.qtdEstProduto});
+            this.data,
+            this.vlrtotal,
+            this.desconto,
+            this.qtditens,
+            this.cliente,
+            this.operador});
             this.lstListaVenda.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstListaVenda.ForeColor = System.Drawing.Color.BurlyWood;
             this.lstListaVenda.HideSelection = false;
@@ -93,38 +93,35 @@
             this.id.Text = "ID";
             this.id.Width = 30;
             // 
-            // codigoBarras
+            // data
             // 
-            this.codigoBarras.Text = "Codigo Barras";
-            this.codigoBarras.Width = 103;
+            this.data.Text = "Data";
+            this.data.Width = 76;
             // 
-            // descricao
+            // vlrtotal
             // 
-            this.descricao.Text = "Descrição";
-            this.descricao.Width = 146;
+            this.vlrtotal.Text = "Valor Total";
+            this.vlrtotal.Width = 87;
             // 
-            // corProduto
+            // desconto
             // 
-            this.corProduto.Text = "Cor";
-            this.corProduto.Width = 84;
+            this.desconto.Text = "Desconto";
+            this.desconto.Width = 84;
             // 
-            // tamProduto
+            // qtditens
             // 
-            this.tamProduto.Text = "Tamanho";
+            this.qtditens.Text = "Qtd Itens";
+            this.qtditens.Width = 74;
             // 
-            // precoCusto
+            // cliente
             // 
-            this.precoCusto.Text = "Custo";
-            this.precoCusto.Width = 70;
+            this.cliente.Text = "Cliente";
+            this.cliente.Width = 141;
             // 
-            // precoVenda
+            // operador
             // 
-            this.precoVenda.Text = "Venda";
-            this.precoVenda.Width = 77;
-            // 
-            // qtdEstProduto
-            // 
-            this.qtdEstProduto.Text = "Estoque";
+            this.operador.Text = "Operador";
+            this.operador.Width = 125;
             // 
             // frmListaVenda
             // 
@@ -136,7 +133,9 @@
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.lstListaVenda);
             this.Name = "frmListaVenda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vendas";
+            this.Load += new System.EventHandler(this.frmListaVenda_Load);
             this.ResumeLayout(false);
 
         }
@@ -147,12 +146,11 @@
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.ListView lstListaVenda;
         private System.Windows.Forms.ColumnHeader id;
-        private System.Windows.Forms.ColumnHeader codigoBarras;
-        private System.Windows.Forms.ColumnHeader descricao;
-        private System.Windows.Forms.ColumnHeader corProduto;
-        private System.Windows.Forms.ColumnHeader tamProduto;
-        private System.Windows.Forms.ColumnHeader precoCusto;
-        private System.Windows.Forms.ColumnHeader precoVenda;
-        private System.Windows.Forms.ColumnHeader qtdEstProduto;
+        private System.Windows.Forms.ColumnHeader data;
+        private System.Windows.Forms.ColumnHeader vlrtotal;
+        private System.Windows.Forms.ColumnHeader desconto;
+        private System.Windows.Forms.ColumnHeader qtditens;
+        private System.Windows.Forms.ColumnHeader cliente;
+        private System.Windows.Forms.ColumnHeader operador;
     }
 }

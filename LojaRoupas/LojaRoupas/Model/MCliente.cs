@@ -67,5 +67,53 @@ namespace LojaRoupas.Model
             }
             return Lista;
         }
+        public Cliente getCliente(int idCliente)
+        {
+            this.Conect();
+            Cliente c = new Cliente();            
+            sql = "SELECT id, nome, cpf, email, telefone, nascimento, endereco, comprasrealizadas FROM tbcliente where id = @id;";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("id", idCliente);
+            cmd.Prepare();
+            rdr = cmd.ExecuteReader();
+
+            while (rdr.Read())
+            {
+                Console.WriteLine("{0}", rdr.GetInt32(0));                
+                c.setId(rdr.GetInt32(0));
+                c.setNome(rdr.GetString(1));
+                c.setCpf(rdr.GetString(2));
+                c.setEmail(rdr.GetString(3));
+                c.setTelefone(rdr.GetString(4));
+                c.setNascimento(rdr.GetString(5));
+                c.setEndereco(rdr.GetString(6));
+                c.setComprasRealizadas(rdr.GetInt32(7));
+            }
+            return c;
+        }
+        public String getNomeCliente(int idCliente)
+        {
+            this.Conect();
+            Cliente c = new Cliente();
+            sql = "SELECT id, nome, cpf, email, telefone, nascimento, endereco, comprasrealizadas FROM tbcliente where id = @id;";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("id", idCliente);
+            cmd.Prepare();
+            rdr = cmd.ExecuteReader();
+
+            while (rdr.Read())
+            {
+                Console.WriteLine("{0}", rdr.GetInt32(0));
+                c.setId(rdr.GetInt32(0));
+                c.setNome(rdr.GetString(1));
+                c.setCpf(rdr.GetString(2));
+                c.setEmail(rdr.GetString(3));
+                c.setTelefone(rdr.GetString(4));
+                c.setNascimento(rdr.GetString(5));
+                c.setEndereco(rdr.GetString(6));
+                c.setComprasRealizadas(rdr.GetInt32(7));
+            }
+            return c.getNome();
+        }
     }
 }

@@ -36,13 +36,13 @@
             this.txtRazaoSocial = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtCnpj = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.txtCnpj = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,6 +94,7 @@
             // 
             // txtRazaoSocial
             // 
+            this.txtRazaoSocial.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtRazaoSocial.Location = new System.Drawing.Point(150, 107);
             this.txtRazaoSocial.Name = "txtRazaoSocial";
             this.txtRazaoSocial.Size = new System.Drawing.Size(525, 20);
@@ -123,13 +124,6 @@
             this.label2.TabIndex = 24;
             this.label2.Text = "CNPJ:";
             // 
-            // txtCnpj
-            // 
-            this.txtCnpj.Location = new System.Drawing.Point(150, 138);
-            this.txtCnpj.Name = "txtCnpj";
-            this.txtCnpj.Size = new System.Drawing.Size(278, 20);
-            this.txtCnpj.TabIndex = 2;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -144,6 +138,7 @@
             // 
             // txtEndereco
             // 
+            this.txtEndereco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEndereco.Location = new System.Drawing.Point(150, 172);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(580, 20);
@@ -193,19 +188,27 @@
             this.txtTelefone.Size = new System.Drawing.Size(100, 20);
             this.txtTelefone.TabIndex = 4;
             // 
+            // txtCnpj
+            // 
+            this.txtCnpj.Location = new System.Drawing.Point(150, 138);
+            this.txtCnpj.Mask = "00.000.000/0000-00";
+            this.txtCnpj.Name = "txtCnpj";
+            this.txtCnpj.Size = new System.Drawing.Size(118, 20);
+            this.txtCnpj.TabIndex = 2;
+            // 
             // frmFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(776, 289);
+            this.Controls.Add(this.txtCnpj);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.txtCnpj);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtRazaoSocial);
@@ -234,12 +237,12 @@
         private System.Windows.Forms.TextBox txtRazaoSocial;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtCnpj;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
+        private System.Windows.Forms.MaskedTextBox txtCnpj;
     }
 }

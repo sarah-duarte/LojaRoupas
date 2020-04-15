@@ -28,6 +28,10 @@ namespace LojaRoupas.Classes
             MCliente conexao = new MCliente();
             return conexao.ListaCliente();
         }
-
+        public String getNomeCliente(int id)
+        {
+            MCliente conexao = new MCliente();
+            return conexao.getNomeCliente(id);
+        }
     }
 }

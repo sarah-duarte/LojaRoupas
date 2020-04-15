@@ -58,10 +58,5 @@ namespace LojaRoupas
         {
             Close();
         }
-        private void btnAtualizar_Click(object sender, EventArgs e)
-        {
-            MontaLista();
-            AtualizaLista();
-        }
     }
 }

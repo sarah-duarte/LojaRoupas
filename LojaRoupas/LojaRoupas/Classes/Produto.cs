@@ -53,5 +53,15 @@ namespace LojaRoupas.Classes
             MProduto conexao = new MProduto();
             return conexao.getProduto(codigobarras);
         }
+        public Produto getProduto(int id)
+        {
+            MProduto conexao = new MProduto();
+            return conexao.getProduto(id);
+        }
+        public String getDescProduto(int id)
+        {
+            MProduto conexao = new MProduto();
+            return conexao.getDescProduto(id);
+        }
     }
 }

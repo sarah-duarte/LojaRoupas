@@ -40,7 +40,7 @@ namespace LojaRoupas.Model
             Console.WriteLine("row inserted");
         }
 
-        public List<Fornecedor> ListaProduto()
+        public List<Fornecedor> ListaFornecedor()
         {
             List<Fornecedor> Lista = new List<Fornecedor>();
             this.Conect();
@@ -61,6 +61,48 @@ namespace LojaRoupas.Model
                 Lista.Add(fornecedor);
             }
             return Lista;
+        }
+        public Fornecedor getFornecedor(int idFornecedor)
+        {
+            Conect();
+            Fornecedor fornecedor = new Fornecedor();
+            sql = "SELECT id, razaosocial, cnpj, telefone, endereco FROM tbfornecedor where id = @id";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("id", idFornecedor);
+            cmd.Prepare();
+            rdr = cmd.ExecuteReader();
+
+            while (rdr.Read())
+            {
+                Console.WriteLine("{0}", rdr.GetInt32(0));                
+                fornecedor.setId(rdr.GetInt32(0));
+                fornecedor.setCnpj(rdr.GetString(1));
+                fornecedor.setRazaosocial(rdr.GetString(2));
+                fornecedor.setEndereco(rdr.GetString(3));
+                fornecedor.setTelefone(rdr.GetString(4));
+            }
+            return fornecedor;
+        }
+        public String getNomeFornecedor(int idFornecedor)
+        {
+            Conect();
+            Fornecedor fornecedor = new Fornecedor();
+            sql = "SELECT id, razaosocial, cnpj, telefone, endereco FROM tbfornecedor where id = @id";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("id", idFornecedor);
+            cmd.Prepare();
+            rdr = cmd.ExecuteReader();
+
+            while (rdr.Read())
+            {
+                Console.WriteLine("{0}", rdr.GetInt32(0));
+                fornecedor.setId(rdr.GetInt32(0));
+                fornecedor.setCnpj(rdr.GetString(1));
+                fornecedor.setRazaosocial(rdr.GetString(2));
+                fornecedor.setEndereco(rdr.GetString(3));
+                fornecedor.setTelefone(rdr.GetString(4));
+            }
+            return fornecedor.getRazaosocial();
         }
     }
 }

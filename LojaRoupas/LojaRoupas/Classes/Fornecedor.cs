@@ -40,7 +40,12 @@ namespace LojaRoupas.Classes
         public List<Fornecedor> ListaFornecedor()
         {
             MFornecedor conexao = new MFornecedor();
-            return conexao.ListaProduto();
+            return conexao.ListaFornecedor();
+        }
+        public String getNomeFornecedor(int id)
+        {
+            MFornecedor conexao = new MFornecedor();
+            return conexao.getNomeFornecedor(id);
         }
     }
 }

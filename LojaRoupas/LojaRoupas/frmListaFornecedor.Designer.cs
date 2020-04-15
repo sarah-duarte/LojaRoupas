@@ -87,7 +87,7 @@
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(118, 55);
             this.btnNovo.TabIndex = 20;
-            this.btnNovo.Text = "NOVO ITEM";
+            this.btnNovo.Text = "NOVO";
             this.btnNovo.UseVisualStyleBackColor = false;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
