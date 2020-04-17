@@ -142,6 +142,7 @@
             this.Controls.Add(this.lstListaOperador);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListaOperador";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Operadores";
             this.Load += new System.EventHandler(this.frmListaOperador_Load);
             this.ResumeLayout(false);

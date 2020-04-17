@@ -36,12 +36,12 @@ namespace LojaRoupas
             lstListaVenda.Clear();
             lstListaVenda.View = View.Details;
             lstListaVenda.Columns.Add("ID", 30);
-            lstListaVenda.Columns.Add("Data", 76);
-            lstListaVenda.Columns.Add("Valor Total", 87);
-            lstListaVenda.Columns.Add("Desconto", 84);
-            lstListaVenda.Columns.Add("Qtd. Itens", 74);
-            lstListaVenda.Columns.Add("Cliente", 141);
-            lstListaVenda.Columns.Add("Operador", 125);
+            lstListaVenda.Columns.Add("DATA", 76);
+            lstListaVenda.Columns.Add("VALOR TOTAL", 87);
+            lstListaVenda.Columns.Add("DESCONTO", 84);
+            lstListaVenda.Columns.Add("QTD. ITENS", 74);
+            lstListaVenda.Columns.Add("CLIENTE", 141);
+            lstListaVenda.Columns.Add("OPERADOR", 125);
         }
         private void btnNovo_Click(object sender, EventArgs e)
         {

@@ -34,13 +34,13 @@ namespace LojaRoupas
             lstListaProduto.Clear();
             lstListaProduto.View = View.Details;
             lstListaProduto.Columns.Add("ID", 30);
-            lstListaProduto.Columns.Add("Codigo Barras", 103);
-            lstListaProduto.Columns.Add("Descrição", 146);
-            lstListaProduto.Columns.Add("Cor", 84);
-            lstListaProduto.Columns.Add("Tamanho", 60);
-            lstListaProduto.Columns.Add("Custo", 70);
-            lstListaProduto.Columns.Add("Venda", 77);
-            lstListaProduto.Columns.Add("Estoque", 60);
+            lstListaProduto.Columns.Add("CODIGO BARRAS", 103);
+            lstListaProduto.Columns.Add("DESCRIÇÃO", 146);
+            lstListaProduto.Columns.Add("COR", 84);
+            lstListaProduto.Columns.Add("TAMANHO", 60);
+            lstListaProduto.Columns.Add("CUSTO", 70);
+            lstListaProduto.Columns.Add("VENDA", 77);
+            lstListaProduto.Columns.Add("ESTOQUE", 60);
         }
         private void frmListaProdutos_Load(object sender, EventArgs e)
         {

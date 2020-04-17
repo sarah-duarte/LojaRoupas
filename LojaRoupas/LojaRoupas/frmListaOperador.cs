@@ -40,13 +40,13 @@ namespace LojaRoupas
             lstListaOperador.Clear();
             lstListaOperador.View = View.Details;
             lstListaOperador.Columns.Add("ID", 28);
-            lstListaOperador.Columns.Add("Nome", 84);
-            lstListaOperador.Columns.Add("Cpf", 102);
-            lstListaOperador.Columns.Add("Email", 131);
-            lstListaOperador.Columns.Add("Telefone", 79);
-            lstListaOperador.Columns.Add("Nascimento", 71);
-            lstListaOperador.Columns.Add("Endereço", 154);
-            lstListaOperador.Columns.Add("Turno", 99);
+            lstListaOperador.Columns.Add("NOME", 84);
+            lstListaOperador.Columns.Add("CPF", 102);
+            lstListaOperador.Columns.Add("EMAIL", 131);
+            lstListaOperador.Columns.Add("TELEFONE", 79);
+            lstListaOperador.Columns.Add("NASCIMENTO", 71);
+            lstListaOperador.Columns.Add("ENDEREÇO", 154);
+            lstListaOperador.Columns.Add("TURNO", 99);
         }
 
         private void btnNovo_Click(object sender, EventArgs e)

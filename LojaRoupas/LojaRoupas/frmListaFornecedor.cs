@@ -31,9 +31,9 @@ namespace LojaRoupas
             lstListaFornecedor.Clear();
             lstListaFornecedor.View = View.Details;
             lstListaFornecedor.Columns.Add("ID", 103);
-            lstListaFornecedor.Columns.Add("Razão Social", 169);
-            lstListaFornecedor.Columns.Add("Endereço", 187);
-            lstListaFornecedor.Columns.Add("Telefone", 179);
+            lstListaFornecedor.Columns.Add("RAZÃO SOCIAL", 169);
+            lstListaFornecedor.Columns.Add("ENDEREÇO", 187);
+            lstListaFornecedor.Columns.Add("TELEFONE", 179);
         }
         private void btnNovo_Click(object sender, EventArgs e)
         {

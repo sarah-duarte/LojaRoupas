@@ -117,6 +117,7 @@
             this.Controls.Add(this.lstListaFornecedor);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListaFornecedor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Forncedores";
             this.Load += new System.EventHandler(this.frmListaFornecedor_Load);
             this.ResumeLayout(false);

@@ -194,6 +194,7 @@
             // 
             // txtPrcCusto
             // 
+            this.txtPrcCusto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrcCusto.Location = new System.Drawing.Point(153, 178);
             this.txtPrcCusto.Name = "txtPrcCusto";
             this.txtPrcCusto.Size = new System.Drawing.Size(114, 25);
@@ -201,6 +202,7 @@
             // 
             // txtPrcVenda
             // 
+            this.txtPrcVenda.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtPrcVenda.Location = new System.Drawing.Point(153, 209);
             this.txtPrcVenda.Name = "txtPrcVenda";
             this.txtPrcVenda.Size = new System.Drawing.Size(114, 25);
