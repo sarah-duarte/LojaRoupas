@@ -35,7 +35,7 @@ namespace LojaRoupas
             itemV.setIdDocumento(int.Parse(lblID.Text));
             itemV.setIdProduto(prod.getIdProduto());
             itemV.setQtdItens(int.Parse(txtQtd.Text));
-            itemV.setPrcVenda(prod.getPrecoVenda());
+            itemV.SetPrcVenda(prod.getPrecoVenda());
             itemV.setTotalPreco(prod.getPrecoVenda() * int.Parse(txtQtd.Text));
             itensVenda.Add(itemV);
         }
@@ -64,23 +64,32 @@ namespace LojaRoupas
             if (txtQtd.Text != String.Empty & int.Parse(txtQtd.Text) > 0 & txtCodBarras.Text != String.Empty)
             {
                 Produto produto = new Produto();
-                produto = produto.getProduto(txtCodBarras.Text);
+                produto = produto.GetProduto(txtCodBarras.Text);
                 if (produto.getIdProduto() > 0)
                 {
-                    Console.WriteLine("{0}", produto.getIdProduto().ToString());
-                    ListViewItem item = new ListViewItem(produto.getCodigoBarras());
-                    item.SubItems.Add(produto.getDescProduto() + " " + produto.getCorProduto() + " " + produto.getTamProduto());
-                    item.SubItems.Add(produto.getPrecoVenda().ToString());
-                    item.SubItems.Add(txtQtd.Text);
-                    item.SubItems.Add((produto.getPrecoVenda() * int.Parse(txtQtd.Text)).ToString());
-                    lstListaItensVenda.Items.Add(item);
+                    if (produto.getQtdEstProduto() >= int.Parse(txtQtd.Text))
+                    {
 
-                    AddItemLista(produto);
-                    lblTotal.Text = "R$ " + GetTotalProdutos().ToString();
-                    lblQtdItens.Text = GetTotalQtdItens().ToString();
+                        Console.WriteLine("{0}", produto.getIdProduto().ToString());
+                        ListViewItem item = new ListViewItem(produto.getCodigoBarras());
+                        item.SubItems.Add(produto.getDescProduto() + " " + produto.getCorProduto() + " " + produto.getTamProduto());
+                        item.SubItems.Add(produto.getPrecoVenda().ToString());
+                        item.SubItems.Add(txtQtd.Text);
+                        item.SubItems.Add((produto.getPrecoVenda() * int.Parse(txtQtd.Text)).ToString());
+                        lstListaItensVenda.Items.Add(item);
 
-                    txtCodBarras.Text = "";
-                    txtQtd.Text = "1";
+                        AddItemLista(produto);
+                        lblTotal.Text = "R$ " + GetTotalProdutos().ToString();
+                        lblQtdItens.Text = GetTotalQtdItens().ToString();
+
+                        txtCodBarras.Text = "";
+                        txtQtd.Text = "1";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Quantidade solicitada acima da quantidade disponível! Quantidade em Estoque: "
+                                        + produto.getQtdEstProduto().ToString(), "Produto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
                 }
                 else
                 {
@@ -138,7 +147,7 @@ namespace LojaRoupas
             venda.setIdCliente(cmbCliente.SelectedIndex + 1);
             venda.setIdOperador(cmbOperador.SelectedIndex + 1);
             venda.setItensVenda(itensVenda);
-            venda.setData("10/04/2020");
+            venda.setData("17/04/2020");
             venda.setQtdItens(GetTotalQtdItens());
             venda.setVlrTotal(GetTotalProdutos());
             venda.setDesconto(0);
@@ -165,7 +174,7 @@ namespace LojaRoupas
                 MontaVenda();
                 try
                 {
-                    venda.cadVenda(venda);
+                    venda.CadVenda(venda);
                     MessageBox.Show("Venda Realizada com Sucesso!", "Venda", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }

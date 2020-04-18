@@ -22,13 +22,13 @@ namespace LojaRoupas.Classes
             MVenda conexao = new MVenda();
             return conexao.GetNovoId();
         }
-        public void cadVenda(Venda venda)
+        public void CadVenda(Venda venda)
         {
             MVenda conexao = new MVenda();
             conexao.InserirVenda(venda);
             foreach (ItemVenda i in itensVenda)
             {
-                i.cadItemVenda(i);
+                i.CadItemVenda(i);
             }
         }
         public List<Venda> ListaVenda()

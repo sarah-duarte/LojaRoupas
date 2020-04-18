@@ -26,7 +26,7 @@ namespace LojaRoupas.Model
         {
             this.Conect();
 
-            sql = "INSERT INTO tboperador(nome, cpf, email, telefone, nascimento, endereco, turno)) ";
+            sql = "INSERT INTO tboperador(nome, cpf, email, telefone, nascimento, endereco, turno)";
             sql = sql + "VALUES(@nome, @cpf, @email, @telefone, @nascimento, @endereco, @turno); ";
             cmd = new NpgsqlCommand(sql, con);
             cmd.Parameters.AddWithValue("nome", operador.getNome());
@@ -42,12 +42,11 @@ namespace LojaRoupas.Model
 
             Console.WriteLine("row inserted");
         }
-
         public List<Operador> ListaOperador()
         {
             List<Operador> Lista = new List<Operador>();
             this.Conect();
-            sql = "SELECT id, nome, cpf, email, telefone, nascimento, endereco, turno FROM tboperador;";
+            sql = "SELECT id, nome, cpf, email, telefone, nascimento, endereco, turno FROM tboperador order by id;";
             cmd = new NpgsqlCommand(sql, con);
             rdr = cmd.ExecuteReader();
 

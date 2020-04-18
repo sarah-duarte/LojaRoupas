@@ -40,12 +40,11 @@ namespace LojaRoupas.Model
 
             Console.WriteLine("row inserted");
         }
-
         public List<ItemCompra> ListaItemCompra(int idCompra)
         {
             List<ItemCompra> Lista = new List<ItemCompra>();
             this.Conect();
-            sql = "SELECT id, idproduto, qtditens, totalpreco, prccompra, idcompra FROM tbitemcompra where idcompra = @idcompra;";
+            sql = "SELECT id, idproduto, qtditens, totalpreco, prccompra, idcompra FROM tbitemcompra where idcompra = @idcompra order by id;";
             cmd = new NpgsqlCommand(sql, con);
             cmd.Parameters.AddWithValue("idcompra", idCompra);
             cmd.Prepare();

@@ -21,7 +21,7 @@ namespace LojaRoupas
                 Cliente Cliente = new Cliente();
                 Operador Operador = new Operador();
 
-                ListViewItem item = new ListViewItem(venda.getId().ToString());
+                ListViewItem item = new ListViewItem(v.getId().ToString());
                 item.SubItems.Add(v.getData());
                 item.SubItems.Add(v.getVlrTotal().ToString());
                 item.SubItems.Add(v.getDesconto().ToString());

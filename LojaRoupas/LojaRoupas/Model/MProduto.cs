@@ -41,13 +41,12 @@ namespace LojaRoupas.Model
             cmd.ExecuteNonQuery();
 
             Console.WriteLine("row inserted");
-        }
-        
+        }        
         public List<Produto> ListaProduto()
         {
             List<Produto> Lista = new List<Produto>();
             this.Conect();
-            sql = "SELECT  id, codigobarras, descricao, cor, tamanho, precocusto, precovenda, qtdestoque FROM tbproduto";
+            sql = "SELECT  id, codigobarras, descricao, cor, tamanho, precocusto, precovenda, qtdestoque FROM tbproduto order by id";
             cmd = new NpgsqlCommand(sql, con);
             rdr = cmd.ExecuteReader();
 
@@ -138,6 +137,34 @@ namespace LojaRoupas.Model
                 produto.setQtdEstProduto(rdr.GetInt32(7));
             }
             return produto.getDescProduto() + " " + produto.getCorProduto() + " " + produto.getTamProduto();
+        }
+        public void SaidaEstoqueProduto(int qtdvendida, int id)
+        {
+            this.Conect();
+
+            sql = "UPDATE tbproduto SET qtdestoque = qtdestoque - @qtdvendida WHERE id = @id;";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("qtdvendida", qtdvendida);
+            cmd.Parameters.AddWithValue("id", id);
+            cmd.Prepare();
+
+            cmd.ExecuteNonQuery();
+
+            Console.WriteLine("row updated");
+        }
+        public void EntradaEstoqueProduto(int qtdcomprada, int id)
+        {
+            this.Conect();
+
+            sql = "UPDATE tbproduto SET qtdestoque = qtdestoque + @qtdcomprada WHERE id = @id;";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("qtdcomprada", qtdcomprada);
+            cmd.Parameters.AddWithValue("id", id);
+            cmd.Prepare();
+
+            cmd.ExecuteNonQuery();
+
+            Console.WriteLine("row updated");
         }
     }
 }

@@ -24,7 +24,7 @@ namespace LojaRoupas
             produto.setPrecoVenda(Double.Parse(txtPrcVenda.Text));
             produto.setQtdEstProduto(int.Parse(txtQtdEstoque.Text));
             try{
-                produto.cadProduto(produto);
+                produto.CadProduto(produto);
                 MessageBox.Show("Produto Cadastrado com Sucesso!", "Produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }

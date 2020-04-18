@@ -14,6 +14,7 @@ namespace LojaRoupas.Classes
         private Double precoCusto;
         private Double precoVenda;
         private int qtdEstProduto;
+        MProduto conexao = new MProduto();
 
         public void setIdProduto(int id) { this.id = id; }
         public void setCodigoBarras(string codigoBarras) { this.codigoBarras = codigoBarras; }
@@ -33,35 +34,13 @@ namespace LojaRoupas.Classes
         public Double getPrecoVenda(){ return this.precoVenda; }
         public int getQtdEstProduto(){ return this.qtdEstProduto; }
 
-        public int NovoId()
-        {
-            MProduto conexao = new MProduto();
-            return conexao.GetNovoId();
-        }
-        public void cadProduto(Produto produto)
-        {
-            MProduto conexao = new MProduto();
-            conexao.InserirProduto(produto);
-        }
-        public List<Produto> ListaProduto()
-        {
-            MProduto conexao = new MProduto();
-            return conexao.ListaProduto();
-        }
-        public Produto getProduto(String codigobarras)
-        {
-            MProduto conexao = new MProduto();
-            return conexao.getProduto(codigobarras);
-        }
-        public Produto getProduto(int id)
-        {
-            MProduto conexao = new MProduto();
-            return conexao.getProduto(id);
-        }
-        public String getDescProduto(int id)
-        {
-            MProduto conexao = new MProduto();
-            return conexao.getDescProduto(id);
-        }
+        public int NovoId() => conexao.GetNovoId();
+        public void CadProduto(Produto produto) => conexao.InserirProduto(produto);
+        public List<Produto> ListaProduto() => conexao.ListaProduto();
+        public Produto GetProduto(String codigobarras) => conexao.getProduto(codigobarras);
+        public Produto GetProduto(int id) => conexao.getProduto(id);
+        public String GetDescProduto(int id) => conexao.getDescProduto(id);
+        public void SaidaEstoqueProduto(int qtdvendida, int id) => conexao.SaidaEstoqueProduto(qtdvendida, id);
+        public void EntradaEstoqueProduto(int qtdcomprada, int id) => conexao.EntradaEstoqueProduto(qtdcomprada, id);
     }
 }

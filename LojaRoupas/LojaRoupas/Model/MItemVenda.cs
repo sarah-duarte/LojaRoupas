@@ -32,7 +32,7 @@ namespace LojaRoupas.Model
             cmd.Parameters.AddWithValue("idproduto", i.getIdProduto());
             cmd.Parameters.AddWithValue("qtditens", i.getQtdItens());
             cmd.Parameters.AddWithValue("totalpreco", i.getTotalPreco());
-            cmd.Parameters.AddWithValue("prcvenda", i.getPrcVenda());
+            cmd.Parameters.AddWithValue("prcvenda", i.GetPrcVenda());
             cmd.Parameters.AddWithValue("idvenda", i.getIdDocumento());
             cmd.Prepare();
 
@@ -40,12 +40,11 @@ namespace LojaRoupas.Model
 
             Console.WriteLine("row inserted");
         }
-
         public List<ItemVenda> ListaItemVenda(int idVenda)
         {
             List<ItemVenda> Lista = new List<ItemVenda>();
             this.Conect();
-            sql = "SELECT id, idproduto, qtditens, totalpreco, prcvenda, idvenda FROM tbitemvenda where idvenda = @idvenda;";
+            sql = "SELECT id, idproduto, qtditens, totalpreco, prcvenda, idvenda FROM tbitemvenda where idvenda = @idvenda order by id;";
             cmd = new NpgsqlCommand(sql, con);
             cmd.Parameters.AddWithValue("idvenda", idVenda);
             cmd.Prepare();
@@ -59,7 +58,7 @@ namespace LojaRoupas.Model
                 i.setIdProduto(rdr.GetInt32(1));
                 i.setQtdItens(rdr.GetInt32(2));
                 i.setTotalPreco(rdr.GetDouble(3));
-                i.setPrcVenda(rdr.GetDouble(4));
+                i.SetPrcVenda(rdr.GetDouble(4));
                 i.setIdDocumento(rdr.GetInt32(5));
                 Lista.Add(i);
             }
