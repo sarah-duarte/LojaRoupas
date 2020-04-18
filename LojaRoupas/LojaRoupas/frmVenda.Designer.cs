@@ -342,6 +342,7 @@
             this.Controls.Add(this.txtQtd);
             this.Controls.Add(this.txtCodBarras);
             this.Name = "frmVenda";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVenda";
             this.Load += new System.EventHandler(this.frmVenda_Load);
             this.ResumeLayout(false);

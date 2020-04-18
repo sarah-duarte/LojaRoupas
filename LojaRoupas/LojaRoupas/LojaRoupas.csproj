@@ -110,17 +110,66 @@
   <ItemGroup>
     <Compile Include="Classes\Cliente.cs" />
     <Compile Include="Classes\Compra.cs" />
-    <Compile Include="frmlistaCliente.cs">
+    <Compile Include="Classes\Usuario.cs" />
+    <Compile Include="frmListaCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmlistaCliente.Designer.cs">
-      <DependentUpon>frmlistaCliente.cs</DependentUpon>
+    <Compile Include="frmListaCliente.Designer.cs">
+      <DependentUpon>frmListaCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaCompra.Designer.cs">
+      <DependentUpon>frmListaCompra.cs</DependentUpon>
     </Compile>
     <Compile Include="frmListaFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmListaFornecedor.Designer.cs">
       <DependentUpon>frmListaFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaItensCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaItensCompra.Designer.cs">
+      <DependentUpon>frmListaItensCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaItensVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaItensVenda.Designer.cs">
+      <DependentUpon>frmListaItensVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaOperador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaOperador.Designer.cs">
+      <DependentUpon>frmListaOperador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaUsuario.Designer.cs">
+      <DependentUpon>frmListaUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmListaVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmListaVenda.Designer.cs">
+      <DependentUpon>frmListaVenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPesquisaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPesquisaProduto.Designer.cs">
+      <DependentUpon>frmPesquisaProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUsuarios.cs">
       <SubType>Form</SubType>
@@ -187,6 +236,7 @@
     <Compile Include="Model\MItemVenda.cs" />
     <Compile Include="Model\MOperador.cs" />
     <Compile Include="Model\MProduto.cs" />
+    <Compile Include="Model\MUsuario.cs" />
     <Compile Include="Model\MVenda.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -196,17 +246,38 @@
     <EmbeddedResource Include="frmFornecedor.resx">
       <DependentUpon>frmFornecedor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmlistacliente.resx">
-      <DependentUpon>frmlistaCliente.cs</DependentUpon>
+    <EmbeddedResource Include="frmListaCliente.resx">
+      <DependentUpon>frmListaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaCompra.resx">
+      <DependentUpon>frmListaCompra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmListaFornecedor.resx">
       <DependentUpon>frmListaFornecedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmListaItensCompra.resx">
+      <DependentUpon>frmListaItensCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaItensVenda.resx">
+      <DependentUpon>frmListaItensVenda.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaOperador.resx">
+      <DependentUpon>frmListaOperador.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmListaProdutos.resx">
       <DependentUpon>frmListaProdutos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmListaUsuario.resx">
+      <DependentUpon>frmListaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmListaVenda.resx">
+      <DependentUpon>frmListaVenda.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmOperador.resx">
       <DependentUpon>frmOperador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPesquisaProduto.resx">
+      <DependentUpon>frmPesquisaProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmPrincipal.resx">
       <DependentUpon>frmPrincipal.cs</DependentUpon>
