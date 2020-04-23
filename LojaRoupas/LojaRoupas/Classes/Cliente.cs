@@ -1,37 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using LojaRoupas.Model;
-using LojaRoupas.Classes;
-using System.Windows.Forms;
-
 
 namespace LojaRoupas.Classes
 {
     class Cliente : Pessoa
     {
         private int comprasRealizadas;
+        MCliente conexao = new MCliente();
+
         public void setComprasRealizadas(int comprasRealizadas){ this.comprasRealizadas = comprasRealizadas; }
         public int getComprasRealizadas(){ return this.comprasRealizadas; }
 
-        public int NovoId()
-        {
-            MCliente conexao = new MCliente();
-            return conexao.GetNovoId();
-        }
-        public void cadCliente(Cliente cliente)
-        {
-            MCliente conexao = new MCliente();
-            conexao.InserirCliente(cliente);
-        }
-        public List<Cliente> ListaCliente()
-        {
-            MCliente conexao = new MCliente();
-            return conexao.ListaCliente();
-        }
-        public String getNomeCliente(int id)
-        {
-            MCliente conexao = new MCliente();
-            return conexao.getNomeCliente(id);
-        }
+        public int NovoId() => conexao.GetNovoId();
+        public void cadCliente(Cliente cliente) => conexao.InserirCliente(cliente);
+        public List<Cliente> ListaCliente() => conexao.ListaCliente();
+        public Cliente getCliente(int id) => conexao.getCliente(id);
+        public String getNomeCliente(int id) => conexao.getNomeCliente(id);
     }
 }
