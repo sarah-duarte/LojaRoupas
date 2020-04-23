@@ -140,6 +140,7 @@ namespace LojaRoupas
             ListarOperadorComboBox();
             lblID.Text = Convert.ToString(venda.NovoId());
             txtQtd.Text = "1";
+            txtDesconto.Text = "0.00";
             MontaLista();
         }
         private void MontaVenda()
@@ -147,10 +148,10 @@ namespace LojaRoupas
             venda.setIdCliente(cmbCliente.SelectedIndex + 1);
             venda.setIdOperador(cmbOperador.SelectedIndex + 1);
             venda.setItensVenda(itensVenda);
-            venda.setData("17/04/2020");
+            venda.setData(DateTime.Today.ToString("d"));
             venda.setQtdItens(GetTotalQtdItens());
             venda.setVlrTotal(GetTotalProdutos());
-            venda.setDesconto(0);
+            venda.setDesconto(double.Parse(txtDesconto.Text));
         }
         private Boolean Validacoes()
         {
@@ -185,5 +186,36 @@ namespace LojaRoupas
             }
         }
         private void btnCancelar_Click(object sender, EventArgs e) => Close();
+        private void btnDesconto_Click(object sender, EventArgs e)
+        {
+            if (Validacoes())
+            {
+                pnlDesconto.Visible = true;
+                txtDesconto.Text = "0.00";
+            }
+        }
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            if (txtDesconto.Text != string.Empty & double.Parse(txtDesconto.Text) >= 0)
+            {
+                if (rdbValor.Checked)
+                {
+                    txtDesconto.Text = txtDesconto.Text;
+                }
+                else if (rdbPerc.Checked)
+                {
+                    rdbValor.Checked = true;
+                    txtDesconto.Text = (double.Parse(txtDesconto.Text) / 100 * GetTotalProdutos()).ToString();
+                }
+                else
+                {
+                    rdbValor.Checked = true;
+                    txtDesconto.Text = "0,00";
+                }
+                lblDesconto.Text = "R$ " + txtDesconto.Text;
+            } else txtDesconto.Text = "0,00";
+
+            pnlDesconto.Visible = false;
+        }
     }
 }

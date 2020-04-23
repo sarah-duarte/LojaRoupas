@@ -53,6 +53,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.cmbCliente = new System.Windows.Forms.ComboBox();
+            this.btnDesconto = new System.Windows.Forms.Button();
+            this.pnlDesconto = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rdbPerc = new System.Windows.Forms.RadioButton();
+            this.rdbValor = new System.Windows.Forms.RadioButton();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtDesconto = new System.Windows.Forms.TextBox();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.pnlDesconto.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtCodBarras
@@ -240,7 +250,7 @@
             // 
             this.btnFinalizarVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinalizarVenda.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnFinalizarVenda.Location = new System.Drawing.Point(669, 16);
+            this.btnFinalizarVenda.Location = new System.Drawing.Point(670, 78);
             this.btnFinalizarVenda.Name = "btnFinalizarVenda";
             this.btnFinalizarVenda.Size = new System.Drawing.Size(118, 55);
             this.btnFinalizarVenda.TabIndex = 28;
@@ -252,7 +262,7 @@
             // 
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnCancelar.Location = new System.Drawing.Point(669, 77);
+            this.btnCancelar.Location = new System.Drawing.Point(670, 139);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(118, 55);
             this.btnCancelar.TabIndex = 29;
@@ -314,6 +324,98 @@
             this.cmbCliente.Size = new System.Drawing.Size(275, 28);
             this.cmbCliente.TabIndex = 33;
             // 
+            // btnDesconto
+            // 
+            this.btnDesconto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDesconto.ForeColor = System.Drawing.Color.BurlyWood;
+            this.btnDesconto.Location = new System.Drawing.Point(669, 17);
+            this.btnDesconto.Name = "btnDesconto";
+            this.btnDesconto.Size = new System.Drawing.Size(118, 55);
+            this.btnDesconto.TabIndex = 35;
+            this.btnDesconto.Text = "DESCONTO";
+            this.btnDesconto.UseVisualStyleBackColor = true;
+            this.btnDesconto.Click += new System.EventHandler(this.btnDesconto_Click);
+            // 
+            // pnlDesconto
+            // 
+            this.pnlDesconto.Controls.Add(this.groupBox1);
+            this.pnlDesconto.Location = new System.Drawing.Point(260, 154);
+            this.pnlDesconto.Name = "pnlDesconto";
+            this.pnlDesconto.Size = new System.Drawing.Size(355, 200);
+            this.pnlDesconto.TabIndex = 36;
+            this.pnlDesconto.Visible = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.btnOK);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.Controls.Add(this.txtDesconto);
+            this.groupBox1.Controls.Add(this.rdbValor);
+            this.groupBox1.Controls.Add(this.rdbPerc);
+            this.groupBox1.ForeColor = System.Drawing.Color.BurlyWood;
+            this.groupBox1.Location = new System.Drawing.Point(20, 18);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(318, 156);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            // 
+            // rdbPerc
+            // 
+            this.rdbPerc.AutoSize = true;
+            this.rdbPerc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbPerc.Location = new System.Drawing.Point(23, 88);
+            this.rdbPerc.Name = "rdbPerc";
+            this.rdbPerc.Size = new System.Drawing.Size(44, 28);
+            this.rdbPerc.TabIndex = 0;
+            this.rdbPerc.Text = "%";
+            this.rdbPerc.UseVisualStyleBackColor = true;
+            // 
+            // rdbValor
+            // 
+            this.rdbValor.AutoSize = true;
+            this.rdbValor.Checked = true;
+            this.rdbValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbValor.Location = new System.Drawing.Point(23, 45);
+            this.rdbValor.Name = "rdbValor";
+            this.rdbValor.Size = new System.Drawing.Size(39, 28);
+            this.rdbValor.TabIndex = 1;
+            this.rdbValor.TabStop = true;
+            this.rdbValor.Text = "$";
+            this.rdbValor.UseVisualStyleBackColor = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.BurlyWood;
+            this.label7.Location = new System.Drawing.Point(94, 49);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(95, 22);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "DESCONTO";
+            // 
+            // txtDesconto
+            // 
+            this.txtDesconto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtDesconto.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDesconto.Location = new System.Drawing.Point(98, 74);
+            this.txtDesconto.Name = "txtDesconto";
+            this.txtDesconto.Size = new System.Drawing.Size(116, 32);
+            this.txtDesconto.TabIndex = 22;
+            // 
+            // btnOK
+            // 
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOK.ForeColor = System.Drawing.Color.BurlyWood;
+            this.btnOK.Location = new System.Drawing.Point(247, 59);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(53, 38);
+            this.btnOK.TabIndex = 36;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
             // frmVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -321,6 +423,8 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 518);
+            this.Controls.Add(this.pnlDesconto);
+            this.Controls.Add(this.btnDesconto);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cmbCliente);
             this.Controls.Add(this.label4);
@@ -345,6 +449,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmVenda";
             this.Load += new System.EventHandler(this.frmVenda_Load);
+            this.pnlDesconto.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -377,5 +484,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cmbCliente;
+        private System.Windows.Forms.Button btnDesconto;
+        private System.Windows.Forms.Panel pnlDesconto;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox txtDesconto;
+        private System.Windows.Forms.RadioButton rdbValor;
+        private System.Windows.Forms.RadioButton rdbPerc;
     }
 }
