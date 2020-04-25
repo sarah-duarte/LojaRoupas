@@ -33,7 +33,7 @@ namespace LojaRoupas.Model
             cmd.Parameters.AddWithValue("qtditens", i.getQtdItens());
             cmd.Parameters.AddWithValue("totalpreco", i.getTotalPreco());
             cmd.Parameters.AddWithValue("prccompra", i.getPrcCusto());
-            cmd.Parameters.AddWithValue("idvenda", i.getIdDocumento());
+            cmd.Parameters.AddWithValue("idcompra", i.getIdDocumento());
             cmd.Prepare();
 
             cmd.ExecuteNonQuery();

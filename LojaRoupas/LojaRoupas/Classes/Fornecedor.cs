@@ -1,9 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using LojaRoupas.Model;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LojaRoupas.Classes
 {
@@ -14,6 +11,7 @@ namespace LojaRoupas.Classes
         private string razaosocial;
         private string endereco;
         private string telefone;
+        MFornecedor conexao = new MFornecedor();
 
         public void setId(int id){ this.id = id; }
         public void setCnpj(string cnpj){ this.cnpj = cnpj; }
@@ -27,25 +25,10 @@ namespace LojaRoupas.Classes
         public string getEndereco(){ return this.endereco; }
         public string getTelefone() { return this.telefone; }
 
-        public int NovoId()
-        {
-            MFornecedor conexao = new MFornecedor();
-            return conexao.GetNovoId();
-        }
-        public void cadFornecedor(Fornecedor fornecedor)
-        {
-            MFornecedor conexao = new MFornecedor();
-            conexao.InserirFornecedor(fornecedor);
-        }
-        public List<Fornecedor> ListaFornecedor()
-        {
-            MFornecedor conexao = new MFornecedor();
-            return conexao.ListaFornecedor();
-        }
-        public String getNomeFornecedor(int id)
-        {
-            MFornecedor conexao = new MFornecedor();
-            return conexao.getNomeFornecedor(id);
-        }
+        public int NovoId() => conexao.GetNovoId();
+        public void cadFornecedor(Fornecedor fornecedor) => conexao.InserirFornecedor(fornecedor);
+        public List<Fornecedor> ListaFornecedor() => conexao.ListaFornecedor();
+        public Fornecedor getFornecedor(int id) => conexao.getFornecedor(id);
+        public String getNomeFornecedor(int id) => conexao.getNomeFornecedor(id);
     }
 }

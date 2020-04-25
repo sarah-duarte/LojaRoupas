@@ -52,10 +52,10 @@ namespace LojaRoupas.Model
                 Console.WriteLine("{0}", rdr.GetInt32(0));
                 Fornecedor fornecedor = new Fornecedor();
                 fornecedor.setId(rdr.GetInt32(0));
-                fornecedor.setCnpj(rdr.GetString(1));
-                fornecedor.setRazaosocial(rdr.GetString(2));
-                fornecedor.setEndereco(rdr.GetString(3));
-                fornecedor.setTelefone(rdr.GetString(4));
+                fornecedor.setRazaosocial(rdr.GetString(1));
+                fornecedor.setCnpj(rdr.GetString(2));
+                fornecedor.setTelefone(rdr.GetString(3));
+                fornecedor.setEndereco(rdr.GetString(4));
 
                 Lista.Add(fornecedor);
             }
@@ -75,10 +75,10 @@ namespace LojaRoupas.Model
             {
                 Console.WriteLine("{0}", rdr.GetInt32(0));                
                 fornecedor.setId(rdr.GetInt32(0));
-                fornecedor.setCnpj(rdr.GetString(1));
-                fornecedor.setRazaosocial(rdr.GetString(2));
-                fornecedor.setEndereco(rdr.GetString(3));
-                fornecedor.setTelefone(rdr.GetString(4));
+                fornecedor.setRazaosocial(rdr.GetString(1));
+                fornecedor.setCnpj(rdr.GetString(2));
+                fornecedor.setTelefone(rdr.GetString(3));
+                fornecedor.setEndereco(rdr.GetString(4));
             }
             return fornecedor;
         }
@@ -96,10 +96,10 @@ namespace LojaRoupas.Model
             {
                 Console.WriteLine("{0}", rdr.GetInt32(0));
                 fornecedor.setId(rdr.GetInt32(0));
-                fornecedor.setCnpj(rdr.GetString(1));
-                fornecedor.setRazaosocial(rdr.GetString(2));
-                fornecedor.setEndereco(rdr.GetString(3));
-                fornecedor.setTelefone(rdr.GetString(4));
+                fornecedor.setRazaosocial(rdr.GetString(1));
+                fornecedor.setCnpj(rdr.GetString(2));
+                fornecedor.setTelefone(rdr.GetString(3));
+                fornecedor.setEndereco(rdr.GetString(4));
             }
             return fornecedor.getRazaosocial();
         }

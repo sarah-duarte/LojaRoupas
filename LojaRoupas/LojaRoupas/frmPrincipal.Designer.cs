@@ -105,6 +105,7 @@
             this.compraToolStripMenuItem.Name = "compraToolStripMenuItem";
             this.compraToolStripMenuItem.Size = new System.Drawing.Size(141, 20);
             this.compraToolStripMenuItem.Text = "Compra de Mercadoria";
+            this.compraToolStripMenuItem.Click += new System.EventHandler(this.compraToolStripMenuItem_Click);
             // 
             // vendaToolStripMenuItem
             // 

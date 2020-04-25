@@ -55,9 +55,6 @@ namespace LojaRoupas
             MontaLista();
             AtualizaLista();
         }
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
+        private void btnCancelar_Click(object sender, EventArgs e) => Close();
     }
 }

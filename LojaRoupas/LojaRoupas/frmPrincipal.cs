@@ -45,5 +45,11 @@ namespace LojaRoupas
             frmListaVenda telaListaVenda = new frmListaVenda();
             telaListaVenda.ShowDialog();
         }
+
+        private void compraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListaCompra telaListaCompra = new frmListaCompra();
+            telaListaCompra.ShowDialog();
+        }
     }
 }

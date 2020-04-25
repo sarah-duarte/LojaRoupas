@@ -1,48 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using LojaRoupas.Classes;
 
 namespace LojaRoupas
 {
-    public partial class frmVenda : Form
+    public partial class frmCompra : Form
     {
-        List<ItemVenda> itensVenda = new List<ItemVenda>();
-        Venda venda = new Venda();
-        List<Cliente> ListaClientes = new List<Cliente>();
-        Cliente cliente = new Cliente();
-        List<Operador> ListaOperador = new List<Operador>();
-        Operador Operador = new Operador();
-        public frmVenda()
+        List<ItemCompra> itensCompra = new List<ItemCompra>();
+        Compra Compra = new Compra();
+        List<Fornecedor> ListaFornecedor = new List<Fornecedor>();
+        Fornecedor Fornecedor = new Fornecedor();
+        public frmCompra()
         {
             InitializeComponent();
         }
         private void MontaLista()
         {
-            lstListaItensVenda.Clear();
-            lstListaItensVenda.View = View.Details;
-            lstListaItensVenda.Columns.Add("CÓDIGO", 80);
-            lstListaItensVenda.Columns.Add("DESCRIÇÃO", 253);
-            lstListaItensVenda.Columns.Add("PREÇO", 70);
-            lstListaItensVenda.Columns.Add("QTDE", 70);
-            lstListaItensVenda.Columns.Add("TOTAL", 76);
+            lstListaItensCompra.Clear();
+            lstListaItensCompra.View = View.Details;
+            lstListaItensCompra.Columns.Add("CÓDIGO", 80);
+            lstListaItensCompra.Columns.Add("DESCRIÇÃO", 253);
+            lstListaItensCompra.Columns.Add("PREÇO", 70);
+            lstListaItensCompra.Columns.Add("QTDE", 70);
+            lstListaItensCompra.Columns.Add("TOTAL", 76);
         }
         private void AddItemLista(Produto prod)
         {
-            ItemVenda itemV = new ItemVenda();
+            ItemCompra itemV = new ItemCompra();
             itemV.setID(itemV.NovoId());
             itemV.setIdDocumento(int.Parse(lblID.Text));
             itemV.setIdProduto(prod.getIdProduto());
             itemV.setQtdItens(int.Parse(txtQtd.Text));
-            itemV.SetPrcVenda(prod.getPrecoVenda());
-            itemV.setTotalPreco(prod.getPrecoVenda() * int.Parse(txtQtd.Text));
-            itensVenda.Add(itemV);
+            itemV.setPrcCusto(prod.getPrecoCusto());
+            itemV.setTotalPreco(prod.getPrecoCusto() * int.Parse(txtQtd.Text));
+            itensCompra.Add(itemV);
         }
         private Double GetTotalProdutos()
         {
             Double TotalProduto = 0;
-            foreach (ItemVenda itV in itensVenda)
+            foreach (ItemCompra itV in itensCompra)
             {
                 Console.WriteLine("{0}", itV.getId().ToString());
                 TotalProduto += itV.getTotalPreco();
@@ -52,12 +56,60 @@ namespace LojaRoupas
         private int GetTotalQtdItens()
         {
             int TotalQtdItens = 0;
-            foreach (ItemVenda itV in itensVenda)
+            foreach (ItemCompra itV in itensCompra)
             {
                 Console.WriteLine("{0}", itV.getId().ToString());
                 TotalQtdItens += itV.getQtdItens();
             }
             return TotalQtdItens;
+        }
+        private void ListarFornecedorComboBox()
+        {
+            try
+            {
+                ListaFornecedor = Fornecedor.ListaFornecedor();
+                foreach (Fornecedor c in ListaFornecedor)
+                {
+                    Console.WriteLine("{0}", c.getId().ToString());
+                    cmbFornecedor.Items.Insert(c.getId() - 1, c.getRazaosocial());
+                }
+            }
+            catch (IOException erro)
+            {
+                MessageBox.Show(erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        private void MontaCompra()
+        {
+            Compra.setIdFornecedor(cmbFornecedor.SelectedIndex + 1);
+            Compra.setItensCompra(itensCompra);
+            Compra.setData(DateTime.Today.ToString("d"));
+            Compra.setQtdItens(GetTotalQtdItens());
+            Compra.setVlrTotal(GetTotalProdutos());
+            Compra.setDesconto(double.Parse(txtDesconto.Text));
+        }
+        private Boolean Validacoes()
+        {
+            Boolean retorno = true;
+            if (cmbFornecedor.SelectedIndex == -1)
+            {
+                MessageBox.Show("Um Fornecedor deve ser escolhido!", "Validações", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                retorno = false;
+            }
+            if (itensCompra.Count == 0)
+            {
+                MessageBox.Show("Produto deve ser escolhido!", "Validações", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                retorno = false;
+            }
+            return retorno;
+        }
+        private void frmCompra_Load(object sender, EventArgs e)
+        {
+            ListarFornecedorComboBox();
+            lblID.Text = Convert.ToString(Compra.NovoId());
+            txtQtd.Text = "1";
+            txtDesconto.Text = "0.00";
+            MontaLista();
         }
         private void btnAddItem_Click(object sender, EventArgs e)
         {
@@ -73,10 +125,10 @@ namespace LojaRoupas
                         Console.WriteLine("{0}", produto.getIdProduto().ToString());
                         ListViewItem item = new ListViewItem(produto.getCodigoBarras());
                         item.SubItems.Add(produto.getDescProduto() + " " + produto.getCorProduto() + " " + produto.getTamProduto());
-                        item.SubItems.Add(produto.getPrecoVenda().ToString());
+                        item.SubItems.Add(produto.getPrecoCusto().ToString());
                         item.SubItems.Add(txtQtd.Text);
-                        item.SubItems.Add((produto.getPrecoVenda() * int.Parse(txtQtd.Text)).ToString());
-                        lstListaItensVenda.Items.Add(item);
+                        item.SubItems.Add((produto.getPrecoCusto() * int.Parse(txtQtd.Text)).ToString());
+                        lstListaItensCompra.Items.Add(item);
 
                         AddItemLista(produto);
                         lblTotal.Text = "R$ " + GetTotalProdutos().ToString();
@@ -101,82 +153,16 @@ namespace LojaRoupas
                 MessageBox.Show("Você deve adicionar uma quantidade acima de 0 e adicionar um codigo de barras valido!", "Validações", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-        private void ListarClienteComboBox()
-        {
-            try
-            {
-                ListaClientes = cliente.ListaCliente();
-                foreach (Cliente c in ListaClientes)
-                {
-                    Console.WriteLine("{0}", c.getId().ToString());
-                    cmbCliente.Items.Insert(c.getId() - 1, c.getNome());
-                }
-            }
-            catch (IOException erro)
-            {
-                MessageBox.Show(erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-        private void ListarOperadorComboBox()
-        {
-            try 
-            {
-                ListaOperador = Operador.ListaOperador();
-                foreach (Operador c in ListaOperador)
-                {
-                    Console.WriteLine("{0}", c.getId().ToString());
-                    cmbOperador.Items.Insert(c.getId() - 1, c.getNome());
-                }
-            }
-            catch (IOException erro)
-            {
-                MessageBox.Show(erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
-        }
-        private void frmVenda_Load(object sender, EventArgs e)
-        {
-            ListarClienteComboBox();
-            ListarOperadorComboBox();
-            lblID.Text = Convert.ToString(venda.NovoId());
-            txtQtd.Text = "1";
-            txtDesconto.Text = "0.00";
-            MontaLista();
-        }
-        private void MontaVenda()
-        {
-            venda.setIdCliente(cmbCliente.SelectedIndex + 1);
-            venda.setIdOperador(cmbOperador.SelectedIndex + 1);
-            venda.setItensVenda(itensVenda);
-            venda.setData(DateTime.Today.ToString("d"));
-            venda.setQtdItens(GetTotalQtdItens());
-            venda.setVlrTotal(GetTotalProdutos());
-            venda.setDesconto(double.Parse(txtDesconto.Text));
-        }
-        private Boolean Validacoes()
-        {
-            Boolean retorno = true;
-            if (cmbOperador.SelectedIndex == -1)
-            {
-                MessageBox.Show("Um Operador deve ser escolhido!", "Validações", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                retorno = false;
-            }
-            if (itensVenda.Count == 0)
-            {
-                MessageBox.Show("Produto deve ser escolhido!", "Validações", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                retorno = false;
-            }
-            return retorno;
-        }
-        private void btnFinalizarVenda_Click(object sender, EventArgs e)
+        private void btnCancelar_Click(object sender, EventArgs e) => Close();
+        private void btnFinalizarCompra_Click(object sender, EventArgs e)
         {
             if (Validacoes())
             {
-                MontaVenda();
+                MontaCompra();
                 try
                 {
-                    venda.CadVenda(venda);
-                    MessageBox.Show("Venda Realizada com Sucesso!", "Venda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Compra.CadCompra(Compra);
+                    MessageBox.Show("Compra Realizada com Sucesso!", "Compra", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Close();
                 }
                 catch (IOException erro)
@@ -185,7 +171,6 @@ namespace LojaRoupas
                 }
             }
         }
-        private void btnCancelar_Click(object sender, EventArgs e) => Close();
         private void btnDesconto_Click(object sender, EventArgs e)
         {
             if (Validacoes())
@@ -213,7 +198,8 @@ namespace LojaRoupas
                     txtDesconto.Text = "0,00";
                 }
                 lblDesconto.Text = "R$ " + txtDesconto.Text;
-            } else txtDesconto.Text = "0,00";
+            }
+            else txtDesconto.Text = "0,00";
 
             pnlDesconto.Visible = false;
         }

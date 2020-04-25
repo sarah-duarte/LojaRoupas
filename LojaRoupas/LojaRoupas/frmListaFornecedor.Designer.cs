@@ -30,12 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaFornecedor));
             this.lstListaFornecedor = new System.Windows.Forms.ListView();
-            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.razaosocial = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.endereco = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.telefone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.razaosocial = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cnpj = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.endereco = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.telefone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // lstListaFornecedor
@@ -44,6 +45,7 @@
             this.lstListaFornecedor.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.id,
             this.razaosocial,
+            this.cnpj,
             this.endereco,
             this.telefone});
             this.lstListaFornecedor.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -55,26 +57,6 @@
             this.lstListaFornecedor.TabIndex = 0;
             this.lstListaFornecedor.UseCompatibleStateImageBehavior = false;
             this.lstListaFornecedor.View = System.Windows.Forms.View.Details;
-            // 
-            // id
-            // 
-            this.id.Text = "ID";
-            this.id.Width = 76;
-            // 
-            // razaosocial
-            // 
-            this.razaosocial.Text = "Razão Social";
-            this.razaosocial.Width = 169;
-            // 
-            // endereco
-            // 
-            this.endereco.Text = "Endereço";
-            this.endereco.Width = 298;
-            // 
-            // telefone
-            // 
-            this.telefone.Text = "Telefone";
-            this.telefone.Width = 120;
             // 
             // btnNovo
             // 
@@ -106,6 +88,31 @@
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // id
+            // 
+            this.id.Text = "ID";
+            this.id.Width = 41;
+            // 
+            // razaosocial
+            // 
+            this.razaosocial.Text = "RAZÃO SOCIAL";
+            this.razaosocial.Width = 197;
+            // 
+            // cnpj
+            // 
+            this.cnpj.Text = "CNPJ";
+            this.cnpj.Width = 81;
+            // 
+            // endereco
+            // 
+            this.endereco.Text = "ENDEREÇO";
+            this.endereco.Width = 169;
+            // 
+            // telefone
+            // 
+            this.telefone.Text = "TELEFONE";
+            this.telefone.Width = 101;
+            // 
             // frmListaFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -127,11 +134,12 @@
         #endregion
 
         private System.Windows.Forms.ListView lstListaFornecedor;
-        private System.Windows.Forms.ColumnHeader id;
-        private System.Windows.Forms.ColumnHeader razaosocial;
-        private System.Windows.Forms.ColumnHeader endereco;
-        private System.Windows.Forms.ColumnHeader telefone;
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.ColumnHeader id;
+        private System.Windows.Forms.ColumnHeader razaosocial;
+        private System.Windows.Forms.ColumnHeader cnpj;
+        private System.Windows.Forms.ColumnHeader endereco;
+        private System.Windows.Forms.ColumnHeader telefone;
     }
 }

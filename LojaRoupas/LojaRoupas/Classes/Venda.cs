@@ -8,7 +8,8 @@ namespace LojaRoupas.Classes
         private int idCliente;
         private int idOperador;
         private List<ItemVenda> itensVenda;
-        
+        MVenda conexao = new MVenda();
+
         public void setIdCliente(int idCliente){ this.idCliente = idCliente; }
         public void setIdOperador(int idOperador) { this.idOperador = idOperador; }
         public void setItensVenda(List<ItemVenda> itensVenda) { this.itensVenda = itensVenda; }
@@ -17,24 +18,15 @@ namespace LojaRoupas.Classes
         public int getIdOperador() { return this.idOperador; }
         public List<ItemVenda> getItensVenda(){ return this.itensVenda; }
 
-        public int NovoId()
-        {
-            MVenda conexao = new MVenda();
-            return conexao.GetNovoId();
-        }
+        public int NovoId() => conexao.GetNovoId();
         public void CadVenda(Venda venda)
         {
-            MVenda conexao = new MVenda();
             conexao.InserirVenda(venda);
             foreach (ItemVenda i in itensVenda)
             {
                 i.CadItemVenda(i);
             }
         }
-        public List<Venda> ListaVenda()
-        {
-            MVenda conexao = new MVenda();
-            return conexao.ListaVenda();
-        }
+        public List<Venda> ListaVenda() => conexao.ListaVenda();
     }
 }
