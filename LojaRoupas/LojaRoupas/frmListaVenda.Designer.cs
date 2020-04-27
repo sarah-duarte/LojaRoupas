@@ -38,6 +38,7 @@
             this.qtditens = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.operador = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnItensDoc = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -46,7 +47,7 @@
             this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnCancelar.Location = new System.Drawing.Point(660, 95);
+            this.btnCancelar.Location = new System.Drawing.Point(644, 156);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(109, 55);
             this.btnCancelar.TabIndex = 26;
@@ -59,7 +60,7 @@
             this.btnNovo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnNovo.Location = new System.Drawing.Point(660, 34);
+            this.btnNovo.Location = new System.Drawing.Point(644, 34);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(109, 55);
             this.btnNovo.TabIndex = 25;
@@ -83,7 +84,7 @@
             this.lstListaVenda.HideSelection = false;
             this.lstListaVenda.Location = new System.Drawing.Point(0, 0);
             this.lstListaVenda.Name = "lstListaVenda";
-            this.lstListaVenda.Size = new System.Drawing.Size(801, 450);
+            this.lstListaVenda.Size = new System.Drawing.Size(765, 450);
             this.lstListaVenda.TabIndex = 24;
             this.lstListaVenda.UseCompatibleStateImageBehavior = false;
             this.lstListaVenda.View = System.Windows.Forms.View.Details;
@@ -123,12 +124,25 @@
             this.operador.Text = "Operador";
             this.operador.Width = 125;
             // 
+            // btnItensDoc
+            // 
+            this.btnItensDoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnItensDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnItensDoc.ForeColor = System.Drawing.Color.BurlyWood;
+            this.btnItensDoc.Location = new System.Drawing.Point(644, 95);
+            this.btnItensDoc.Name = "btnItensDoc";
+            this.btnItensDoc.Size = new System.Drawing.Size(109, 55);
+            this.btnItensDoc.TabIndex = 27;
+            this.btnItensDoc.Text = "ITENS DA VENDA";
+            this.btnItensDoc.UseVisualStyleBackColor = true;
+            // 
             // frmListaVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(801, 450);
+            this.ClientSize = new System.Drawing.Size(765, 450);
+            this.Controls.Add(this.btnItensDoc);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.lstListaVenda);
@@ -152,5 +166,6 @@
         private System.Windows.Forms.ColumnHeader qtditens;
         private System.Windows.Forms.ColumnHeader cliente;
         private System.Windows.Forms.ColumnHeader operador;
+        private System.Windows.Forms.Button btnItensDoc;
     }
 }

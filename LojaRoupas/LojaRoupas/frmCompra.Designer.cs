@@ -398,8 +398,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(799, 517);
-            this.Controls.Add(this.lstListaItensCompra);
             this.Controls.Add(this.pnlDesconto);
+            this.Controls.Add(this.lstListaItensCompra);
             this.Controls.Add(this.btnDesconto);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.cmbFornecedor);

@@ -110,9 +110,9 @@
             this.btnNovo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnNovo.Location = new System.Drawing.Point(753, 30);
+            this.btnNovo.Location = new System.Drawing.Point(762, 30);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(134, 55);
+            this.btnNovo.Size = new System.Drawing.Size(125, 55);
             this.btnNovo.TabIndex = 23;
             this.btnNovo.Text = "NOVO ";
             this.btnNovo.UseVisualStyleBackColor = false;
@@ -124,9 +124,9 @@
             this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnCancelar.Location = new System.Drawing.Point(753, 91);
+            this.btnCancelar.Location = new System.Drawing.Point(762, 91);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(134, 55);
+            this.btnCancelar.Size = new System.Drawing.Size(125, 55);
             this.btnCancelar.TabIndex = 24;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;

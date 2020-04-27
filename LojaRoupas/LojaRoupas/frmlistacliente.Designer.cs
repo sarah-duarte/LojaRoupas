@@ -57,7 +57,7 @@
             this.lstListaCliente.HideSelection = false;
             this.lstListaCliente.Location = new System.Drawing.Point(0, 0);
             this.lstListaCliente.Name = "lstListaCliente";
-            this.lstListaCliente.Size = new System.Drawing.Size(1022, 450);
+            this.lstListaCliente.Size = new System.Drawing.Size(989, 450);
             this.lstListaCliente.TabIndex = 0;
             this.lstListaCliente.UseCompatibleStateImageBehavior = false;
             this.lstListaCliente.View = System.Windows.Forms.View.Details;
@@ -103,7 +103,7 @@
             this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnCancelar.Location = new System.Drawing.Point(885, 97);
+            this.btnCancelar.Location = new System.Drawing.Point(852, 97);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(125, 55);
             this.btnCancelar.TabIndex = 23;
@@ -117,7 +117,7 @@
             this.btnNovo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnNovo.Location = new System.Drawing.Point(885, 36);
+            this.btnNovo.Location = new System.Drawing.Point(852, 36);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(125, 55);
             this.btnNovo.TabIndex = 22;
@@ -129,11 +129,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1022, 450);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(989, 450);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.lstListaCliente);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "frmListaCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista Clientes";
