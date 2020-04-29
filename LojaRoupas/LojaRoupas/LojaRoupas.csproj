@@ -282,6 +282,9 @@
     <EmbeddedResource Include="frmListaVenda.resx">
       <DependentUpon>frmListaVenda.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmOperador.resx">
       <DependentUpon>frmOperador.cs</DependentUpon>
     </EmbeddedResource>
