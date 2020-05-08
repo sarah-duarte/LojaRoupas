@@ -56,11 +56,12 @@
             this.btnDesconto = new System.Windows.Forms.Button();
             this.pnlDesconto = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rdbPerc = new System.Windows.Forms.RadioButton();
-            this.rdbValor = new System.Windows.Forms.RadioButton();
+            this.btnOK = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDesconto = new System.Windows.Forms.TextBox();
-            this.btnOK = new System.Windows.Forms.Button();
+            this.rdbValor = new System.Windows.Forms.RadioButton();
+            this.rdbPerc = new System.Windows.Forms.RadioButton();
+            this.btnPesqProduto = new System.Windows.Forms.Button();
             this.pnlDesconto.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -72,7 +73,7 @@
             this.txtCodBarras.Location = new System.Drawing.Point(16, 164);
             this.txtCodBarras.MaxLength = 15;
             this.txtCodBarras.Name = "txtCodBarras";
-            this.txtCodBarras.Size = new System.Drawing.Size(295, 32);
+            this.txtCodBarras.Size = new System.Drawing.Size(258, 32);
             this.txtCodBarras.TabIndex = 4;
             // 
             // txtQtd
@@ -359,29 +360,17 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
-            // rdbPerc
+            // btnOK
             // 
-            this.rdbPerc.AutoSize = true;
-            this.rdbPerc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbPerc.Location = new System.Drawing.Point(23, 88);
-            this.rdbPerc.Name = "rdbPerc";
-            this.rdbPerc.Size = new System.Drawing.Size(44, 28);
-            this.rdbPerc.TabIndex = 0;
-            this.rdbPerc.Text = "%";
-            this.rdbPerc.UseVisualStyleBackColor = true;
-            // 
-            // rdbValor
-            // 
-            this.rdbValor.AutoSize = true;
-            this.rdbValor.Checked = true;
-            this.rdbValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdbValor.Location = new System.Drawing.Point(23, 45);
-            this.rdbValor.Name = "rdbValor";
-            this.rdbValor.Size = new System.Drawing.Size(39, 28);
-            this.rdbValor.TabIndex = 1;
-            this.rdbValor.TabStop = true;
-            this.rdbValor.Text = "$";
-            this.rdbValor.UseVisualStyleBackColor = true;
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOK.ForeColor = System.Drawing.Color.BurlyWood;
+            this.btnOK.Location = new System.Drawing.Point(247, 59);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(53, 38);
+            this.btnOK.TabIndex = 36;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
             // label7
             // 
@@ -404,17 +393,41 @@
             this.txtDesconto.Size = new System.Drawing.Size(116, 32);
             this.txtDesconto.TabIndex = 22;
             // 
-            // btnOK
+            // rdbValor
             // 
-            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnOK.Location = new System.Drawing.Point(247, 59);
-            this.btnOK.Name = "btnOK";
-            this.btnOK.Size = new System.Drawing.Size(53, 38);
-            this.btnOK.TabIndex = 36;
-            this.btnOK.Text = "OK";
-            this.btnOK.UseVisualStyleBackColor = true;
-            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            this.rdbValor.AutoSize = true;
+            this.rdbValor.Checked = true;
+            this.rdbValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbValor.Location = new System.Drawing.Point(23, 45);
+            this.rdbValor.Name = "rdbValor";
+            this.rdbValor.Size = new System.Drawing.Size(39, 28);
+            this.rdbValor.TabIndex = 1;
+            this.rdbValor.TabStop = true;
+            this.rdbValor.Text = "$";
+            this.rdbValor.UseVisualStyleBackColor = true;
+            // 
+            // rdbPerc
+            // 
+            this.rdbPerc.AutoSize = true;
+            this.rdbPerc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbPerc.Location = new System.Drawing.Point(23, 88);
+            this.rdbPerc.Name = "rdbPerc";
+            this.rdbPerc.Size = new System.Drawing.Size(44, 28);
+            this.rdbPerc.TabIndex = 0;
+            this.rdbPerc.Text = "%";
+            this.rdbPerc.UseVisualStyleBackColor = true;
+            // 
+            // btnPesqProduto
+            // 
+            this.btnPesqProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesqProduto.ForeColor = System.Drawing.Color.BurlyWood;
+            this.btnPesqProduto.Location = new System.Drawing.Point(280, 165);
+            this.btnPesqProduto.Name = "btnPesqProduto";
+            this.btnPesqProduto.Size = new System.Drawing.Size(30, 29);
+            this.btnPesqProduto.TabIndex = 60;
+            this.btnPesqProduto.Text = "...";
+            this.btnPesqProduto.UseVisualStyleBackColor = true;
+            this.btnPesqProduto.Click += new System.EventHandler(this.btnPesqProduto_Click);
             // 
             // frmVenda
             // 
@@ -424,6 +437,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 518);
             this.Controls.Add(this.pnlDesconto);
+            this.Controls.Add(this.btnPesqProduto);
             this.Controls.Add(this.btnDesconto);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.cmbCliente);
@@ -492,5 +506,6 @@
         private System.Windows.Forms.TextBox txtDesconto;
         private System.Windows.Forms.RadioButton rdbValor;
         private System.Windows.Forms.RadioButton rdbPerc;
+        private System.Windows.Forms.Button btnPesqProduto;
     }
 }

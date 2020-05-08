@@ -12,7 +12,7 @@ namespace LojaRoupas.Classes
         public void setComprasRealizadas(int comprasRealizadas){ this.comprasRealizadas = comprasRealizadas; }
         public int getComprasRealizadas(){ return this.comprasRealizadas; }
 
-        public int NovoId() => conexao.GetNovoId();
+        public override int NovoId() => conexao.GetNovoId();
         public void cadCliente(Cliente cliente) => conexao.InserirCliente(cliente);
         public List<Cliente> ListaCliente() => conexao.ListaCliente();
         public Cliente getCliente(int id) => conexao.getCliente(id);

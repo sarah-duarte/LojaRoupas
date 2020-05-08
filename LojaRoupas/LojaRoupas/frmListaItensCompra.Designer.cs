@@ -107,7 +107,7 @@
             this.Controls.Add(this.lstListaProduto);
             this.Name = "frmListaItensCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmListaItensCompra";
+            this.Text = "Itens da Compra";
             this.ResumeLayout(false);
 
         }

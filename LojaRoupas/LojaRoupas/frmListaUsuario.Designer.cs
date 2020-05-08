@@ -53,6 +53,7 @@
             this.btnCancelar.TabIndex = 27;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnNovo
             // 
@@ -66,6 +67,7 @@
             this.btnNovo.TabIndex = 26;
             this.btnNovo.Text = "NOVO ";
             this.btnNovo.UseVisualStyleBackColor = false;
+            this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // lstListaOperador
             // 

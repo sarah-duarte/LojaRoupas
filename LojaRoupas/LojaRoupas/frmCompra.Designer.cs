@@ -59,6 +59,7 @@
             this.btnAddItem = new System.Windows.Forms.Button();
             this.txtQtd = new System.Windows.Forms.TextBox();
             this.txtCodBarras = new System.Windows.Forms.TextBox();
+            this.btnPesqProduto = new System.Windows.Forms.Button();
             this.pnlDesconto.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -329,7 +330,7 @@
             this.Qtde,
             this.Total});
             this.lstListaItensCompra.HideSelection = false;
-            this.lstListaItensCompra.Location = new System.Drawing.Point(10, 209);
+            this.lstListaItensCompra.Location = new System.Drawing.Point(14, 211);
             this.lstListaItensCompra.Name = "lstListaItensCompra";
             this.lstListaItensCompra.Size = new System.Drawing.Size(557, 294);
             this.lstListaItensCompra.TabIndex = 40;
@@ -389,8 +390,20 @@
             this.txtCodBarras.Location = new System.Drawing.Point(14, 162);
             this.txtCodBarras.MaxLength = 15;
             this.txtCodBarras.Name = "txtCodBarras";
-            this.txtCodBarras.Size = new System.Drawing.Size(295, 32);
+            this.txtCodBarras.Size = new System.Drawing.Size(258, 32);
             this.txtCodBarras.TabIndex = 37;
+            // 
+            // btnPesqProduto
+            // 
+            this.btnPesqProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesqProduto.ForeColor = System.Drawing.Color.BurlyWood;
+            this.btnPesqProduto.Location = new System.Drawing.Point(278, 163);
+            this.btnPesqProduto.Name = "btnPesqProduto";
+            this.btnPesqProduto.Size = new System.Drawing.Size(30, 29);
+            this.btnPesqProduto.TabIndex = 59;
+            this.btnPesqProduto.Text = "...";
+            this.btnPesqProduto.UseVisualStyleBackColor = true;
+            this.btnPesqProduto.Click += new System.EventHandler(this.btnPesqProduto_Click);
             // 
             // frmCompra
             // 
@@ -399,6 +412,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(799, 517);
             this.Controls.Add(this.pnlDesconto);
+            this.Controls.Add(this.btnPesqProduto);
             this.Controls.Add(this.lstListaItensCompra);
             this.Controls.Add(this.btnDesconto);
             this.Controls.Add(this.label4);
@@ -462,5 +476,6 @@
         private System.Windows.Forms.Button btnAddItem;
         private System.Windows.Forms.TextBox txtQtd;
         private System.Windows.Forms.TextBox txtCodBarras;
+        private System.Windows.Forms.Button btnPesqProduto;
     }
 }

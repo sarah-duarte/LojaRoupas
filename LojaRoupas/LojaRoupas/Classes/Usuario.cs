@@ -15,7 +15,7 @@ namespace LojaRoupas.Classes
         public String getLogin() { return this.login; }
         public String getSenha() { return this.senha; }
 
-        public int NovoId() => conexao.GetNovoId();
+        public override int NovoId() => conexao.GetNovoId();
         public void cadUsuario(Usuario Usuario) => conexao.InserirUsuario(Usuario);
         public List<Usuario> ListaUsuario() => conexao.ListaUsuario();
         public Usuario getUsuario(int id) => conexao.getUsuario(id);

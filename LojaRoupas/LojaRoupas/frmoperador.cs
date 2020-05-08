@@ -25,10 +25,5 @@ namespace LojaRoupas
         {
             this.Close();
         }
-
-        private void btnDesativar_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace LojaRoupas
@@ -16,5 +9,13 @@ namespace LojaRoupas
         {
             InitializeComponent();
         }
+
+        private void btnNovo_Click(object sender, EventArgs e)
+        {
+            frmUsuarios telaUsuarios = new frmUsuarios();
+            telaUsuarios.ShowDialog();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e) => Close();
     }
 }

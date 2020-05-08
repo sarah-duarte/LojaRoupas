@@ -56,5 +56,11 @@ namespace LojaRoupas
             AtualizaLista();
         }
         private void btnCancelar_Click(object sender, EventArgs e) => Close();
+
+        private void btnItensDoc_Click(object sender, EventArgs e)
+        {
+            frmListaItensVenda telaItensVenda = new frmListaItensVenda();
+            telaItensVenda.ShowDialog();
+        }
     }
 }

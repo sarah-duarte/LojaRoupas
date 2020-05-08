@@ -135,6 +135,7 @@
             this.btnItensDoc.TabIndex = 27;
             this.btnItensDoc.Text = "ITENS DA VENDA";
             this.btnItensDoc.UseVisualStyleBackColor = true;
+            this.btnItensDoc.Click += new System.EventHandler(this.btnItensDoc_Click);
             // 
             // frmListaVenda
             // 

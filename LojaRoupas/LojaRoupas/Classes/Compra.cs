@@ -16,7 +16,7 @@ namespace LojaRoupas.Classes
         public void setIdFornecedor(int idFornecedor){ this.idFornecedor = idFornecedor; }
         public void setItensCompra(List<ItemCompra> itensCompra){ this.itensCompra = itensCompra; }
 
-        public int NovoId() => conexao.GetNovoId();
+        public override int NovoId() => conexao.GetNovoId();
         public void CadCompra(Compra Compra)
         {
             conexao.InserirCompra(Compra);

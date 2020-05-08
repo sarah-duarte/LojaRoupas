@@ -203,5 +203,11 @@ namespace LojaRoupas
 
             pnlDesconto.Visible = false;
         }
+
+        private void btnPesqProduto_Click(object sender, EventArgs e)
+        {
+            frmPesquisaProduto telaPesqProduto = new frmPesquisaProduto();
+            telaPesqProduto.ShowDialog();
+        }
     }
 }

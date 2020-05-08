@@ -126,8 +126,9 @@
             this.btnItensDoc.Name = "btnItensDoc";
             this.btnItensDoc.Size = new System.Drawing.Size(109, 55);
             this.btnItensDoc.TabIndex = 30;
-            this.btnItensDoc.Text = "ITENS DA VENDA";
+            this.btnItensDoc.Text = "ITENS DA COMPRA";
             this.btnItensDoc.UseVisualStyleBackColor = true;
+            this.btnItensDoc.Click += new System.EventHandler(this.btnItensDoc_Click);
             // 
             // frmListaCompra
             // 

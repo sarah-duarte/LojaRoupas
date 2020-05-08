@@ -12,7 +12,7 @@ namespace LojaRoupas.Classes
         public Double getPrcCusto(){ return this.prcCusto; }
         public void setPrcCusto(Double prcCusto){ this.prcCusto = prcCusto; }
 
-        public int NovoId() => conexao.GetNovoId();
+        public override int NovoId() => conexao.GetNovoId();
         public void CadItemCompra(ItemCompra ItemCompra)
         {
             conexao.InserirItemCompra(ItemCompra);

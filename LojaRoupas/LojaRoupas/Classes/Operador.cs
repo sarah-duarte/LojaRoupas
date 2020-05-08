@@ -17,28 +17,14 @@ namespace LojaRoupas.Classes
     class Operador : Pessoa
     {
         private string turno;
+        MOperador conexao = new MOperador();
+
         public void setTurno(string turno){ this.turno = turno; }
         public string getTurno(){ return this.turno; }
 
-        public int NovoId()
-        {
-            MOperador conexao = new MOperador();
-            return conexao.GetNovoId();
-        }
-        public void cadOperador(Operador operador)
-        {
-            MOperador conexao = new MOperador();
-            conexao.InserirOperador(operador);
-        }
-        public List<Operador> ListaOperador()
-        {
-            MOperador conexao = new MOperador();
-            return conexao.ListaOperador();
-        }
-        public String getNomeOperador(int id)
-        {
-            MOperador conexao = new MOperador();
-            return conexao.getNomeOperador(id);
-        }
+        public override int NovoId() => conexao.GetNovoId();
+        public void cadOperador(Operador operador) => conexao.InserirOperador(operador);
+        public List<Operador> ListaOperador() => conexao.ListaOperador();
+        public String getNomeOperador(int id) => conexao.getNomeOperador(id);
     }
 }

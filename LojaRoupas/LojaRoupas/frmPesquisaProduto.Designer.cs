@@ -279,7 +279,7 @@
             this.Controls.Add(this.lstListaProduto);
             this.Name = "frmPesquisaProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmPesquisaProduto";
+            this.Text = "Pesquisa Produto";
             this.ResumeLayout(false);
             this.PerformLayout();
 

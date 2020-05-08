@@ -53,7 +53,7 @@
             this.lstListaFornecedor.HideSelection = false;
             this.lstListaFornecedor.Location = new System.Drawing.Point(0, 0);
             this.lstListaFornecedor.Name = "lstListaFornecedor";
-            this.lstListaFornecedor.Size = new System.Drawing.Size(735, 450);
+            this.lstListaFornecedor.Size = new System.Drawing.Size(824, 450);
             this.lstListaFornecedor.TabIndex = 0;
             this.lstListaFornecedor.UseCompatibleStateImageBehavior = false;
             this.lstListaFornecedor.View = System.Windows.Forms.View.Details;
@@ -89,7 +89,7 @@
             this.btnNovo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnNovo.Location = new System.Drawing.Point(596, 29);
+            this.btnNovo.Location = new System.Drawing.Point(685, 29);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(127, 55);
             this.btnNovo.TabIndex = 20;
@@ -103,7 +103,7 @@
             this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnCancelar.Location = new System.Drawing.Point(596, 90);
+            this.btnCancelar.Location = new System.Drawing.Point(685, 90);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(127, 55);
             this.btnCancelar.TabIndex = 21;
@@ -116,7 +116,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(735, 450);
+            this.ClientSize = new System.Drawing.Size(824, 450);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.lstListaFornecedor);

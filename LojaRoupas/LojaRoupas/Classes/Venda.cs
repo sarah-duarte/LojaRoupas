@@ -18,7 +18,7 @@ namespace LojaRoupas.Classes
         public int getIdOperador() { return this.idOperador; }
         public List<ItemVenda> getItensVenda(){ return this.itensVenda; }
 
-        public int NovoId() => conexao.GetNovoId();
+        public override int NovoId() => conexao.GetNovoId();
         public void CadVenda(Venda venda)
         {
             conexao.InserirVenda(venda);
