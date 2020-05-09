@@ -14,6 +14,7 @@ namespace LojaRoupas
 {
     public partial class frmOperador : Form
     {
+        
         Operador operador = new Operador();
         public frmOperador()
         {
@@ -49,6 +50,7 @@ namespace LojaRoupas
         private void frmOperador_Load(object sender, EventArgs e)
         {
             lblID.Text = Convert.ToString(operador.NovoId());
+          
         }
     }
 }

@@ -6,8 +6,8 @@ namespace LojaRoupas.Classes
 {
     class Usuario : Pessoa
     {
-        private String login;
-        private String senha;
+        private string login;
+        private string senha;
         MUsuario conexao = new MUsuario();
 
         public void setLogin(String login) { this.login = login; }
@@ -19,7 +19,7 @@ namespace LojaRoupas.Classes
         public void cadUsuario(Usuario Usuario) => conexao.InserirUsuario(Usuario);
         public List<Usuario> ListaUsuario() => conexao.ListaUsuario();
         public Usuario getUsuario(int id) => conexao.getUsuario(id);
-        public Usuario getUsuario(string Login) => conexao.getUsuario(Login);
+        public Usuario getLogin(string Login) => conexao.getUsuario(Login);
         public String getNomeUsuario(int id) => conexao.getNomeUsuario(id);
         public String getSenhaUsuario(string Login) => conexao.getSenhaUsuario(Login);
     }

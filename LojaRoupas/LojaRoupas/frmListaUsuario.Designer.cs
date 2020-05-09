@@ -28,9 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaUsuario));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
-            this.lstListaOperador = new System.Windows.Forms.ListView();
+            this.lstListaUsuario = new System.Windows.Forms.ListView();
             this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.nome = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cpf = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -38,7 +39,7 @@
             this.telefone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.nascimento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.endereco = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.LOGIN = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.cadastro = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -69,10 +70,10 @@
             this.btnNovo.UseVisualStyleBackColor = false;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
-            // lstListaOperador
+            // lstListaUsuario
             // 
-            this.lstListaOperador.BackColor = System.Drawing.SystemColors.InfoText;
-            this.lstListaOperador.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lstListaUsuario.BackColor = System.Drawing.SystemColors.InfoText;
+            this.lstListaUsuario.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.id,
             this.nome,
             this.cpf,
@@ -80,16 +81,16 @@
             this.telefone,
             this.nascimento,
             this.endereco,
-            this.LOGIN});
-            this.lstListaOperador.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstListaOperador.ForeColor = System.Drawing.Color.BurlyWood;
-            this.lstListaOperador.HideSelection = false;
-            this.lstListaOperador.Location = new System.Drawing.Point(0, 0);
-            this.lstListaOperador.Name = "lstListaOperador";
-            this.lstListaOperador.Size = new System.Drawing.Size(846, 450);
-            this.lstListaOperador.TabIndex = 25;
-            this.lstListaOperador.UseCompatibleStateImageBehavior = false;
-            this.lstListaOperador.View = System.Windows.Forms.View.Details;
+            this.cadastro});
+            this.lstListaUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstListaUsuario.ForeColor = System.Drawing.Color.BurlyWood;
+            this.lstListaUsuario.HideSelection = false;
+            this.lstListaUsuario.Location = new System.Drawing.Point(0, 0);
+            this.lstListaUsuario.Name = "lstListaUsuario";
+            this.lstListaUsuario.Size = new System.Drawing.Size(846, 450);
+            this.lstListaUsuario.TabIndex = 25;
+            this.lstListaUsuario.UseCompatibleStateImageBehavior = false;
+            this.lstListaUsuario.View = System.Windows.Forms.View.Details;
             // 
             // id
             // 
@@ -126,10 +127,9 @@
             this.endereco.Text = "Endereço";
             this.endereco.Width = 154;
             // 
-            // LOGIN
+            // cadastro
             // 
-            this.LOGIN.Text = "LOGIN";
-            this.LOGIN.Width = 71;
+            this.cadastro.Text = "Login";
             // 
             // frmListaUsuario
             // 
@@ -138,10 +138,12 @@
             this.ClientSize = new System.Drawing.Size(846, 450);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnNovo);
-            this.Controls.Add(this.lstListaOperador);
+            this.Controls.Add(this.lstListaUsuario);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmListaUsuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Usuarios";
+            this.Load += new System.EventHandler(this.frmListaUsuario_Load);
             this.ResumeLayout(false);
 
         }
@@ -150,7 +152,7 @@
 
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnNovo;
-        private System.Windows.Forms.ListView lstListaOperador;
+        private System.Windows.Forms.ListView lstListaUsuario;
         private System.Windows.Forms.ColumnHeader id;
         private System.Windows.Forms.ColumnHeader nome;
         private System.Windows.Forms.ColumnHeader cpf;
@@ -158,6 +160,6 @@
         private System.Windows.Forms.ColumnHeader telefone;
         private System.Windows.Forms.ColumnHeader nascimento;
         private System.Windows.Forms.ColumnHeader endereco;
-        private System.Windows.Forms.ColumnHeader LOGIN;
+        private System.Windows.Forms.ColumnHeader cadastro;
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Npgsql;
 using LojaRoupas.Classes;
 
+
 namespace LojaRoupas.Model
 {
     class MUsuario : Conexao
@@ -22,21 +23,21 @@ namespace LojaRoupas.Model
             }
             return ultimoid + 1;
         }
-        public void InserirUsuario(Usuario Usuario)
+        public void InserirUsuario(Usuario usuario)
         {
             this.Conect();
 
             sql = "INSERT INTO tbusuario(nome, cpf, email, telefone, nascimento, endereco, login, senha) ";
             sql = sql + "VALUES(@nome, @cpf, @email, @telefone, @nascimento, @endereco, @login, @senha); ";
             cmd = new NpgsqlCommand(sql, con);
-            cmd.Parameters.AddWithValue("nome", Usuario.getNome());
-            cmd.Parameters.AddWithValue("cpf", Usuario.getCpf());
-            cmd.Parameters.AddWithValue("email", Usuario.getEmail());
-            cmd.Parameters.AddWithValue("telefone", Usuario.getTelefone());
-            cmd.Parameters.AddWithValue("nascimento", Usuario.getNascimento());
-            cmd.Parameters.AddWithValue("endereco", Usuario.getEndereco());
-            cmd.Parameters.AddWithValue("login", Usuario.getLogin());
-            cmd.Parameters.AddWithValue("senha", Usuario.getSenha());
+            cmd.Parameters.AddWithValue("nome", usuario.getNome());
+            cmd.Parameters.AddWithValue("cpf", usuario.getCpf());
+            cmd.Parameters.AddWithValue("email", usuario.getEmail());
+            cmd.Parameters.AddWithValue("telefone", usuario.getTelefone());
+            cmd.Parameters.AddWithValue("nascimento", usuario.getNascimento());
+            cmd.Parameters.AddWithValue("endereco", usuario.getEndereco());
+            cmd.Parameters.AddWithValue("login", usuario.getLogin());
+            cmd.Parameters.AddWithValue("senha", usuario.getSenha());
             cmd.Prepare();
 
             cmd.ExecuteNonQuery();
