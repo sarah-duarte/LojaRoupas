@@ -47,7 +47,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTurno = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -254,13 +254,13 @@
             this.label1.TabIndex = 53;
             this.label1.Text = "ID:";
             // 
-            // textBox1
+            // txtTurno
             // 
-            this.textBox1.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.textBox1.Location = new System.Drawing.Point(123, 192);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(169, 20);
-            this.textBox1.TabIndex = 70;
+            this.txtTurno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtTurno.Location = new System.Drawing.Point(123, 192);
+            this.txtTurno.Name = "txtTurno";
+            this.txtTurno.Size = new System.Drawing.Size(169, 20);
+            this.txtTurno.TabIndex = 70;
             // 
             // label7
             // 
@@ -281,7 +281,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(692, 274);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTurno);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.txtTelefone);
@@ -306,6 +306,7 @@
             this.Name = "frmOperador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Operador";
+            this.Load += new System.EventHandler(this.frmOperador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -331,7 +332,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTurno;
         private System.Windows.Forms.Label label7;
     }
 }
