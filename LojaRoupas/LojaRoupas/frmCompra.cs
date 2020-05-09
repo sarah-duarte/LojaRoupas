@@ -85,7 +85,7 @@ namespace LojaRoupas
             Compra.setItensCompra(itensCompra);
             Compra.setData(DateTime.Today.ToString("d"));
             Compra.setQtdItens(GetTotalQtdItens());
-            Compra.setVlrTotal(GetTotalProdutos());
+            Compra.setVlrTotal((GetTotalProdutos() - double.Parse(txtDesconto.Text)));
             Compra.setDesconto(double.Parse(txtDesconto.Text));
         }
         private Boolean Validacoes()
@@ -119,29 +119,20 @@ namespace LojaRoupas
                 produto = produto.GetProduto(txtCodBarras.Text);
                 if (produto.getIdProduto() > 0)
                 {
-                    if (produto.getQtdEstProduto() >= int.Parse(txtQtd.Text))
-                    {
+                    Console.WriteLine("{0}", produto.getIdProduto().ToString());
+                    ListViewItem item = new ListViewItem(produto.getCodigoBarras());
+                    item.SubItems.Add(produto.getDescProduto() + " " + produto.getCorProduto() + " " + produto.getTamProduto());
+                    item.SubItems.Add(produto.getPrecoCusto().ToString());
+                    item.SubItems.Add(txtQtd.Text);
+                    item.SubItems.Add((produto.getPrecoCusto() * int.Parse(txtQtd.Text)).ToString());
+                    lstListaItensCompra.Items.Add(item);
 
-                        Console.WriteLine("{0}", produto.getIdProduto().ToString());
-                        ListViewItem item = new ListViewItem(produto.getCodigoBarras());
-                        item.SubItems.Add(produto.getDescProduto() + " " + produto.getCorProduto() + " " + produto.getTamProduto());
-                        item.SubItems.Add(produto.getPrecoCusto().ToString());
-                        item.SubItems.Add(txtQtd.Text);
-                        item.SubItems.Add((produto.getPrecoCusto() * int.Parse(txtQtd.Text)).ToString());
-                        lstListaItensCompra.Items.Add(item);
+                    AddItemLista(produto);
+                    lblTotal.Text = "R$ " + GetTotalProdutos().ToString();
+                    lblQtdItens.Text = GetTotalQtdItens().ToString();
 
-                        AddItemLista(produto);
-                        lblTotal.Text = "R$ " + GetTotalProdutos().ToString();
-                        lblQtdItens.Text = GetTotalQtdItens().ToString();
-
-                        txtCodBarras.Text = "";
-                        txtQtd.Text = "1";
-                    }
-                    else
-                    {
-                        MessageBox.Show("Quantidade solicitada acima da quantidade disponível! Quantidade em Estoque: "
-                                        + produto.getQtdEstProduto().ToString(), "Produto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    }
+                    txtCodBarras.Text = "";
+                    txtQtd.Text = "1";
                 }
                 else
                 {
@@ -200,6 +191,8 @@ namespace LojaRoupas
                 lblDesconto.Text = "R$ " + txtDesconto.Text;
             }
             else txtDesconto.Text = "0,00";
+
+            lblTotal.Text = "R$ " + (GetTotalProdutos()- double.Parse(txtDesconto.Text)).ToString();
 
             pnlDesconto.Visible = false;
         }

@@ -150,7 +150,7 @@ namespace LojaRoupas
             venda.setItensVenda(itensVenda);
             venda.setData(DateTime.Today.ToString("d"));
             venda.setQtdItens(GetTotalQtdItens());
-            venda.setVlrTotal(GetTotalProdutos());
+            venda.setVlrTotal((GetTotalProdutos() - double.Parse(txtDesconto.Text)));
             venda.setDesconto(double.Parse(txtDesconto.Text));
         }
         private Boolean Validacoes()
@@ -213,7 +213,10 @@ namespace LojaRoupas
                     txtDesconto.Text = "0,00";
                 }
                 lblDesconto.Text = "R$ " + txtDesconto.Text;
-            } else txtDesconto.Text = "0,00";
+            } 
+            else txtDesconto.Text = "0,00";
+
+            lblTotal.Text = "R$ " + (GetTotalProdutos() - double.Parse(txtDesconto.Text)).ToString();
 
             pnlDesconto.Visible = false;
         }
