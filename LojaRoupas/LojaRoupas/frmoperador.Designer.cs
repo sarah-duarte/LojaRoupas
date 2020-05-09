@@ -47,8 +47,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtTurno = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.cmbTurno = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -81,7 +81,7 @@
             this.txtCPF.Mask = "000.000.000-00";
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(100, 20);
-            this.txtCPF.TabIndex = 68;
+            this.txtCPF.TabIndex = 4;
             // 
             // txtTelefone
             // 
@@ -89,7 +89,7 @@
             this.txtTelefone.Mask = "(99) 00000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(100, 20);
-            this.txtTelefone.TabIndex = 67;
+            this.txtTelefone.TabIndex = 2;
             // 
             // txtNascimento
             // 
@@ -97,7 +97,7 @@
             this.txtNascimento.Mask = "00/00/0000";
             this.txtNascimento.Name = "txtNascimento";
             this.txtNascimento.Size = new System.Drawing.Size(75, 20);
-            this.txtNascimento.TabIndex = 66;
+            this.txtNascimento.TabIndex = 3;
             this.txtNascimento.ValidatingType = typeof(System.DateTime);
             // 
             // btnCancelar
@@ -108,7 +108,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(556, 202);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(118, 55);
-            this.btnCancelar.TabIndex = 65;
+            this.btnCancelar.TabIndex = 9;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -121,7 +121,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(432, 202);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(118, 55);
-            this.btnSalvar.TabIndex = 64;
+            this.btnSalvar.TabIndex = 8;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -132,7 +132,7 @@
             this.txtEndereco.Location = new System.Drawing.Point(145, 166);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(459, 20);
-            this.txtEndereco.TabIndex = 63;
+            this.txtEndereco.TabIndex = 6;
             // 
             // txtEmail
             // 
@@ -140,7 +140,7 @@
             this.txtEmail.Location = new System.Drawing.Point(117, 140);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(487, 20);
-            this.txtEmail.TabIndex = 62;
+            this.txtEmail.TabIndex = 5;
             // 
             // lblID
             // 
@@ -161,7 +161,7 @@
             this.txtNome.Location = new System.Drawing.Point(188, 89);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(416, 20);
-            this.txtNome.TabIndex = 60;
+            this.txtNome.TabIndex = 1;
             // 
             // label8
             // 
@@ -254,26 +254,34 @@
             this.label1.TabIndex = 53;
             this.label1.Text = "ID:";
             // 
-            // txtTurno
-            // 
-            this.txtTurno.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTurno.Location = new System.Drawing.Point(123, 192);
-            this.txtTurno.Name = "txtTurno";
-            this.txtTurno.Size = new System.Drawing.Size(169, 20);
-            this.txtTurno.TabIndex = 70;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.Transparent;
             this.label7.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label7.Location = new System.Drawing.Point(41, 189);
+            this.label7.Location = new System.Drawing.Point(41, 192);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(70, 22);
             this.label7.TabIndex = 69;
             this.label7.Text = "TURNO:";
+            // 
+            // cmbTurno
+            // 
+            this.cmbTurno.FormattingEnabled = true;
+            this.cmbTurno.Items.AddRange(new object[] {
+            "MANHÃ",
+            "TARDE",
+            "NOITE",
+            "INTERMIDIÁRIO",
+            "DIURNO",
+            "INTEGRAL",
+            "COMERCIAL"});
+            this.cmbTurno.Location = new System.Drawing.Point(118, 192);
+            this.cmbTurno.Name = "cmbTurno";
+            this.cmbTurno.Size = new System.Drawing.Size(121, 21);
+            this.cmbTurno.TabIndex = 7;
             // 
             // frmOperador
             // 
@@ -281,7 +289,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(692, 274);
-            this.Controls.Add(this.txtTurno);
+            this.Controls.Add(this.cmbTurno);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.txtTelefone);
@@ -332,7 +340,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtTurno;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox cmbTurno;
     }
 }

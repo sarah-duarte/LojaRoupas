@@ -120,7 +120,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(509, 63);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(134, 44);
-            this.btnSalvar.TabIndex = 29;
+            this.btnSalvar.TabIndex = 7;
             this.btnSalvar.Text = "PESQUISAR";
             this.btnSalvar.UseVisualStyleBackColor = true;
             // 
@@ -130,7 +130,7 @@
             this.txtPrcVenda.Location = new System.Drawing.Point(327, 89);
             this.txtPrcVenda.Name = "txtPrcVenda";
             this.txtPrcVenda.Size = new System.Drawing.Size(78, 20);
-            this.txtPrcVenda.TabIndex = 28;
+            this.txtPrcVenda.TabIndex = 6;
             // 
             // txtPrcCusto
             // 
@@ -138,7 +138,7 @@
             this.txtPrcCusto.Location = new System.Drawing.Point(127, 89);
             this.txtPrcCusto.Name = "txtPrcCusto";
             this.txtPrcCusto.Size = new System.Drawing.Size(78, 20);
-            this.txtPrcCusto.TabIndex = 26;
+            this.txtPrcCusto.TabIndex = 5;
             // 
             // txtTamanho
             // 
@@ -146,7 +146,7 @@
             this.txtTamanho.Location = new System.Drawing.Point(315, 63);
             this.txtTamanho.Name = "txtTamanho";
             this.txtTamanho.Size = new System.Drawing.Size(125, 20);
-            this.txtTamanho.TabIndex = 24;
+            this.txtTamanho.TabIndex = 4;
             // 
             // txtCor
             // 
@@ -154,7 +154,7 @@
             this.txtCor.Location = new System.Drawing.Point(60, 63);
             this.txtCor.Name = "txtCor";
             this.txtCor.Size = new System.Drawing.Size(154, 20);
-            this.txtCor.TabIndex = 22;
+            this.txtCor.TabIndex = 3;
             // 
             // txtDescricao
             // 
@@ -162,7 +162,7 @@
             this.txtDescricao.Location = new System.Drawing.Point(356, 37);
             this.txtDescricao.Name = "txtDescricao";
             this.txtDescricao.Size = new System.Drawing.Size(287, 20);
-            this.txtDescricao.TabIndex = 20;
+            this.txtDescricao.TabIndex = 2;
             // 
             // txtCodBarras
             // 
@@ -170,7 +170,7 @@
             this.txtCodBarras.Location = new System.Drawing.Point(85, 37);
             this.txtCodBarras.Name = "txtCodBarras";
             this.txtCodBarras.Size = new System.Drawing.Size(167, 20);
-            this.txtCodBarras.TabIndex = 18;
+            this.txtCodBarras.TabIndex = 1;
             // 
             // label7
             // 

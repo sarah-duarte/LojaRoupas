@@ -58,7 +58,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(555, 205);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(118, 55);
-            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.TabIndex = 8;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -71,7 +71,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(431, 205);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(118, 55);
-            this.btnSalvar.TabIndex = 9;
+            this.btnSalvar.TabIndex = 7;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
@@ -105,7 +105,7 @@
             this.txtEndereco.Location = new System.Drawing.Point(144, 169);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(459, 20);
-            this.txtEndereco.TabIndex = 8;
+            this.txtEndereco.TabIndex = 6;
             // 
             // txtEmail
             // 
@@ -113,7 +113,7 @@
             this.txtEmail.Location = new System.Drawing.Point(116, 143);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(487, 20);
-            this.txtEmail.TabIndex = 7;
+            this.txtEmail.TabIndex = 5;
             // 
             // lblID
             // 
@@ -134,7 +134,7 @@
             this.txtNome.Location = new System.Drawing.Point(187, 92);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(416, 20);
-            this.txtNome.TabIndex = 3;
+            this.txtNome.TabIndex = 1;
             // 
             // label8
             // 
@@ -233,16 +233,17 @@
             this.txtNascimento.Mask = "00/00/0000";
             this.txtNascimento.Name = "txtNascimento";
             this.txtNascimento.Size = new System.Drawing.Size(75, 20);
-            this.txtNascimento.TabIndex = 5;
+            this.txtNascimento.TabIndex = 3;
             this.txtNascimento.ValidatingType = typeof(System.DateTime);
             // 
             // txtTelefone
             // 
+            this.txtTelefone.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.txtTelefone.Location = new System.Drawing.Point(140, 118);
             this.txtTelefone.Mask = "(99) 00000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(100, 20);
-            this.txtTelefone.TabIndex = 4;
+            this.txtTelefone.TabIndex = 2;
             // 
             // txtCPF
             // 
@@ -250,7 +251,7 @@
             this.txtCPF.Mask = "000.000.000-00";
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(100, 20);
-            this.txtCPF.TabIndex = 6;
+            this.txtCPF.TabIndex = 4;
             // 
             // frmCliente
             // 

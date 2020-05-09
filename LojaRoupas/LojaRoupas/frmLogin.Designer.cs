@@ -47,7 +47,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(436, 196);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(115, 38);
-            this.btnCancelar.TabIndex = 52;
+            this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -60,7 +60,7 @@
             this.btnEntrar.Location = new System.Drawing.Point(436, 149);
             this.btnEntrar.Name = "btnEntrar";
             this.btnEntrar.Size = new System.Drawing.Size(115, 41);
-            this.btnEntrar.TabIndex = 51;
+            this.btnEntrar.TabIndex = 3;
             this.btnEntrar.Text = "ENTRAR";
             this.btnEntrar.UseVisualStyleBackColor = true;
             this.btnEntrar.Click += new System.EventHandler(this.btnEntrar_Click);
@@ -73,7 +73,7 @@
             this.textBox6.Name = "textBox6";
             this.textBox6.PasswordChar = '*';
             this.textBox6.Size = new System.Drawing.Size(237, 38);
-            this.textBox6.TabIndex = 50;
+            this.textBox6.TabIndex = 2;
             // 
             // label4
             // 
@@ -106,7 +106,7 @@
             this.textBox1.Location = new System.Drawing.Point(181, 151);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(237, 38);
-            this.textBox1.TabIndex = 47;
+            this.textBox1.TabIndex = 1;
             // 
             // pictureBox1
             // 

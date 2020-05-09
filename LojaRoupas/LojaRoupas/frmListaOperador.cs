@@ -53,6 +53,8 @@ namespace LojaRoupas
         {
             frmOperador telaoperador = new frmOperador();
             telaoperador.ShowDialog();
+            MontaLista();
+            AtualizaLista();
         }
 
         private void frmListaOperador_Load(object sender, EventArgs e)

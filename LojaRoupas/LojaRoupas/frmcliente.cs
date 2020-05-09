@@ -33,7 +33,7 @@ namespace LojaRoupas
             try
             {
                 cliente.cadCliente(cliente);
-                MessageBox.Show("Forncedor Cadastrado com Sucesso!", "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Cliente Cadastrado com Sucesso!", "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             catch (IOException erro)
@@ -41,11 +41,7 @@ namespace LojaRoupas
                 MessageBox.Show(erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        private void btnCancelar_Click(object sender, EventArgs e) => Close();
 
         private void frmCliente_Load(object sender, EventArgs e)
         {

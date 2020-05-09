@@ -108,7 +108,7 @@ namespace LojaRoupas
             ListarFornecedorComboBox();
             lblID.Text = Convert.ToString(Compra.NovoId());
             txtQtd.Text = "1";
-            txtDesconto.Text = "0.00";
+            txtDesconto.Text = "0,00";
             MontaLista();
         }
         private void btnAddItem_Click(object sender, EventArgs e)
@@ -167,7 +167,7 @@ namespace LojaRoupas
             if (Validacoes())
             {
                 pnlDesconto.Visible = true;
-                txtDesconto.Text = "0.00";
+                txtDesconto.Text = "0,00";
             }
         }
         private void btnOK_Click(object sender, EventArgs e)

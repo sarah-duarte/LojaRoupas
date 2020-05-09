@@ -41,14 +41,14 @@ namespace LojaRoupas
         {
             lstListaUsuario.Clear();
             lstListaUsuario.View = View.Details;
-            lstListaUsuario.Columns.Add("Id", 28);
-            lstListaUsuario.Columns.Add("Nome", 84);
-            lstListaUsuario.Columns.Add("Cpf", 102);
-            lstListaUsuario.Columns.Add("Email", 131);
-            lstListaUsuario.Columns.Add("Telefone", 79);
-            lstListaUsuario.Columns.Add("Nascimento", 71);
-            lstListaUsuario.Columns.Add("Login", 60);
-            lstListaUsuario.Columns.Add("Endereço", 154);
+            lstListaUsuario.Columns.Add("ID", 28);
+            lstListaUsuario.Columns.Add("NOME", 84);
+            lstListaUsuario.Columns.Add("CPF", 102);
+            lstListaUsuario.Columns.Add("EMAIL", 131);
+            lstListaUsuario.Columns.Add("TELEFONE", 79);
+            lstListaUsuario.Columns.Add("NASC.", 71);
+            lstListaUsuario.Columns.Add("LOGIN", 60);
+            lstListaUsuario.Columns.Add("ENDEREÇO", 154);
 
         }
         private void frmListaUsuario_Load(object sender, EventArgs e)
@@ -60,6 +60,8 @@ namespace LojaRoupas
         {
             frmUsuarios telaUsuarios = new frmUsuarios();
             telaUsuarios.ShowDialog();
+            MontaLista();
+            AtualizaLista();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e) => Close();

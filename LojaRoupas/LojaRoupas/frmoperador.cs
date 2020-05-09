@@ -29,11 +29,11 @@ namespace LojaRoupas
             operador.setEndereco(txtEndereco.Text);
             operador.setNascimento(txtNascimento.Text);
             operador.setTelefone(txtTelefone.Text);
-            operador.setTurno(txtTurno.Text);
+            operador.setTurno(cmbTurno.Text);
             try
             {
                 operador.cadOperador(operador);
-                MessageBox.Show("Forncedor Cadastrado com Sucesso!", "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Operador Cadastrado com Sucesso!", "Operador", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             catch (IOException erro)
@@ -42,15 +42,11 @@ namespace LojaRoupas
             }
         }
 
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+        private void btnCancelar_Click(object sender, EventArgs e) => this.Close();
 
         private void frmOperador_Load(object sender, EventArgs e)
         {
-            lblID.Text = Convert.ToString(operador.NovoId());
-          
+            lblID.Text = Convert.ToString(operador.NovoId());          
         }
     }
 }
