@@ -11,14 +11,13 @@ namespace LojaRoupas
         {
             InitializeComponent();
         }
-
         private void AtualizaLista()
         {
             Cliente cliente = new Cliente();
             List<Cliente> lista = cliente.ListaCliente();
             foreach (Cliente c in lista)
             {
-                Console.WriteLine("{0}", c.getId().ToString());
+                //Console.WriteLine("{0}", c.getId().ToString());
                 ListViewItem item = new ListViewItem(c.getId().ToString());
                 item.SubItems.Add(c.getNome());
                 item.SubItems.Add(c.getCpf());
@@ -48,12 +47,10 @@ namespace LojaRoupas
             MontaLista();
             AtualizaLista();
         }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void frmListaCliente_Load(object sender, EventArgs e)
         {
             MontaLista();

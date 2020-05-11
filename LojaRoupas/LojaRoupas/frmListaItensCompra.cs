@@ -19,7 +19,7 @@ namespace LojaRoupas
         {
             foreach (ItemCompra i in Lista)
             {
-                Console.WriteLine("{0}", i.getId().ToString());
+                //Console.WriteLine("{0}", i.getId().ToString());
                 Produto Produto = new Produto();
 
                 ListViewItem item = new ListViewItem(i.getId().ToString());

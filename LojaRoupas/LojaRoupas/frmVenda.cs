@@ -70,7 +70,7 @@ namespace LojaRoupas
                     if (produto.getQtdEstProduto() >= int.Parse(txtQtd.Text))
                     {
 
-                        Console.WriteLine("{0}", produto.getIdProduto().ToString());
+                        //Console.WriteLine("{0}", produto.getIdProduto().ToString());
                         ListViewItem item = new ListViewItem(produto.getCodigoBarras());
                         item.SubItems.Add(produto.getDescProduto() + " " + produto.getCorProduto() + " " + produto.getTamProduto());
                         item.SubItems.Add(produto.getPrecoVenda().ToString());

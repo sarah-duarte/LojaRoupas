@@ -17,7 +17,7 @@ namespace LojaRoupas
             List<Fornecedor> lista = fornecedor.ListaFornecedor();
             foreach (Fornecedor f in lista)
             {
-                Console.WriteLine("{0}", f.getId().ToString());
+                //Console.WriteLine("{0}", f.getId().ToString());
                 ListViewItem item = new ListViewItem(f.getId().ToString());
                 item.SubItems.Add(f.getRazaosocial());
                 item.SubItems.Add(f.getCnpj());

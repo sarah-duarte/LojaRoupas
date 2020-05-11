@@ -23,7 +23,7 @@ namespace LojaRoupas
             List<Operador> lista = operador.ListaOperador();
             foreach (Operador o in lista)
             {
-                Console.WriteLine("{0}", o.getId().ToString());
+                //Console.WriteLine("{0}", o.getId().ToString());
                 ListViewItem item = new ListViewItem(o.getId().ToString());
                 item.SubItems.Add(o.getNome());
                 item.SubItems.Add(o.getCpf());

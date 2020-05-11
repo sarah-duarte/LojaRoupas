@@ -17,7 +17,7 @@ namespace LojaRoupas
             List<Compra> lista = Compra.ListaCompra();
             foreach (Compra v in lista)
             {
-                Console.WriteLine("{0}", v.getId().ToString());
+                //Console.WriteLine("{0}", v.getId().ToString());
                 Fornecedor Fornecedor = new Fornecedor();
 
                 ListViewItem item = new ListViewItem(v.getId().ToString());
@@ -47,15 +47,12 @@ namespace LojaRoupas
             MontaLista();
             AtualizaLista();
         }
-
         private void btnCancelar_Click(object sender, EventArgs e) => Close();
-
         private void frmListaCompra_Load(object sender, EventArgs e)
         {
             MontaLista();
             AtualizaLista();
         }
-
         private void btnItensDoc_Click(object sender, EventArgs e)
         {
             frmListaItensCompra telaItensCompra = new frmListaItensCompra();

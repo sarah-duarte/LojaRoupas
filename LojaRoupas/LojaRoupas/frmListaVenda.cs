@@ -17,7 +17,7 @@ namespace LojaRoupas
             List<Venda> lista = venda.ListaVenda();
             foreach (Venda v in lista)
             {
-                Console.WriteLine("{0}", venda.getId().ToString());
+                //Console.WriteLine("{0}", venda.getId().ToString());
                 Cliente Cliente = new Cliente();
                 Operador Operador = new Operador();
 

@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using LojaRoupas.Classes;
 
@@ -30,7 +24,7 @@ namespace LojaRoupas
             List<Produto> lista = produto.ListaProduto(txtCodBarras.Text, txtDescricao.Text, txtCor.Text, txtTamanho.Text, PrcCusto, PrcVenda);
             foreach (Produto p in lista)
             {
-                Console.WriteLine("{0}", p.getIdProduto().ToString());
+                //Console.WriteLine("{0}", p.getIdProduto().ToString());
                 ListViewItem item = new ListViewItem(p.getIdProduto().ToString());
                 item.SubItems.Add(p.getCodigoBarras());
                 item.SubItems.Add(p.getDescProduto());
@@ -55,7 +49,6 @@ namespace LojaRoupas
             lstListaProduto.Columns.Add("VENDA", 77);
             lstListaProduto.Columns.Add("ESTOQUE", 60);
         }
-
         private void btnPesq_Click(object sender, EventArgs e)
         {
             MontaLista();
@@ -63,7 +56,6 @@ namespace LojaRoupas
             this.lstListaProduto.Items[0].Focused = true;
             this.lstListaProduto.Items[0].Selected = true;
         }
-
         private void lstListaProduto_DoubleClick(object sender, EventArgs e)
         {
             ListView.SelectedListViewItemCollection produtoSelect =

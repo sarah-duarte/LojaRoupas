@@ -17,7 +17,7 @@ namespace LojaRoupas
             List<Produto> lista = produto.ListaProduto();
             foreach (Produto p in lista)
             {
-                Console.WriteLine("{0}", p.getIdProduto().ToString());
+                //Console.WriteLine("{0}", p.getIdProduto().ToString());
                 ListViewItem item = new ListViewItem(p.getIdProduto().ToString());
                 item.SubItems.Add(p.getCodigoBarras());
                 item.SubItems.Add(p.getDescProduto());

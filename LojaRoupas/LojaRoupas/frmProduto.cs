@@ -12,7 +12,6 @@ namespace LojaRoupas
         {
             InitializeComponent();
         }
-
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             produto.setIdProduto(int.Parse(lblID.Text));
@@ -33,12 +32,7 @@ namespace LojaRoupas
                 MessageBox.Show(erro.Message,"Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
+        private void btnCancelar_Click(object sender, EventArgs e) => this.Close();
         private void frmProduto_Load(object sender, EventArgs e)
         {
             lblID.Text = Convert.ToString(produto.NovoId());

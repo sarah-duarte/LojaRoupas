@@ -19,17 +19,14 @@ namespace LojaRoupas
         {
             InitializeComponent();
         }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
             lblID.Text = Convert.ToString(usuario.NovoId());
         }
-
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             usuario.setId(int.Parse(lblID.Text));
