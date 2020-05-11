@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Npgsql;
 
 namespace LojaRoupas.Model
@@ -19,7 +15,11 @@ namespace LojaRoupas.Model
             cs = "Host=localhost;Username=admin;Password=admin;Database=dbLojaRoupas";
             con = new NpgsqlConnection(cs);
             con.Open();
-            Console.WriteLine("Conectado");
+            //Console.WriteLine("Conectado");
+        }
+        public void Desconect()
+        {
+            con.Close();
         }
         public virtual int GetNovoId() { return 0; }
     }

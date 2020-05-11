@@ -17,9 +17,10 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 ultimoid = rdr.GetInt32(0);
             }
+            this.Desconect();
             return ultimoid + 1;
         }
         public void InserirItemCompra(ItemCompra i)
@@ -37,8 +38,8 @@ namespace LojaRoupas.Model
             cmd.Prepare();
 
             cmd.ExecuteNonQuery();
-
-            Console.WriteLine("row inserted");
+            this.Desconect();
+            //Console.WriteLine("row inserted");
         }
         public List<ItemCompra> ListaItemCompra(int idCompra)
         {
@@ -52,7 +53,7 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 ItemCompra i = new ItemCompra();
                 i.setID(rdr.GetInt32(0));
                 i.setIdProduto(rdr.GetInt32(1));
@@ -62,6 +63,7 @@ namespace LojaRoupas.Model
                 i.setIdDocumento(rdr.GetInt32(5));
                 Lista.Add(i);
             }
+            this.Desconect();
             return Lista;
         }
     }

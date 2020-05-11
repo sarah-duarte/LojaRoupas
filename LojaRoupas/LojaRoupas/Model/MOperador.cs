@@ -17,9 +17,10 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 ultimoid = rdr.GetInt32(0);
             }
+            this.Desconect();
             return ultimoid + 1;
         }
         public void InserirOperador(Operador operador)
@@ -39,8 +40,8 @@ namespace LojaRoupas.Model
             cmd.Prepare();
 
             cmd.ExecuteNonQuery();
-
-            Console.WriteLine("row inserted");
+            this.Desconect();
+            //Console.WriteLine("row inserted");
         }
         public List<Operador> ListaOperador()
         {
@@ -52,7 +53,7 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 Operador o = new Operador();
                 o.setId(rdr.GetInt32(0));
                 o.setNome(rdr.GetString(1));
@@ -64,6 +65,7 @@ namespace LojaRoupas.Model
                 o.setTurno(rdr.GetString(7));
                 Lista.Add(o);
             }
+            this.Desconect();
             return Lista;
         }
         public Operador getOperador(int idOperador)
@@ -78,7 +80,7 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));                
+                //Console.WriteLine("{0}", rdr.GetInt32(0));                
                 o.setId(rdr.GetInt32(0));
                 o.setNome(rdr.GetString(1));
                 o.setCpf(rdr.GetString(2));
@@ -88,6 +90,7 @@ namespace LojaRoupas.Model
                 o.setEndereco(rdr.GetString(6));
                 o.setTurno(rdr.GetString(7));
             }
+            this.Desconect();
             return o;
         }
         public String getNomeOperador(int idOperador)
@@ -102,7 +105,7 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 o.setId(rdr.GetInt32(0));
                 o.setNome(rdr.GetString(1));
                 o.setCpf(rdr.GetString(2));
@@ -112,6 +115,7 @@ namespace LojaRoupas.Model
                 o.setEndereco(rdr.GetString(6));
                 o.setTurno(rdr.GetString(7));
             }
+            this.Desconect();
             return o.getNome();
         }
     }

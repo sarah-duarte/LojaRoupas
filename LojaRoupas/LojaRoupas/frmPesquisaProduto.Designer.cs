@@ -37,7 +37,7 @@
             this.precoCusto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.precoVenda = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.qtdEstProduto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.btnSalvar = new System.Windows.Forms.Button();
+            this.btnPesq = new System.Windows.Forms.Button();
             this.txtPrcVenda = new System.Windows.Forms.TextBox();
             this.txtPrcCusto = new System.Windows.Forms.TextBox();
             this.txtTamanho = new System.Windows.Forms.TextBox();
@@ -67,6 +67,7 @@
             this.qtdEstProduto});
             this.lstListaProduto.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.lstListaProduto.ForeColor = System.Drawing.Color.BurlyWood;
+            this.lstListaProduto.FullRowSelect = true;
             this.lstListaProduto.HideSelection = false;
             this.lstListaProduto.Location = new System.Drawing.Point(0, 115);
             this.lstListaProduto.Name = "lstListaProduto";
@@ -74,6 +75,7 @@
             this.lstListaProduto.TabIndex = 1;
             this.lstListaProduto.UseCompatibleStateImageBehavior = false;
             this.lstListaProduto.View = System.Windows.Forms.View.Details;
+            this.lstListaProduto.DoubleClick += new System.EventHandler(this.lstListaProduto_DoubleClick);
             // 
             // id
             // 
@@ -113,16 +115,17 @@
             // 
             this.qtdEstProduto.Text = "Estoque";
             // 
-            // btnSalvar
+            // btnPesq
             // 
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnSalvar.Location = new System.Drawing.Point(509, 63);
-            this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(134, 44);
-            this.btnSalvar.TabIndex = 7;
-            this.btnSalvar.Text = "PESQUISAR";
-            this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnPesq.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPesq.ForeColor = System.Drawing.Color.BurlyWood;
+            this.btnPesq.Location = new System.Drawing.Point(509, 63);
+            this.btnPesq.Name = "btnPesq";
+            this.btnPesq.Size = new System.Drawing.Size(134, 44);
+            this.btnPesq.TabIndex = 7;
+            this.btnPesq.Text = "PESQUISAR";
+            this.btnPesq.UseVisualStyleBackColor = true;
+            this.btnPesq.Click += new System.EventHandler(this.btnPesq_Click);
             // 
             // txtPrcVenda
             // 
@@ -263,7 +266,7 @@
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(655, 450);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.btnSalvar);
+            this.Controls.Add(this.btnPesq);
             this.Controls.Add(this.txtPrcVenda);
             this.Controls.Add(this.txtPrcCusto);
             this.Controls.Add(this.txtTamanho);
@@ -296,7 +299,7 @@
         private System.Windows.Forms.ColumnHeader precoCusto;
         private System.Windows.Forms.ColumnHeader precoVenda;
         private System.Windows.Forms.ColumnHeader qtdEstProduto;
-        private System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnPesq;
         private System.Windows.Forms.TextBox txtPrcVenda;
         private System.Windows.Forms.TextBox txtPrcCusto;
         private System.Windows.Forms.TextBox txtTamanho;

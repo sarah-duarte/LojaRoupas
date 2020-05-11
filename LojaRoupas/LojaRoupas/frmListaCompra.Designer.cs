@@ -46,7 +46,7 @@
             this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnCancelar.Location = new System.Drawing.Point(562, 156);
+            this.btnCancelar.Location = new System.Drawing.Point(581, 134);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(109, 55);
             this.btnCancelar.TabIndex = 29;
@@ -59,7 +59,7 @@
             this.btnNovo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnNovo.Location = new System.Drawing.Point(562, 34);
+            this.btnNovo.Location = new System.Drawing.Point(581, 12);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(109, 55);
             this.btnNovo.TabIndex = 28;
@@ -77,12 +77,13 @@
             this.desconto,
             this.qtditens,
             this.fornecedor});
-            this.lstListaCompra.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstListaCompra.Dock = System.Windows.Forms.DockStyle.Left;
             this.lstListaCompra.ForeColor = System.Drawing.Color.BurlyWood;
+            this.lstListaCompra.FullRowSelect = true;
             this.lstListaCompra.HideSelection = false;
             this.lstListaCompra.Location = new System.Drawing.Point(0, 0);
             this.lstListaCompra.Name = "lstListaCompra";
-            this.lstListaCompra.Size = new System.Drawing.Size(702, 450);
+            this.lstListaCompra.Size = new System.Drawing.Size(565, 450);
             this.lstListaCompra.TabIndex = 27;
             this.lstListaCompra.UseCompatibleStateImageBehavior = false;
             this.lstListaCompra.View = System.Windows.Forms.View.Details;
@@ -122,7 +123,7 @@
             this.btnItensDoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnItensDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnItensDoc.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnItensDoc.Location = new System.Drawing.Point(562, 95);
+            this.btnItensDoc.Location = new System.Drawing.Point(581, 73);
             this.btnItensDoc.Name = "btnItensDoc";
             this.btnItensDoc.Size = new System.Drawing.Size(109, 55);
             this.btnItensDoc.TabIndex = 30;

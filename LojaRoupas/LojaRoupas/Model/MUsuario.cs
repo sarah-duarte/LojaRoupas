@@ -18,9 +18,10 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 ultimoid = rdr.GetInt32(0);
             }
+            this.Desconect();
             return ultimoid + 1;
         }
         public void InserirUsuario(Usuario usuario)
@@ -41,8 +42,8 @@ namespace LojaRoupas.Model
             cmd.Prepare();
 
             cmd.ExecuteNonQuery();
-
-            Console.WriteLine("row inserted");
+            this.Desconect();
+            //Console.WriteLine("row inserted");
         }
         public List<Usuario> ListaUsuario()
         {
@@ -54,7 +55,7 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 Usuario c = new Usuario();
                 c.setId(rdr.GetInt32(0));
                 c.setNome(rdr.GetString(1));
@@ -67,6 +68,7 @@ namespace LojaRoupas.Model
                 c.setSenha(rdr.GetString(8));
                 Lista.Add(c);
             }
+            this.Desconect();
             return Lista;
         }
         public Usuario getUsuario(int idUsuario)
@@ -81,7 +83,7 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 c.setId(rdr.GetInt32(0));
                 c.setNome(rdr.GetString(1));
                 c.setCpf(rdr.GetString(2));
@@ -92,6 +94,7 @@ namespace LojaRoupas.Model
                 c.setLogin(rdr.GetString(7));
                 c.setSenha(rdr.GetString(8));
             }
+            this.Desconect();
             return c;
         }
         public Usuario getUsuario(string Login)
@@ -106,7 +109,7 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 c.setId(rdr.GetInt32(0));
                 c.setNome(rdr.GetString(1));
                 c.setCpf(rdr.GetString(2));
@@ -117,6 +120,7 @@ namespace LojaRoupas.Model
                 c.setLogin(rdr.GetString(7));
                 c.setSenha(rdr.GetString(8));
             }
+            this.Desconect();
             return c;
         }
         public String getNomeUsuario(int idUsuario)
@@ -131,7 +135,7 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 c.setId(rdr.GetInt32(0));
                 c.setNome(rdr.GetString(1));
                 c.setCpf(rdr.GetString(2));
@@ -142,6 +146,7 @@ namespace LojaRoupas.Model
                 c.setLogin(rdr.GetString(7));
                 c.setSenha(rdr.GetString(8));
             }
+            this.Desconect();
             return c.getNome();
         }
         public String getSenhaUsuario(string Login)
@@ -156,7 +161,7 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 c.setId(rdr.GetInt32(0));
                 c.setNome(rdr.GetString(1));
                 c.setCpf(rdr.GetString(2));
@@ -167,6 +172,7 @@ namespace LojaRoupas.Model
                 c.setLogin(rdr.GetString(7));
                 c.setSenha(rdr.GetString(8));
             }
+            this.Desconect();
             return c.getSenha();
         }
     }

@@ -433,6 +433,7 @@
             this.Controls.Add(this.txtQtd);
             this.Controls.Add(this.txtCodBarras);
             this.Name = "frmCompra";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Compra";
             this.Load += new System.EventHandler(this.frmCompra_Load);
             this.pnlDesconto.ResumeLayout(false);

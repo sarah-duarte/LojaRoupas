@@ -47,7 +47,7 @@
             this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnCancelar.Location = new System.Drawing.Point(644, 156);
+            this.btnCancelar.Location = new System.Drawing.Point(644, 134);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(109, 55);
             this.btnCancelar.TabIndex = 26;
@@ -60,7 +60,7 @@
             this.btnNovo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnNovo.Location = new System.Drawing.Point(644, 34);
+            this.btnNovo.Location = new System.Drawing.Point(644, 12);
             this.btnNovo.Name = "btnNovo";
             this.btnNovo.Size = new System.Drawing.Size(109, 55);
             this.btnNovo.TabIndex = 25;
@@ -79,12 +79,12 @@
             this.qtditens,
             this.cliente,
             this.operador});
-            this.lstListaVenda.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstListaVenda.ForeColor = System.Drawing.Color.BurlyWood;
+            this.lstListaVenda.FullRowSelect = true;
             this.lstListaVenda.HideSelection = false;
             this.lstListaVenda.Location = new System.Drawing.Point(0, 0);
             this.lstListaVenda.Name = "lstListaVenda";
-            this.lstListaVenda.Size = new System.Drawing.Size(765, 450);
+            this.lstListaVenda.Size = new System.Drawing.Size(627, 450);
             this.lstListaVenda.TabIndex = 24;
             this.lstListaVenda.UseCompatibleStateImageBehavior = false;
             this.lstListaVenda.View = System.Windows.Forms.View.Details;
@@ -129,7 +129,7 @@
             this.btnItensDoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnItensDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnItensDoc.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnItensDoc.Location = new System.Drawing.Point(644, 95);
+            this.btnItensDoc.Location = new System.Drawing.Point(644, 73);
             this.btnItensDoc.Name = "btnItensDoc";
             this.btnItensDoc.Size = new System.Drawing.Size(109, 55);
             this.btnItensDoc.TabIndex = 27;

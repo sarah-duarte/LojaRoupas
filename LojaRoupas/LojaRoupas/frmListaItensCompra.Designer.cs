@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lstListaProduto = new System.Windows.Forms.ListView();
+            this.lstListaItensCompra = new System.Windows.Forms.ListView();
             this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.codigoBarras = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.descricao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -39,10 +39,10 @@
             this.qtdEstProduto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
             // 
-            // lstListaProduto
+            // lstListaItensCompra
             // 
-            this.lstListaProduto.BackColor = System.Drawing.Color.Black;
-            this.lstListaProduto.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.lstListaItensCompra.BackColor = System.Drawing.Color.Black;
+            this.lstListaItensCompra.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.id,
             this.codigoBarras,
             this.descricao,
@@ -51,15 +51,15 @@
             this.precoCusto,
             this.precoVenda,
             this.qtdEstProduto});
-            this.lstListaProduto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstListaProduto.ForeColor = System.Drawing.Color.BurlyWood;
-            this.lstListaProduto.HideSelection = false;
-            this.lstListaProduto.Location = new System.Drawing.Point(0, 0);
-            this.lstListaProduto.Name = "lstListaProduto";
-            this.lstListaProduto.Size = new System.Drawing.Size(636, 450);
-            this.lstListaProduto.TabIndex = 1;
-            this.lstListaProduto.UseCompatibleStateImageBehavior = false;
-            this.lstListaProduto.View = System.Windows.Forms.View.Details;
+            this.lstListaItensCompra.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lstListaItensCompra.ForeColor = System.Drawing.Color.BurlyWood;
+            this.lstListaItensCompra.HideSelection = false;
+            this.lstListaItensCompra.Location = new System.Drawing.Point(0, 0);
+            this.lstListaItensCompra.Name = "lstListaItensCompra";
+            this.lstListaItensCompra.Size = new System.Drawing.Size(636, 223);
+            this.lstListaItensCompra.TabIndex = 1;
+            this.lstListaItensCompra.UseCompatibleStateImageBehavior = false;
+            this.lstListaItensCompra.View = System.Windows.Forms.View.Details;
             // 
             // id
             // 
@@ -103,18 +103,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(636, 450);
-            this.Controls.Add(this.lstListaProduto);
+            this.ClientSize = new System.Drawing.Size(636, 223);
+            this.Controls.Add(this.lstListaItensCompra);
             this.Name = "frmListaItensCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Itens da Compra";
+            this.Load += new System.EventHandler(this.frmListaItensCompra_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.ListView lstListaProduto;
+        private System.Windows.Forms.ListView lstListaItensCompra;
         private System.Windows.Forms.ColumnHeader id;
         private System.Windows.Forms.ColumnHeader codigoBarras;
         private System.Windows.Forms.ColumnHeader descricao;

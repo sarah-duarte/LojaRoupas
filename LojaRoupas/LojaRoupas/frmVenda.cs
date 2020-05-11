@@ -211,20 +211,28 @@ namespace LojaRoupas
                 {
                     rdbValor.Checked = true;
                     txtDesconto.Text = "0,00";
-                }
-                lblDesconto.Text = "R$ " + txtDesconto.Text;
+                }          
             } 
             else txtDesconto.Text = "0,00";
 
-            lblTotal.Text = "R$ " + (GetTotalProdutos() - double.Parse(txtDesconto.Text)).ToString();
-
+            if (double.Parse(txtDesconto.Text) <= GetTotalProdutos())
+            {
+                txtDesconto.Text = txtDesconto.Text;
+                lblTotal.Text = "R$ " + (GetTotalProdutos() - double.Parse(txtDesconto.Text)).ToString();
+            }
+            else
+            {
+                txtDesconto.Text = "0,00";
+                MessageBox.Show("Desconto acima do valor total!", "Desconto", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            lblDesconto.Text = "R$ " + txtDesconto.Text;
             pnlDesconto.Visible = false;
         }
-
         private void btnPesqProduto_Click(object sender, EventArgs e)
         {
             frmPesquisaProduto telaPesqProduto = new frmPesquisaProduto();
             telaPesqProduto.ShowDialog();
+            txtCodBarras.Text = telaPesqProduto.Produto.getCodigoBarras();
         }
     }
 }

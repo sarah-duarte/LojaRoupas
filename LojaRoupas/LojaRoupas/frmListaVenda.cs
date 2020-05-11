@@ -60,6 +60,15 @@ namespace LojaRoupas
         private void btnItensDoc_Click(object sender, EventArgs e)
         {
             frmListaItensVenda telaItensVenda = new frmListaItensVenda();
+
+            ListView.SelectedListViewItemCollection documentoSelect =
+                this.lstListaVenda.SelectedItems;
+
+            foreach (ListViewItem item in documentoSelect)
+            {
+                ItemVenda i = new ItemVenda();
+                telaItensVenda.Lista = i.ListaItemVenda(int.Parse(item.SubItems[0].Text));
+            }
             telaItensVenda.ShowDialog();
         }
     }

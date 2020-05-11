@@ -17,10 +17,11 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 ultimoid = rdr.GetInt32(0);
             }
-            return ultimoid + 1;
+            this.Desconect();
+            return ultimoid + 1;            
         }
         public void InserirCliente(Cliente cliente)
         {
@@ -39,8 +40,8 @@ namespace LojaRoupas.Model
             cmd.Prepare();
 
             cmd.ExecuteNonQuery();
-
-            Console.WriteLine("row inserted");
+            this.Desconect();
+            //Console.WriteLine("row inserted");
         }
         public List<Cliente> ListaCliente()
         {
@@ -52,7 +53,7 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 Cliente c = new Cliente();
                 c.setId(rdr.GetInt32(0));
                 c.setNome(rdr.GetString(1));
@@ -64,6 +65,7 @@ namespace LojaRoupas.Model
                 c.setComprasRealizadas(rdr.GetInt32(7));
                 Lista.Add(c);
             }
+            this.Desconect();
             return Lista;
         }
         public Cliente getCliente(int idCliente)
@@ -78,7 +80,7 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));                
+                //Console.WriteLine("{0}", rdr.GetInt32(0));                
                 c.setId(rdr.GetInt32(0));
                 c.setNome(rdr.GetString(1));
                 c.setCpf(rdr.GetString(2));
@@ -88,6 +90,7 @@ namespace LojaRoupas.Model
                 c.setEndereco(rdr.GetString(6));
                 c.setComprasRealizadas(rdr.GetInt32(7));
             }
+            this.Desconect();
             return c;
         }
         public String getNomeCliente(int idCliente)
@@ -102,7 +105,7 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 c.setId(rdr.GetInt32(0));
                 c.setNome(rdr.GetString(1));
                 c.setCpf(rdr.GetString(2));
@@ -112,6 +115,7 @@ namespace LojaRoupas.Model
                 c.setEndereco(rdr.GetString(6));
                 c.setComprasRealizadas(rdr.GetInt32(7));
             }
+            this.Desconect();
             return c.getNome();
         }
     }

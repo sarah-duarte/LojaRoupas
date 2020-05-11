@@ -17,7 +17,7 @@ namespace LojaRoupas
             List<Compra> lista = Compra.ListaCompra();
             foreach (Compra v in lista)
             {
-                Console.WriteLine("{0}", Compra.getId().ToString());
+                Console.WriteLine("{0}", v.getId().ToString());
                 Fornecedor Fornecedor = new Fornecedor();
 
                 ListViewItem item = new ListViewItem(v.getId().ToString());
@@ -59,6 +59,15 @@ namespace LojaRoupas
         private void btnItensDoc_Click(object sender, EventArgs e)
         {
             frmListaItensCompra telaItensCompra = new frmListaItensCompra();
+
+            ListView.SelectedListViewItemCollection documentoSelect =
+                this.lstListaCompra.SelectedItems;
+
+            foreach (ListViewItem item in documentoSelect)
+            {
+                ItemCompra i = new ItemCompra();
+                telaItensCompra.Lista = i.ListaItemCompra(int.Parse(item.SubItems[0].Text));
+            }
             telaItensCompra.ShowDialog();
         }
     }

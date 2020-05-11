@@ -17,9 +17,10 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 ultimoid = rdr.GetInt32(0);
             }
+            this.Desconect();
             return ultimoid + 1;
         }
         public void InserirFornecedor(Fornecedor fornecedor)
@@ -36,8 +37,8 @@ namespace LojaRoupas.Model
             cmd.Prepare();
 
             cmd.ExecuteNonQuery();
-
-            Console.WriteLine("row inserted");
+            this.Desconect();
+            //Console.WriteLine("row inserted");
         }
         public List<Fornecedor> ListaFornecedor()
         {
@@ -49,7 +50,7 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 Fornecedor fornecedor = new Fornecedor();
                 fornecedor.setId(rdr.GetInt32(0));
                 fornecedor.setRazaosocial(rdr.GetString(1));
@@ -59,6 +60,7 @@ namespace LojaRoupas.Model
 
                 Lista.Add(fornecedor);
             }
+            this.Desconect();
             return Lista;
         }
         public Fornecedor getFornecedor(int idFornecedor)
@@ -73,13 +75,14 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));                
+                //Console.WriteLine("{0}", rdr.GetInt32(0));                
                 fornecedor.setId(rdr.GetInt32(0));
                 fornecedor.setRazaosocial(rdr.GetString(1));
                 fornecedor.setCnpj(rdr.GetString(2));
                 fornecedor.setTelefone(rdr.GetString(3));
                 fornecedor.setEndereco(rdr.GetString(4));
             }
+            this.Desconect();
             return fornecedor;
         }
         public String getNomeFornecedor(int idFornecedor)
@@ -94,13 +97,14 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 fornecedor.setId(rdr.GetInt32(0));
                 fornecedor.setRazaosocial(rdr.GetString(1));
                 fornecedor.setCnpj(rdr.GetString(2));
                 fornecedor.setTelefone(rdr.GetString(3));
                 fornecedor.setEndereco(rdr.GetString(4));
             }
+            this.Desconect();
             return fornecedor.getRazaosocial();
         }
     }

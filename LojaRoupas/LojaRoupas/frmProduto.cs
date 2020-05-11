@@ -14,7 +14,7 @@ namespace LojaRoupas
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
-        {            
+        {
             produto.setIdProduto(int.Parse(lblID.Text));
             produto.setCodigoBarras(txtCodBarras.Text);
             produto.setDescProduto(txtDescricao.Text);

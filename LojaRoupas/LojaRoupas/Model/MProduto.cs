@@ -17,9 +17,10 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 ultimoid = rdr.GetInt32(0);
             }
+            this.Desconect();
             return ultimoid + 1;
         }
         public void InserirProduto(Produto produto)
@@ -39,20 +40,21 @@ namespace LojaRoupas.Model
             cmd.Prepare();
 
             cmd.ExecuteNonQuery();
-
-            Console.WriteLine("row inserted");
+            this.Desconect();
+            //Console.WriteLine("row inserted");
         }        
         public List<Produto> ListaProduto()
         {
             List<Produto> Lista = new List<Produto>();
             this.Conect();
-            sql = "SELECT  id, codigobarras, descricao, cor, tamanho, precocusto, precovenda, qtdestoque FROM tbproduto order by id";
+            sql = "SELECT  id, codigobarras, descricao, cor, tamanho, precocusto, precovenda, qtdestoque " +
+                "FROM tbproduto order by id";
             cmd = new NpgsqlCommand(sql, con);
             rdr = cmd.ExecuteReader();
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 Produto produto = new Produto();
                 produto.setIdProduto(rdr.GetInt32(0));
                 produto.setCodigoBarras(rdr.GetString(1));
@@ -64,6 +66,45 @@ namespace LojaRoupas.Model
                 produto.setQtdEstProduto(rdr.GetInt32(7));
                 Lista.Add(produto);
             }
+            this.Desconect();
+            return Lista;
+        }
+        public List<Produto> ListaProduto(String codigobarras, String descricao, String cor, String tamanho, Double precocusto, Double precovenda)
+        {
+            List<Produto> Lista = new List<Produto>();
+            this.Conect();
+            sql = "SELECT  id, codigobarras, descricao, cor, tamanho, precocusto, precovenda, qtdestoque " +
+                " FROM tbproduto " +
+                " WHERE  codigobarras like @codigobarras and descricao like @descricao " +
+                " and cor like @cor and tamanho like @tamanho ";
+            if (precocusto != 0) sql = sql + " and precocusto = @precocusto ";
+            if (precovenda != 0) sql = sql + " and precovenda = @precovenda ";
+            sql = sql + " order by id";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("codigobarras", "%"+codigobarras+ "%");
+            cmd.Parameters.AddWithValue("descricao", "%" + descricao + "%");
+            cmd.Parameters.AddWithValue("cor", "%" + cor + "%");
+            cmd.Parameters.AddWithValue("tamanho", "%" + tamanho + "%");
+            if (precocusto != 0) cmd.Parameters.AddWithValue("precocusto", precocusto);
+            if (precovenda != 0) cmd.Parameters.AddWithValue("precovenda", precovenda);
+            cmd.Prepare();
+            rdr = cmd.ExecuteReader();
+
+            while (rdr.Read())
+            {
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
+                Produto produto = new Produto();
+                produto.setIdProduto(rdr.GetInt32(0));
+                produto.setCodigoBarras(rdr.GetString(1));
+                produto.setDescProduto(rdr.GetString(2));
+                produto.setCorProduto(rdr.GetString(3));
+                produto.setTamProduto(rdr.GetString(4));
+                produto.setPrecoCusto(rdr.GetDouble(5));
+                produto.setPrecoVenda(rdr.GetDouble(6));
+                produto.setQtdEstProduto(rdr.GetInt32(7));
+                Lista.Add(produto);
+            }
+            this.Desconect();
             return Lista;
         }
         public Produto getProduto(String codigobarras)
@@ -78,7 +119,7 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));                
+                //Console.WriteLine("{0}", rdr.GetInt32(0));                
                 produto.setIdProduto(rdr.GetInt32(0));
                 produto.setCodigoBarras(rdr.GetString(1));
                 produto.setDescProduto(rdr.GetString(2));
@@ -88,6 +129,7 @@ namespace LojaRoupas.Model
                 produto.setPrecoVenda(rdr.GetDouble(6));
                 produto.setQtdEstProduto(rdr.GetInt32(7));
             }
+            this.Desconect();
             return produto;
         }
         public Produto getProduto(int idProduto)
@@ -102,7 +144,7 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 produto.setIdProduto(rdr.GetInt32(0));
                 produto.setCodigoBarras(rdr.GetString(1));
                 produto.setDescProduto(rdr.GetString(2));
@@ -112,6 +154,7 @@ namespace LojaRoupas.Model
                 produto.setPrecoVenda(rdr.GetDouble(6));
                 produto.setQtdEstProduto(rdr.GetInt32(7));
             }
+            this.Desconect();
             return produto;
         }
         public String getDescProduto(int idProduto)
@@ -126,7 +169,7 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                Console.WriteLine("{0}", rdr.GetInt32(0));
+                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 produto.setIdProduto(rdr.GetInt32(0));
                 produto.setCodigoBarras(rdr.GetString(1));
                 produto.setDescProduto(rdr.GetString(2));
@@ -136,6 +179,7 @@ namespace LojaRoupas.Model
                 produto.setPrecoVenda(rdr.GetDouble(6));
                 produto.setQtdEstProduto(rdr.GetInt32(7));
             }
+            this.Desconect();
             return produto.getDescProduto() + " " + produto.getCorProduto() + " " + produto.getTamProduto();
         }
         public void SaidaEstoqueProduto(int qtdvendida, int id)
@@ -149,8 +193,8 @@ namespace LojaRoupas.Model
             cmd.Prepare();
 
             cmd.ExecuteNonQuery();
-
-            Console.WriteLine("row updated");
+            this.Desconect();
+            //Console.WriteLine("row updated");
         }
         public void EntradaEstoqueProduto(int qtdcomprada, int id)
         {
@@ -163,8 +207,8 @@ namespace LojaRoupas.Model
             cmd.Prepare();
 
             cmd.ExecuteNonQuery();
-
-            Console.WriteLine("row updated");
+            this.Desconect();
+            //Console.WriteLine("row updated");
         }
     }
 }
