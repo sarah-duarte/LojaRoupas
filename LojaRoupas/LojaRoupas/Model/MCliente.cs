@@ -28,7 +28,7 @@ namespace LojaRoupas.Model
             this.Conect();
 
             sql = "INSERT INTO tbcliente(nome, cpf, email, telefone, nascimento, endereco, comprasrealizadas) ";
-            sql = sql + "VALUES(@nome, @cpf, @email, @telefone, @nascimento, @endereco, @comprasrealizadas); ";
+            sql += "VALUES(@nome, @cpf, @email, @telefone, @nascimento, @endereco, @comprasrealizadas); ";
             cmd = new NpgsqlCommand(sql, con);
             cmd.Parameters.AddWithValue("nome", cliente.getNome());
             cmd.Parameters.AddWithValue("cpf", cliente.getCpf());
@@ -43,7 +43,39 @@ namespace LojaRoupas.Model
             this.Desconect();
             //Console.WriteLine("row inserted");
         }
-        public List<Cliente> ListaCliente()
+        public void EditarCliente(Cliente cliente)
+        {
+            this.Conect();
+
+            sql = "UPDATE tbcliente SET nome=@nome, cpf=@cpf, email=@email, telefone=@telefone, nascimento=@nascimento, " +
+                " endereco=@endereco, comprasrealizadas=@comprasrealizadas WHERE id=@id;";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("id", cliente.getId());
+            cmd.Parameters.AddWithValue("nome", cliente.getNome());
+            cmd.Parameters.AddWithValue("cpf", cliente.getCpf());
+            cmd.Parameters.AddWithValue("email", cliente.getEmail());
+            cmd.Parameters.AddWithValue("telefone", cliente.getTelefone());
+            cmd.Parameters.AddWithValue("nascimento", cliente.getNascimento());
+            cmd.Parameters.AddWithValue("endereco", cliente.getEndereco());
+            cmd.Parameters.AddWithValue("comprasrealizadas", cliente.getComprasRealizadas());
+            cmd.Prepare();
+
+            cmd.ExecuteNonQuery();
+            this.Desconect();
+        }
+        public void ExcluirCliente(int idCliente)
+        {
+            this.Conect();
+
+            sql = "DELETE FROM tbcliente WHERE id=@id;";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("id", idCliente);
+            cmd.Prepare();
+
+            cmd.ExecuteNonQuery();
+            this.Desconect();
+        }
+        public List<Cliente> ListarCliente()
         {
             List<Cliente> Lista = new List<Cliente>();
             this.Conect();

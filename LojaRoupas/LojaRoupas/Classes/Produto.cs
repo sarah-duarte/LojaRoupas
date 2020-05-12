@@ -36,10 +36,11 @@ namespace LojaRoupas.Classes
 
         public int NovoId() => conexao.GetNovoId();
         public void CadProduto(Produto produto) => conexao.InserirProduto(produto);
-        public List<Produto> ListaProduto() => conexao.ListaProduto();
+        public void EditarProduto(Produto produto) => conexao.EditarProduto(produto);
+        public List<Produto> ListaProduto() => conexao.ListarProduto();
         public List<Produto> ListaProduto(String codigobarras, String descricao, String cor, String tamanho, Double precocusto, Double precovenda)
         {
-            return conexao.ListaProduto(codigobarras, descricao, cor, tamanho, precocusto, precovenda);
+            return conexao.ListarProduto(codigobarras, descricao, cor, tamanho, precocusto, precovenda);
         }
         public Produto GetProduto(String codigobarras) => conexao.getProduto(codigobarras);
         public Produto GetProduto(int id) => conexao.getProduto(id);

@@ -42,8 +42,27 @@ namespace LojaRoupas.Model
             cmd.ExecuteNonQuery();
             this.Desconect();
             //Console.WriteLine("row inserted");
-        }        
-        public List<Produto> ListaProduto()
+        }
+        public void EditarProduto(Produto produto)
+        {
+            this.Conect();
+
+            sql = "UPDATE tbproduto SET codigobarras=@codigobarras, descricao=@descricao, cor=@cor," +
+                " tamanho=@tamanho, precocusto=@precocusto, precovenda=@precovenda WHERE id=@id; ";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("id", produto.getIdProduto());
+            cmd.Parameters.AddWithValue("codigoBarras", produto.getCodigoBarras());
+            cmd.Parameters.AddWithValue("descricao", produto.getDescProduto());
+            cmd.Parameters.AddWithValue("cor", produto.getCorProduto());
+            cmd.Parameters.AddWithValue("tamanho", produto.getTamProduto());
+            cmd.Parameters.AddWithValue("precoCusto", produto.getPrecoCusto());
+            cmd.Parameters.AddWithValue("precoVenda", produto.getPrecoVenda());
+            cmd.Prepare();
+
+            cmd.ExecuteNonQuery();
+            this.Desconect();
+        }
+        public List<Produto> ListarProduto()
         {
             List<Produto> Lista = new List<Produto>();
             this.Conect();
@@ -69,7 +88,7 @@ namespace LojaRoupas.Model
             this.Desconect();
             return Lista;
         }
-        public List<Produto> ListaProduto(String codigobarras, String descricao, String cor, String tamanho, Double precocusto, Double precovenda)
+        public List<Produto> ListarProduto(String codigobarras, String descricao, String cor, String tamanho, Double precocusto, Double precovenda)
         {
             List<Produto> Lista = new List<Produto>();
             this.Conect();

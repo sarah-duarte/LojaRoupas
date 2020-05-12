@@ -45,7 +45,40 @@ namespace LojaRoupas.Model
             this.Desconect();
             //Console.WriteLine("row inserted");
         }
-        public List<Usuario> ListaUsuario()
+        public void EditarUsuario(Usuario Usuario)
+        {
+            this.Conect();
+
+            sql = "UPDATE tbusuario SET nome=@nome, cpf=@cpf, email=@email, telefone=@telefone, nascimento=@nascimento, " +
+                " endereco=@endereco, login=@login, senha=@senha WHERE id=@id;";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("id", Usuario.getId());
+            cmd.Parameters.AddWithValue("nome", Usuario.getNome());
+            cmd.Parameters.AddWithValue("cpf", Usuario.getCpf());
+            cmd.Parameters.AddWithValue("email", Usuario.getEmail());
+            cmd.Parameters.AddWithValue("telefone", Usuario.getTelefone());
+            cmd.Parameters.AddWithValue("nascimento", Usuario.getNascimento());
+            cmd.Parameters.AddWithValue("endereco", Usuario.getEndereco());
+            cmd.Parameters.AddWithValue("login", Usuario.getLogin());
+            cmd.Parameters.AddWithValue("senha", Usuario.getSenha());
+            cmd.Prepare();
+
+            cmd.ExecuteNonQuery();
+            this.Desconect();
+        }
+        public void ExcluirUsuario(int idUsuario)
+        {
+            this.Conect();
+
+            sql = "DELETE FROM tbusuario WHERE id=@id;";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("id", idUsuario);
+            cmd.Prepare();
+
+            cmd.ExecuteNonQuery();
+            this.Desconect();
+        }
+        public List<Usuario> ListarUsuario()
         {
             List<Usuario> Lista = new List<Usuario>();
             this.Conect();

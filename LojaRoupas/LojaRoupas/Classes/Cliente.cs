@@ -14,7 +14,9 @@ namespace LojaRoupas.Classes
 
         public override int NovoId() => conexao.GetNovoId();
         public void cadCliente(Cliente cliente) => conexao.InserirCliente(cliente);
-        public List<Cliente> ListaCliente() => conexao.ListaCliente();
+        public void EditarCliente(Cliente cliente) => conexao.EditarCliente(cliente);
+        public void ExcluirCliente(int idCliente) => conexao.ExcluirCliente(idCliente);
+        public List<Cliente> ListaCliente() => conexao.ListarCliente();
         public Cliente getCliente(int id) => conexao.getCliente(id);
         public String getNomeCliente(int id) => conexao.getNomeCliente(id);
     }

@@ -43,7 +43,39 @@ namespace LojaRoupas.Model
             this.Desconect();
             //Console.WriteLine("row inserted");
         }
-        public List<Operador> ListaOperador()
+        public void EditarOperador(Operador Operador)
+        {
+            this.Conect();
+
+            sql = "UPDATE tboperador SET nome=@nome, cpf=@cpf, email=@email, telefone=@telefone, nascimento=@nascimento, " +
+                " endereco=@endereco, turno=@turno WHERE id=@id;";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("id", Operador.getId());
+            cmd.Parameters.AddWithValue("nome", Operador.getNome());
+            cmd.Parameters.AddWithValue("cpf", Operador.getCpf());
+            cmd.Parameters.AddWithValue("email", Operador.getEmail());
+            cmd.Parameters.AddWithValue("telefone", Operador.getTelefone());
+            cmd.Parameters.AddWithValue("nascimento", Operador.getNascimento());
+            cmd.Parameters.AddWithValue("endereco", Operador.getEndereco());
+            cmd.Parameters.AddWithValue("turno", Operador.getTurno());
+            cmd.Prepare();
+
+            cmd.ExecuteNonQuery();
+            this.Desconect();
+        }
+        public void ExcluirOperador(int idOperador)
+        {
+            this.Conect();
+
+            sql = "DELETE FROM tboperador WHERE id=@id;";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("id", idOperador);
+            cmd.Prepare();
+
+            cmd.ExecuteNonQuery();
+            this.Desconect();
+        }
+        public List<Operador> ListarOperador()
         {
             List<Operador> Lista = new List<Operador>();
             this.Conect();

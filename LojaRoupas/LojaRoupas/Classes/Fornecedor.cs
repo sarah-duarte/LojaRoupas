@@ -27,7 +27,9 @@ namespace LojaRoupas.Classes
 
         public int NovoId() => conexao.GetNovoId();
         public void cadFornecedor(Fornecedor fornecedor) => conexao.InserirFornecedor(fornecedor);
-        public List<Fornecedor> ListaFornecedor() => conexao.ListaFornecedor();
+        public void EditarFornecedor(Fornecedor Fornecedor) => conexao.EditarFornecedor(Fornecedor);
+        public void ExcluirFornecedor(int idFornecedor) => conexao.ExcluirFornecedor(idFornecedor);
+        public List<Fornecedor> ListaFornecedor() => conexao.ListarFornecedor();
         public Fornecedor getFornecedor(int id) => conexao.getFornecedor(id);
         public String getNomeFornecedor(int id) => conexao.getNomeFornecedor(id);
     }

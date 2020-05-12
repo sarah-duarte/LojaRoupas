@@ -24,7 +24,9 @@ namespace LojaRoupas.Classes
 
         public override int NovoId() => conexao.GetNovoId();
         public void cadOperador(Operador operador) => conexao.InserirOperador(operador);
-        public List<Operador> ListaOperador() => conexao.ListaOperador();
+        public void EditarOperador(Operador Operador) => conexao.EditarOperador(Operador);
+        public void ExcluirOperador(int idOperador) => conexao.ExcluirOperador(idOperador);
+        public List<Operador> ListaOperador() => conexao.ListarOperador();
         public String getNomeOperador(int id) => conexao.getNomeOperador(id);
     }
 }

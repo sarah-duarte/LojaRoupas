@@ -28,7 +28,7 @@ namespace LojaRoupas.Model
             this.Conect();
 
             sql = "INSERT INTO tbfornecedor(razaosocial, cnpj, telefone, endereco)";
-            sql = sql + "VALUES(@razaosocial, @cnpj, @telefone, @endereco); ";
+            sql = sql + " VALUES(@razaosocial, @cnpj, @telefone, @endereco); ";
             cmd = new NpgsqlCommand(sql, con);
             cmd.Parameters.AddWithValue("razaosocial", fornecedor.getRazaosocial());
             cmd.Parameters.AddWithValue("cnpj", fornecedor.getCnpj());
@@ -40,7 +40,36 @@ namespace LojaRoupas.Model
             this.Desconect();
             //Console.WriteLine("row inserted");
         }
-        public List<Fornecedor> ListaFornecedor()
+        public void EditarFornecedor(Fornecedor fornecedor)
+        {
+            this.Conect();
+
+            sql = "UPDATE tbfornecedor	SET razaosocial=@razaosocial, cnpj=@cnpj, telefone=@telefone," +
+                " endereco=@endereco WHERE id=@id; ";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("id", fornecedor.getId());
+            cmd.Parameters.AddWithValue("razaosocial", fornecedor.getRazaosocial());
+            cmd.Parameters.AddWithValue("cnpj", fornecedor.getCnpj());
+            cmd.Parameters.AddWithValue("endereco", fornecedor.getEndereco());
+            cmd.Parameters.AddWithValue("telefone", fornecedor.getTelefone());
+            cmd.Prepare();
+
+            cmd.ExecuteNonQuery();
+            this.Desconect();
+        }
+        public void ExcluirFornecedor(int idFornecedor)
+        {
+            this.Conect();
+
+            sql = "DELETE FROM tbfornecedor WHERE id=@id;";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("id", idFornecedor);
+            cmd.Prepare();
+
+            cmd.ExecuteNonQuery();
+            this.Desconect();
+        }
+        public List<Fornecedor> ListarFornecedor()
         {
             List<Fornecedor> Lista = new List<Fornecedor>();
             this.Conect();

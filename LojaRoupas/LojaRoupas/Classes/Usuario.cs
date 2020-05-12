@@ -17,9 +17,11 @@ namespace LojaRoupas.Classes
 
         public override int NovoId() => conexao.GetNovoId();
         public void cadUsuario(Usuario Usuario) => conexao.InserirUsuario(Usuario);
-        public List<Usuario> ListaUsuario() => conexao.ListaUsuario();
+        public void EditarUsuario(Usuario Usuario) => conexao.EditarUsuario(Usuario);
+        public void ExcluirUsuario(int idUsuario) => conexao.ExcluirUsuario(idUsuario);
+        public List<Usuario> ListaUsuario() => conexao.ListarUsuario();
         public Usuario getUsuario(int id) => conexao.getUsuario(id);
-        public Usuario getLogin(string Login) => conexao.getUsuario(Login);
+        public Usuario getUsuario(string Login) => conexao.getUsuario(Login);
         public String getNomeUsuario(int id) => conexao.getNomeUsuario(id);
         public String getSenhaUsuario(string Login) => conexao.getSenhaUsuario(Login);
     }
