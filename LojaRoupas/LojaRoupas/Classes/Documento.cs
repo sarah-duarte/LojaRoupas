@@ -25,7 +25,5 @@ namespace LojaRoupas.Classes
         public Double getVlrTotal() { return this.vlrTotal; }
         public Double getDesconto() { return this.desconto; }
         public int getQtdItens() { return this.qtdItens; }
-
-        public virtual int NovoId() { return 0; }
     }
 }

@@ -31,7 +31,5 @@ namespace LojaRoupas.Classes
         public string getTelefone(){ return this.telefone; }
         public string getNascimento(){ return this.nascimento; }
         public string getEndereco(){ return this.endereco; }
-
-        public virtual int NovoId() { return 0; }
     }
 }

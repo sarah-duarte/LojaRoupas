@@ -17,7 +17,6 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 ultimoid = rdr.GetInt32(0);
             }
             this.Desconect();
@@ -39,9 +38,8 @@ namespace LojaRoupas.Model
 
             cmd.ExecuteNonQuery();
             this.Desconect();
-            //Console.WriteLine("row inserted");
         }
-        public List<ItemCompra> ListaItemCompra(int idCompra)
+        public List<ItemCompra> ListarItemCompra(int idCompra)
         {
             List<ItemCompra> Lista = new List<ItemCompra>();
             this.Conect();
@@ -53,7 +51,6 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 ItemCompra i = new ItemCompra();
                 i.setID(rdr.GetInt32(0));
                 i.setIdProduto(rdr.GetInt32(1));

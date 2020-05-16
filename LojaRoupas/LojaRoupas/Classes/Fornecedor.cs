@@ -11,7 +11,6 @@ namespace LojaRoupas.Classes
         private string razaosocial;
         private string endereco;
         private string telefone;
-        MFornecedor conexao = new MFornecedor();
 
         public void setId(int id){ this.id = id; }
         public void setCnpj(string cnpj){ this.cnpj = cnpj; }
@@ -24,13 +23,5 @@ namespace LojaRoupas.Classes
         public string getRazaosocial(){ return this.razaosocial; }
         public string getEndereco(){ return this.endereco; }
         public string getTelefone() { return this.telefone; }
-
-        public int NovoId() => conexao.GetNovoId();
-        public void cadFornecedor(Fornecedor fornecedor) => conexao.InserirFornecedor(fornecedor);
-        public void EditarFornecedor(Fornecedor Fornecedor) => conexao.EditarFornecedor(Fornecedor);
-        public void ExcluirFornecedor(int idFornecedor) => conexao.ExcluirFornecedor(idFornecedor);
-        public List<Fornecedor> ListaFornecedor() => conexao.ListarFornecedor();
-        public Fornecedor getFornecedor(int id) => conexao.getFornecedor(id);
-        public String getNomeFornecedor(int id) => conexao.getNomeFornecedor(id);
     }
 }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Npgsql;
 using LojaRoupas.Classes;
+using LojaRoupas.Controller;
 
 namespace LojaRoupas.Model
 {
@@ -17,7 +18,6 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 ultimoid = rdr.GetInt32(0);
             }
             this.Desconect();
@@ -39,7 +39,6 @@ namespace LojaRoupas.Model
 
             cmd.ExecuteNonQuery();
             this.Desconect();
-            //Console.WriteLine("row inserted");
         }
         public List<Compra> ListaCompra()
         {
@@ -51,9 +50,8 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 Compra c = new Compra();
-                ItemCompra i = new ItemCompra();
+                CItemCompra i = new CItemCompra();
                 List<ItemCompra> itensCompra = new List<ItemCompra>();
                 c.setID(rdr.GetInt32(0));
                 c.setData(rdr.GetString(1));
@@ -61,7 +59,7 @@ namespace LojaRoupas.Model
                 c.setDesconto(rdr.GetDouble(3));
                 c.setQtdItens(rdr.GetInt32(4));
                 c.setIdFornecedor(rdr.GetInt32(5));
-                itensCompra = i.ListaItemCompra(c.getId()); 
+                itensCompra = i.ListarItemCompra(c.getId()); 
                 c.setItensCompra(itensCompra);
                 Lista.Add(c);
             }

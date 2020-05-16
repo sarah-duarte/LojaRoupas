@@ -25,7 +25,5 @@ namespace LojaRoupas.Classes
         public int getIdDocumento() { return this.idDocumento; }
         public int getQtdItens() { return this.qtdItens; }
         public Double getTotalPreco() { return this.totalPreco; }
-
-        public virtual int NovoId() { return 0; }
     }
 }
