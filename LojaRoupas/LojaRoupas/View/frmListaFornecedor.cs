@@ -42,24 +42,15 @@ namespace LojaRoupas
             MontaLista();
             AtualizaLista();
         }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void btnAtualizar_Click(object sender, EventArgs e)
-        {
-            MontaLista();
-            AtualizaLista();           
-        }
-
         private void frmListaFornecedor_Load(object sender, EventArgs e)
         {
             MontaLista();
             AtualizaLista();
         }
-
         private void btnEditar_Click(object sender, EventArgs e)
         {
             ListView.SelectedListViewItemCollection Selecionado =

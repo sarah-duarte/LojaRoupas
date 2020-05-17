@@ -52,7 +52,6 @@ namespace LojaRoupas
             MontaLista();
             AtualizaLista();
         }
-
         private void btnEditar_Click(object sender, EventArgs e)
         {
             ListView.SelectedListViewItemCollection Selecionado =
@@ -61,6 +60,18 @@ namespace LojaRoupas
             foreach (ListViewItem item in Selecionado)
             {
                 c.TelaCliente(int.Parse(item.SubItems[0].Text));
+            }
+            MontaLista();
+            AtualizaLista();
+        }
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection Selecionado =
+                this.lstListaCliente.SelectedItems;
+
+            foreach (ListViewItem item in Selecionado)
+            {
+                c.ExcluirCliente(int.Parse(item.SubItems[0].Text));
             }
             MontaLista();
             AtualizaLista();

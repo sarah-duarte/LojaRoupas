@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using LojaRoupas.Classes;
 using System.IO;
@@ -59,7 +52,7 @@ namespace LojaRoupas
             try
             {
                 u.SalvarUsuario(Usuario);
-                MessageBox.Show("Usuario Cadastrado com Sucesso!", "Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Usuario Salvo com Sucesso!", "Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             catch (IOException erro)
@@ -67,6 +60,5 @@ namespace LojaRoupas
                 MessageBox.Show(erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-    }
-    
+    }    
 }

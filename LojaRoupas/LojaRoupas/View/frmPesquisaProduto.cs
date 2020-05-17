@@ -9,9 +9,7 @@ namespace LojaRoupas
     public partial class frmPesquisaProduto : Form
     {
         CProduto cProduto = new CProduto();
-
         internal Produto Produto { get; set; } = new Produto();
-
         public frmPesquisaProduto()
         {
             InitializeComponent();

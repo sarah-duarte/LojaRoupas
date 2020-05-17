@@ -15,7 +15,6 @@ namespace LojaRoupas.Model
             cs = "Host=localhost;Username=admin;Password=admin;Database=dbLojaRoupas";
             con = new NpgsqlConnection(cs);
             con.Open();
-            //Console.WriteLine("Conectado");
         }
         public void Desconect()
         {

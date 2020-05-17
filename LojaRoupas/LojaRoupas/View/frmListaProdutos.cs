@@ -57,7 +57,6 @@ namespace LojaRoupas
         {
             Close();
         }
-
         private void btnEditar_Click(object sender, EventArgs e)
         {
             ListView.SelectedListViewItemCollection Selecionado =

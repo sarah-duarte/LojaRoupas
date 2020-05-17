@@ -27,7 +27,7 @@ namespace LojaRoupas
             Produto.setQtdEstProduto(int.Parse(txtQtdEstoque.Text));
             try{
                 p.SalvarProduto(Produto);
-                MessageBox.Show("Produto Cadastrado com Sucesso!", "Produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Produto Salvo com Sucesso!", "Produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
             catch (IOException erro)

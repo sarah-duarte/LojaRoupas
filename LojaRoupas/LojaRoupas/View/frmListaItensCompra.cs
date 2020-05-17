@@ -10,7 +10,6 @@ namespace LojaRoupas
     {
         private List<ItemCompra> lista = new List<ItemCompra>();
         internal List<ItemCompra> Lista { get => lista; set => lista = value; }
-
         public frmListaItensCompra()
         {
             InitializeComponent();
@@ -38,7 +37,6 @@ namespace LojaRoupas
             lstListaItensCompra.Columns.Add("QTD", 84);
             lstListaItensCompra.Columns.Add("TOTAL", 74);
         }
-
         private void frmListaItensCompra_Load(object sender, EventArgs e)
         {
             MontaLista();

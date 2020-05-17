@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using LojaRoupas.Classes;
@@ -35,7 +28,7 @@ namespace LojaRoupas
             try
             {
                 o.SalvarOperador(Operador);
-                MessageBox.Show("Operador Cadastrado com Sucesso!", "Operador", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Operador Salvo com Sucesso!", "Operador", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             catch (IOException erro)
@@ -43,9 +36,7 @@ namespace LojaRoupas
                 MessageBox.Show(erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
         private void btnCancelar_Click(object sender, EventArgs e) => this.Close();
-
         private void frmOperador_Load(object sender, EventArgs e)
         {
             if (Operador.getId() != 0)

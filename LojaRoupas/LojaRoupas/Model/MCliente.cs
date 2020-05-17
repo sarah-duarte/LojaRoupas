@@ -133,7 +133,6 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 c.setId(rdr.GetInt32(0));
                 c.setNome(rdr.GetString(1));
                 c.setCpf(rdr.GetString(2));

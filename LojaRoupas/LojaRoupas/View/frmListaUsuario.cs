@@ -1,14 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using LojaRoupas.Classes;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.IO;
 using LojaRoupas.Controller;
 
 namespace LojaRoupas
@@ -61,9 +54,7 @@ namespace LojaRoupas
             MontaLista();
             AtualizaLista();
         }
-
         private void btnCancelar_Click(object sender, EventArgs e) => Close();
-
         private void btnEditar_Click(object sender, EventArgs e)
         {
             ListView.SelectedListViewItemCollection Selecionado =

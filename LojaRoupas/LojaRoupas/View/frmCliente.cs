@@ -1,16 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using LojaRoupas.Classes;
 using LojaRoupas.Controller;
 using System.IO;
-
 
 namespace LojaRoupas
 {
@@ -23,7 +16,6 @@ namespace LojaRoupas
         {
             InitializeComponent();
         }
-
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             Cliente.setId(int.Parse(lblID.Text));
@@ -45,7 +37,6 @@ namespace LojaRoupas
             }
         }
         private void btnCancelar_Click(object sender, EventArgs e) => Close();
-
         private void frmCliente_Load(object sender, EventArgs e)
         {
             if (Cliente.getId() != 0)

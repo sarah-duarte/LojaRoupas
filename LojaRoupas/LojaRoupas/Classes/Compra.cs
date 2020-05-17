@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using LojaRoupas.Model;
+﻿using System.Collections.Generic;
 
 namespace LojaRoupas.Classes
 {

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using LojaRoupas.Model;
-
-namespace LojaRoupas.Classes
+﻿namespace LojaRoupas.Classes
 {
     class Fornecedor 
     {

@@ -9,9 +9,7 @@ namespace LojaRoupas
     public partial class frmListaItensVenda : Form
     {
         private List<ItemVenda> lista = new List<ItemVenda>();
-
         internal List<ItemVenda> Lista { get => lista; set => lista = value; }
-
         public frmListaItensVenda()
         {
             InitializeComponent();

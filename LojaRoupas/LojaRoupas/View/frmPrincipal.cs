@@ -17,40 +17,12 @@ namespace LojaRoupas
         {
             InitializeComponent();
         }
-
-        private void produtoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            p.TelaListaProduto();
-        }
-
-        private void clienteToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            c.TelaListaCliente();           
-        }
-
-        private void operadorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            o.TelaListaOperador();
-        }
-
-        private void fornecedorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            f.TelaListaFornecedor();
-        }
-
-        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            u.TelaListaUsuario();   
-        }
-
-        private void vendaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            v.TelaListaVenda();
-        }
-
-        private void compraToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            cm.TelaListaCompra();
-        }
+        private void produtoToolStripMenuItem_Click(object sender, EventArgs e) => p.TelaListaProduto();
+        private void clienteToolStripMenuItem_Click(object sender, EventArgs e) => c.TelaListaCliente();
+        private void operadorToolStripMenuItem_Click(object sender, EventArgs e) => o.TelaListaOperador();
+        private void fornecedorToolStripMenuItem_Click(object sender, EventArgs e) => f.TelaListaFornecedor();
+        private void usuarioToolStripMenuItem_Click(object sender, EventArgs e) => u.TelaListaUsuario();
+        private void vendaToolStripMenuItem_Click(object sender, EventArgs e) => v.TelaListaVenda();
+        private void compraToolStripMenuItem_Click(object sender, EventArgs e) => cm.TelaListaCompra();
     }
 }

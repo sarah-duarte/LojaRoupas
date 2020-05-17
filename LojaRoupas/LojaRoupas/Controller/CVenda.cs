@@ -1,10 +1,6 @@
 ﻿using LojaRoupas.Classes;
 using LojaRoupas.Model;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LojaRoupas.Controller
 {
@@ -22,6 +18,10 @@ namespace LojaRoupas.Controller
             }
         }
         public List<Venda> ListarVenda() => conexao.ListarVenda();
+        public int QtdVendaCliente(int idCliente)
+        {
+            return conexao.QtdVendaCliente(idCliente);
+        }
         public void TelaVenda()
         {
             frmVenda telaVenda = new frmVenda();

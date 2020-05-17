@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Npgsql;
 using LojaRoupas.Classes;
 using LojaRoupas.Controller;
@@ -67,6 +66,23 @@ namespace LojaRoupas.Model
             }
             this.Desconect();
             return Lista;
+        }
+        public int QtdVendaCliente(int idCliente)
+        {
+            int qtdVendas = 0;
+            this.Conect();
+            sql = "SELECT count(*) as total FROM tbvenda WHERE idcliente = @idCliente";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("idCliente", idCliente);
+            cmd.Prepare();
+            rdr = cmd.ExecuteReader();
+
+            while (rdr.Read())
+            {
+                qtdVendas = rdr.GetInt32(0);
+            }
+            this.Desconect();
+            return qtdVendas;
         }
     }
 }
