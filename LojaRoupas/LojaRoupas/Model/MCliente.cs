@@ -17,7 +17,6 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 ultimoid = rdr.GetInt32(0);
             }
             this.Desconect();
@@ -41,7 +40,6 @@ namespace LojaRoupas.Model
 
             cmd.ExecuteNonQuery();
             this.Desconect();
-            //Console.WriteLine("row inserted");
         }
         public void EditarCliente(Cliente cliente)
         {
@@ -85,7 +83,6 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 Cliente c = new Cliente();
                 c.setId(rdr.GetInt32(0));
                 c.setNome(rdr.GetString(1));
@@ -111,8 +108,7 @@ namespace LojaRoupas.Model
             rdr = cmd.ExecuteReader();
 
             while (rdr.Read())
-            {
-                //Console.WriteLine("{0}", rdr.GetInt32(0));                
+            {                
                 c.setId(rdr.GetInt32(0));
                 c.setNome(rdr.GetString(1));
                 c.setCpf(rdr.GetString(2));

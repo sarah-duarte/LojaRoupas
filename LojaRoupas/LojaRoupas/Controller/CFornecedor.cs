@@ -19,10 +19,21 @@ namespace LojaRoupas.Controller
         public List<Fornecedor> ListarFornecedor() => conexao.ListarFornecedor();
         public Fornecedor GetFornecedor(int id) => conexao.getFornecedor(id);
         public String GetNomeFornecedor(int id) => conexao.getNomeFornecedor(id);
-        
-        public void TelaFornecedor()
+        public void SalvarFornecedor(Fornecedor Fornecedor)
+        {
+            if (GetFornecedor(Fornecedor.getId()).getId() == 0)
+            {
+                InserirFornecedor(Fornecedor);
+            }
+            else
+            {
+                EditarFornecedor(Fornecedor);
+            }
+        }
+        public void TelaFornecedor(int idFornecedor)
         {
             frmFornecedor telaFornecedor = new frmFornecedor();
+            telaFornecedor.Fornecedor = GetFornecedor(idFornecedor);
             telaFornecedor.ShowDialog();
         }
         public void TelaListaFornecedor()

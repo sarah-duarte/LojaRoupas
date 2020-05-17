@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using LojaRoupas.Model;
 using LojaRoupas.Classes;
+using System.Windows.Forms;
 
 namespace LojaRoupas.Controller
 {
@@ -17,9 +18,21 @@ namespace LojaRoupas.Controller
         public Cliente GetCliente(int id) => conexao.getCliente(id);
         public String GetNomeCliente(int id) => conexao.getNomeCliente(id);
 
-        public void TelaCliente()
+        public void SalvarCliente(Cliente cliente)
+        {
+            if (GetCliente(cliente.getId()).getId() == 0)
+            {
+                InserirCliente(cliente);
+            }
+            else
+            {
+                EditarCliente(cliente);
+            }
+        }
+        public void TelaCliente(int idCliente)
         {
             frmCliente telaCliente = new frmCliente();
+            telaCliente.Cliente = GetCliente(idCliente);
             telaCliente.ShowDialog();
         }
         public void TelaListaCliente()

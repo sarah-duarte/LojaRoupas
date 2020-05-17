@@ -15,8 +15,9 @@ namespace LojaRoupas
 {
     public partial class frmUsuarios : Form
     {
-        Usuario usuario = new Usuario();
         CUsuario u = new CUsuario();
+        private Usuario usuario = new Usuario();
+        internal Usuario Usuario { get => usuario; set => usuario = value; }
         public frmUsuarios()
         {
             InitializeComponent();
@@ -27,22 +28,37 @@ namespace LojaRoupas
         }
         private void frmUsuarios_Load(object sender, EventArgs e)
         {
-            lblID.Text = Convert.ToString(u.NovoId());
+            if (Usuario.getId() != 0)
+            {
+                lblID.Text = Usuario.getId().ToString();
+                txtCPF.Text = Usuario.getCpf();
+                txtNome.Text = Usuario.getNome();
+                txtEmail.Text = Usuario.getEmail();
+                txtEndereco.Text = Usuario.getEndereco();
+                txtNascimento.Text = Usuario.getNascimento();
+                txtTelefone.Text = Usuario.getTelefone();
+                txtLogin.Text = Usuario.getLogin();
+                txtSenha.Text = Usuario.getSenha();
+            }
+            else
+            {
+                lblID.Text = Convert.ToString(u.NovoId());
+            }
         }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            usuario.setId(int.Parse(lblID.Text));
-            usuario.setCpf(txtCPF.Text);
-            usuario.setNome(txtNome.Text);
-            usuario.setLogin(txtLogin.Text);
-            usuario.setSenha(txtSenha.Text);
-            usuario.setEmail(txtEmail.Text);
-            usuario.setEndereco(txtEndereco.Text);
-            usuario.setNascimento(txtNascimento.Text);
-            usuario.setTelefone(txtTelefone.Text);
+            Usuario.setId(int.Parse(lblID.Text));
+            Usuario.setCpf(txtCPF.Text);
+            Usuario.setNome(txtNome.Text);
+            Usuario.setLogin(txtLogin.Text);
+            Usuario.setSenha(txtSenha.Text);
+            Usuario.setEmail(txtEmail.Text);
+            Usuario.setEndereco(txtEndereco.Text);
+            Usuario.setNascimento(txtNascimento.Text);
+            Usuario.setTelefone(txtTelefone.Text);
             try
             {
-                u.InserirUsuario(usuario);
+                u.SalvarUsuario(Usuario);
                 MessageBox.Show("Usuario Cadastrado com Sucesso!", "Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }

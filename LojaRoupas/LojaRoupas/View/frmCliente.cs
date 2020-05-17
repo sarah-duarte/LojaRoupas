@@ -17,7 +17,8 @@ namespace LojaRoupas
     public partial class frmCliente : Form
     {
         CCliente ccliente = new CCliente();
-        Cliente cliente = new Cliente();
+        private Cliente cliente = new Cliente();
+        internal Cliente Cliente { get => cliente; set => cliente = value; }
         public frmCliente()
         {
             InitializeComponent();
@@ -25,17 +26,17 @@ namespace LojaRoupas
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            cliente.setId(int.Parse(lblID.Text));
-            cliente.setCpf(txtCPF.Text);
-            cliente.setNome(txtNome.Text);
-            cliente.setEmail(txtEmail.Text);
-            cliente.setEndereco(txtEndereco.Text);
-            cliente.setNascimento(txtNascimento.Text);
-            cliente.setTelefone(txtTelefone.Text);
+            Cliente.setId(int.Parse(lblID.Text));
+            Cliente.setCpf(txtCPF.Text);
+            Cliente.setNome(txtNome.Text);
+            Cliente.setEmail(txtEmail.Text);
+            Cliente.setEndereco(txtEndereco.Text);
+            Cliente.setNascimento(txtNascimento.Text);
+            Cliente.setTelefone(txtTelefone.Text);
             try
             {
-                ccliente.InserirCliente(cliente);
-                MessageBox.Show("Cliente Cadastrado com Sucesso!", "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ccliente.SalvarCliente(Cliente);
+                MessageBox.Show("Cliente Salvo com Sucesso!", "Cliente", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             catch (IOException erro)
@@ -47,7 +48,20 @@ namespace LojaRoupas
 
         private void frmCliente_Load(object sender, EventArgs e)
         {
-            lblID.Text = Convert.ToString(ccliente.NovoId());
+            if (Cliente.getId() != 0)
+            {
+                lblID.Text = Cliente.getId().ToString();
+                txtCPF.Text = Cliente.getCpf();
+                txtNome.Text = Cliente.getNome();
+                txtEmail.Text = Cliente.getEmail();
+                txtEndereco.Text = Cliente.getEndereco();
+                txtNascimento.Text = Cliente.getNascimento();
+                txtTelefone.Text = Cliente.getTelefone();
+            }
+            else
+            {
+                lblID.Text = Convert.ToString(ccliente.NovoId());
+            }            
         }
     }
 }

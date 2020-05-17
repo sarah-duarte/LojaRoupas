@@ -51,7 +51,7 @@ namespace LojaRoupas
 
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            o.TelaOperador();
+            o.TelaOperador(0);
             MontaLista();
             AtualizaLista();
         }
@@ -65,6 +65,19 @@ namespace LojaRoupas
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection Selecionado =
+                this.lstListaOperador.SelectedItems;
+
+            foreach (ListViewItem item in Selecionado)
+            {
+                o.TelaOperador(int.Parse(item.SubItems[0].Text));
+            }
+            MontaLista();
+            AtualizaLista();
         }
     }
 }

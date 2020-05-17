@@ -25,9 +25,21 @@ namespace LojaRoupas.Controller
         public String GetDescProduto(int id) => conexao.getDescProduto(id);
         public void SaidaEstoqueProduto(int qtdvendida, int id) => conexao.SaidaEstoqueProduto(qtdvendida, id);
         public void EntradaEstoqueProduto(int qtdcomprada, int id) => conexao.EntradaEstoqueProduto(qtdcomprada, id);
-        public void TelaProduto()
+        public void SalvarProduto(Produto Produto)
+        {
+            if (GetProduto(Produto.getIdProduto()).getIdProduto() == 0)
+            {
+                InserirProduto(Produto);
+            }
+            else
+            {
+                EditarProduto(Produto);
+            }
+        }
+        public void TelaProduto(int idProduto)
         {
             frmProduto telaProduto = new frmProduto();
+            telaProduto.Produto = GetProduto(idProduto);
             telaProduto.ShowDialog();
         }
         public void TelaListaProduto()

@@ -14,26 +14,27 @@ using LojaRoupas.Controller;
 namespace LojaRoupas
 {
     public partial class frmOperador : Form
-    {        
-        Operador operador = new Operador();
+    {
         COperador o = new COperador();
+        private Operador operador = new Operador();
+        internal Operador Operador { get => operador; set => operador = value; }
         public frmOperador()
         {
             InitializeComponent();
         }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            operador.setId(int.Parse(lblID.Text));
-            operador.setCpf(txtCPF.Text);
-            operador.setNome(txtNome.Text);
-            operador.setEmail(txtEmail.Text);
-            operador.setEndereco(txtEndereco.Text);
-            operador.setNascimento(txtNascimento.Text);
-            operador.setTelefone(txtTelefone.Text);
-            operador.setTurno(cmbTurno.Text);
+            Operador.setId(int.Parse(lblID.Text));
+            Operador.setCpf(txtCPF.Text);
+            Operador.setNome(txtNome.Text);
+            Operador.setEmail(txtEmail.Text);
+            Operador.setEndereco(txtEndereco.Text);
+            Operador.setNascimento(txtNascimento.Text);
+            Operador.setTelefone(txtTelefone.Text);
+            Operador.setTurno(cmbTurno.Text);
             try
             {
-                o.InserirOperador(operador);
+                o.SalvarOperador(Operador);
                 MessageBox.Show("Operador Cadastrado com Sucesso!", "Operador", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
@@ -47,7 +48,21 @@ namespace LojaRoupas
 
         private void frmOperador_Load(object sender, EventArgs e)
         {
-            lblID.Text = Convert.ToString(o.NovoId());          
+            if (Operador.getId() != 0)
+            {
+                lblID.Text = Operador.getId().ToString();
+                txtCPF.Text = Operador.getCpf();
+                txtNome.Text = Operador.getNome();
+                txtEmail.Text = Operador.getEmail();
+                txtEndereco.Text = Operador.getEndereco();
+                txtNascimento.Text = Operador.getNascimento();
+                txtTelefone.Text = Operador.getTelefone();
+                cmbTurno.Text = Operador.getTurno();
+            }
+            else
+            {
+                lblID.Text = Convert.ToString(o.NovoId());
+            }
         }
     }
 }

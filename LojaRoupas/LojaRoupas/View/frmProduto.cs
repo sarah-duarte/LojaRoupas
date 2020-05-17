@@ -8,24 +8,25 @@ namespace LojaRoupas
 {
     public partial class frmProduto : Form
     {
-        Produto produto = new Produto();
         CProduto p = new CProduto();
+        private Produto produto = new Produto();
+        internal Produto Produto { get => produto; set => produto = value; }
         public frmProduto()
         {
             InitializeComponent();
         }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            produto.setIdProduto(int.Parse(lblID.Text));
-            produto.setCodigoBarras(txtCodBarras.Text);
-            produto.setDescProduto(txtDescricao.Text);
-            produto.setCorProduto(txtCor.Text);
-            produto.setTamProduto(txtTamanho.Text);
-            produto.setPrecoCusto(Double.Parse(txtPrcCusto.Text));
-            produto.setPrecoVenda(Double.Parse(txtPrcVenda.Text));
-            produto.setQtdEstProduto(int.Parse(txtQtdEstoque.Text));
+            Produto.setIdProduto(int.Parse(lblID.Text));
+            Produto.setCodigoBarras(txtCodBarras.Text);
+            Produto.setDescProduto(txtDescricao.Text);
+            Produto.setCorProduto(txtCor.Text);
+            Produto.setTamProduto(txtTamanho.Text);
+            Produto.setPrecoCusto(Double.Parse(txtPrcCusto.Text));
+            Produto.setPrecoVenda(Double.Parse(txtPrcVenda.Text));
+            Produto.setQtdEstProduto(int.Parse(txtQtdEstoque.Text));
             try{
-                p.InserirProduto(produto);
+                p.SalvarProduto(Produto);
                 MessageBox.Show("Produto Cadastrado com Sucesso!", "Produto", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }
@@ -37,7 +38,24 @@ namespace LojaRoupas
         private void btnCancelar_Click(object sender, EventArgs e) => this.Close();
         private void frmProduto_Load(object sender, EventArgs e)
         {
-            lblID.Text = Convert.ToString(p.NovoId());
+            if (Produto.getIdProduto() != 0)
+            {
+                lblID.Text = Produto.getIdProduto().ToString();
+                txtCodBarras.Text = Produto.getCodigoBarras();
+                txtDescricao.Text = Produto.getDescProduto();
+                txtCor.Text = Produto.getCorProduto();
+                txtTamanho.Text = Produto.getTamProduto();
+                txtPrcCusto.Text = Produto.getPrecoCusto().ToString();
+                txtPrcVenda.Text = Produto.getPrecoVenda().ToString();
+                txtQtdEstoque.Text = Produto.getQtdEstProduto().ToString();             
+                txtQtdEstoque.Enabled = false;
+            }
+            else
+            {
+                lblID.Text = Convert.ToString(p.NovoId());
+                lblQtdEstoque.Visible = false;
+                txtQtdEstoque.Visible = false;
+            }
         }
     }
 }

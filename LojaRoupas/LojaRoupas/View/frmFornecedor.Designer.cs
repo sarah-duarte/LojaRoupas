@@ -62,7 +62,7 @@
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(515, 22);
+            this.pictureBox1.Location = new System.Drawing.Point(498, 21);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(215, 57);
             this.pictureBox1.TabIndex = 19;
@@ -141,7 +141,7 @@
             this.txtEndereco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtEndereco.Location = new System.Drawing.Point(150, 172);
             this.txtEndereco.Name = "txtEndereco";
-            this.txtEndereco.Size = new System.Drawing.Size(580, 20);
+            this.txtEndereco.Size = new System.Drawing.Size(525, 20);
             this.txtEndereco.TabIndex = 3;
             // 
             // label5
@@ -160,7 +160,7 @@
             // 
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnSalvar.Location = new System.Drawing.Point(488, 213);
+            this.btnSalvar.Location = new System.Drawing.Point(471, 213);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(118, 55);
             this.btnSalvar.TabIndex = 5;
@@ -172,7 +172,7 @@
             // 
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnCancelar.Location = new System.Drawing.Point(612, 213);
+            this.btnCancelar.Location = new System.Drawing.Point(595, 213);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(118, 55);
             this.btnCancelar.TabIndex = 6;
@@ -201,7 +201,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(776, 289);
+            this.ClientSize = new System.Drawing.Size(733, 289);
             this.Controls.Add(this.txtCnpj);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.btnCancelar);

@@ -20,9 +20,21 @@ namespace LojaRoupas.Controller
         public Usuario GetUsuario(string Login) => conexao.getUsuario(Login);
         public String GetNomeUsuario(int id) => conexao.getNomeUsuario(id);
         public String GetSenhaUsuario(string Login) => conexao.getSenhaUsuario(Login);
-        public void TelaUsuario()
+        public void SalvarUsuario(Usuario Usuario)
+        {
+            if (GetUsuario(Usuario.getId()).getId() == 0)
+            {
+                InserirUsuario(Usuario);
+            }
+            else
+            {
+                EditarUsuario(Usuario);
+            }
+        }
+        public void TelaUsuario(int idUsuario)
         {
             frmUsuarios telaUsuario = new frmUsuarios();
+            telaUsuario.Usuario = GetUsuario(idUsuario);
             telaUsuario.ShowDialog();
         }
         public void TelaListaUsuario()

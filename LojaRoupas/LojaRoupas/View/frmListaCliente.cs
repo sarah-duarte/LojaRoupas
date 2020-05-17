@@ -42,13 +42,26 @@ namespace LojaRoupas
         }
         private void btnNovo_Click(object sender, EventArgs e)
         {            
-            c.TelaCliente();
+            c.TelaCliente(0);
             MontaLista();
             AtualizaLista();
         }
         private void btnCancelar_Click(object sender, EventArgs e) => this.Close();
         private void frmListaCliente_Load(object sender, EventArgs e)
         {
+            MontaLista();
+            AtualizaLista();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection Selecionado =
+                this.lstListaCliente.SelectedItems;
+
+            foreach (ListViewItem item in Selecionado)
+            {
+                c.TelaCliente(int.Parse(item.SubItems[0].Text));
+            }
             MontaLista();
             AtualizaLista();
         }

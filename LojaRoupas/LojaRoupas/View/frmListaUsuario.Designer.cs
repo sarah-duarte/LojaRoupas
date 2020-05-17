@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaUsuario));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.lstListaUsuario = new System.Windows.Forms.ListView();
@@ -40,6 +39,8 @@
             this.nascimento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.endereco = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cadastro = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCancelar
@@ -48,9 +49,9 @@
             this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnCancelar.Location = new System.Drawing.Point(722, 103);
+            this.btnCancelar.Location = new System.Drawing.Point(724, 195);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(112, 55);
+            this.btnCancelar.Size = new System.Drawing.Size(125, 55);
             this.btnCancelar.TabIndex = 27;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
@@ -62,9 +63,9 @@
             this.btnNovo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnNovo.Location = new System.Drawing.Point(722, 42);
+            this.btnNovo.Location = new System.Drawing.Point(724, 12);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(112, 55);
+            this.btnNovo.Size = new System.Drawing.Size(125, 55);
             this.btnNovo.TabIndex = 26;
             this.btnNovo.Text = "NOVO ";
             this.btnNovo.UseVisualStyleBackColor = false;
@@ -82,12 +83,12 @@
             this.nascimento,
             this.endereco,
             this.cadastro});
-            this.lstListaUsuario.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstListaUsuario.ForeColor = System.Drawing.Color.BurlyWood;
+            this.lstListaUsuario.FullRowSelect = true;
             this.lstListaUsuario.HideSelection = false;
             this.lstListaUsuario.Location = new System.Drawing.Point(0, 0);
             this.lstListaUsuario.Name = "lstListaUsuario";
-            this.lstListaUsuario.Size = new System.Drawing.Size(846, 450);
+            this.lstListaUsuario.Size = new System.Drawing.Size(716, 450);
             this.lstListaUsuario.TabIndex = 25;
             this.lstListaUsuario.UseCompatibleStateImageBehavior = false;
             this.lstListaUsuario.View = System.Windows.Forms.View.Details;
@@ -131,11 +132,41 @@
             // 
             this.cadastro.Text = "Login";
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcluir.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.ForeColor = System.Drawing.Color.BurlyWood;
+            this.btnExcluir.Location = new System.Drawing.Point(724, 134);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(125, 55);
+            this.btnExcluir.TabIndex = 31;
+            this.btnExcluir.Text = "EXCLUIR";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.ForeColor = System.Drawing.Color.BurlyWood;
+            this.btnEditar.Location = new System.Drawing.Point(724, 73);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(125, 55);
+            this.btnEditar.TabIndex = 30;
+            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
             // frmListaUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 450);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(861, 450);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.lstListaUsuario);
@@ -144,6 +175,7 @@
             this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.frmListaUsuario_Load);
             this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -159,5 +191,7 @@
         private System.Windows.Forms.ColumnHeader nascimento;
         private System.Windows.Forms.ColumnHeader endereco;
         private System.Windows.Forms.ColumnHeader cadastro;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnEditar;
     }
 }

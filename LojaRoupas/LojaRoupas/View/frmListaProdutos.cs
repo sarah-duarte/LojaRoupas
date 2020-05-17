@@ -49,13 +49,26 @@ namespace LojaRoupas
         }
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            p.TelaProduto();
+            p.TelaProduto(0);
             MontaLista();
             AtualizaLista();
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection Selecionado =
+                this.lstListaProduto.SelectedItems;
+
+            foreach (ListViewItem item in Selecionado)
+            {
+                p.TelaProduto(int.Parse(item.SubItems[0].Text));
+            }
+            MontaLista();
+            AtualizaLista();
         }
     }
 }

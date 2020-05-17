@@ -36,7 +36,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lblQtdEstoque = new System.Windows.Forms.Label();
             this.txtCodBarras = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
             this.txtDescricao = new System.Windows.Forms.TextBox();
@@ -57,7 +57,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label1.Location = new System.Drawing.Point(30, 85);
+            this.label1.Location = new System.Drawing.Point(30, 72);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(31, 22);
@@ -69,7 +69,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label2.Location = new System.Drawing.Point(119, 85);
+            this.label2.Location = new System.Drawing.Point(30, 104);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(165, 22);
@@ -81,7 +81,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label3.Location = new System.Drawing.Point(30, 147);
+            this.label3.Location = new System.Drawing.Point(30, 166);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 22);
@@ -93,7 +93,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label4.Location = new System.Drawing.Point(30, 116);
+            this.label4.Location = new System.Drawing.Point(30, 135);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 22);
@@ -105,7 +105,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label5.Location = new System.Drawing.Point(339, 147);
+            this.label5.Location = new System.Drawing.Point(339, 166);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(97, 22);
@@ -117,7 +117,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label6.Location = new System.Drawing.Point(30, 178);
+            this.label6.Location = new System.Drawing.Point(30, 197);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(120, 22);
@@ -129,29 +129,29 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label7.Location = new System.Drawing.Point(27, 209);
+            this.label7.Location = new System.Drawing.Point(274, 197);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(123, 22);
             this.label7.TabIndex = 14;
             this.label7.Text = "PRECO VENDA:";
             // 
-            // label8
+            // lblQtdEstoque
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label8.Location = new System.Drawing.Point(465, 85);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(156, 22);
-            this.label8.TabIndex = 4;
-            this.label8.Text = "QTD. EM ESTOQUE:";
+            this.lblQtdEstoque.AutoSize = true;
+            this.lblQtdEstoque.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQtdEstoque.ForeColor = System.Drawing.Color.BurlyWood;
+            this.lblQtdEstoque.Location = new System.Drawing.Point(521, 197);
+            this.lblQtdEstoque.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblQtdEstoque.Name = "lblQtdEstoque";
+            this.lblQtdEstoque.Size = new System.Drawing.Size(86, 22);
+            this.lblQtdEstoque.TabIndex = 4;
+            this.lblQtdEstoque.Text = "ESTOQUE:";
             // 
             // txtCodBarras
             // 
             this.txtCodBarras.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCodBarras.Location = new System.Drawing.Point(291, 85);
+            this.txtCodBarras.Location = new System.Drawing.Point(202, 104);
             this.txtCodBarras.Name = "txtCodBarras";
             this.txtCodBarras.Size = new System.Drawing.Size(167, 25);
             this.txtCodBarras.TabIndex = 3;
@@ -161,7 +161,7 @@
             this.lblID.AutoSize = true;
             this.lblID.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblID.ForeColor = System.Drawing.Color.BurlyWood;
-            this.lblID.Location = new System.Drawing.Point(61, 85);
+            this.lblID.Location = new System.Drawing.Point(61, 72);
             this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
             this.lblID.Size = new System.Drawing.Size(46, 22);
@@ -171,15 +171,15 @@
             // txtDescricao
             // 
             this.txtDescricao.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtDescricao.Location = new System.Drawing.Point(134, 116);
+            this.txtDescricao.Location = new System.Drawing.Point(134, 135);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(559, 25);
+            this.txtDescricao.Size = new System.Drawing.Size(528, 25);
             this.txtDescricao.TabIndex = 7;
             // 
             // txtCor
             // 
             this.txtCor.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtCor.Location = new System.Drawing.Point(83, 147);
+            this.txtCor.Location = new System.Drawing.Point(83, 166);
             this.txtCor.Name = "txtCor";
             this.txtCor.Size = new System.Drawing.Size(232, 25);
             this.txtCor.TabIndex = 9;
@@ -187,15 +187,15 @@
             // txtTamanho
             // 
             this.txtTamanho.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtTamanho.Location = new System.Drawing.Point(443, 147);
+            this.txtTamanho.Location = new System.Drawing.Point(443, 166);
             this.txtTamanho.Name = "txtTamanho";
-            this.txtTamanho.Size = new System.Drawing.Size(250, 25);
+            this.txtTamanho.Size = new System.Drawing.Size(219, 25);
             this.txtTamanho.TabIndex = 11;
             // 
             // txtPrcCusto
             // 
             this.txtPrcCusto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtPrcCusto.Location = new System.Drawing.Point(153, 178);
+            this.txtPrcCusto.Location = new System.Drawing.Point(157, 197);
             this.txtPrcCusto.Name = "txtPrcCusto";
             this.txtPrcCusto.Size = new System.Drawing.Size(114, 25);
             this.txtPrcCusto.TabIndex = 13;
@@ -203,23 +203,23 @@
             // txtPrcVenda
             // 
             this.txtPrcVenda.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtPrcVenda.Location = new System.Drawing.Point(153, 209);
+            this.txtPrcVenda.Location = new System.Drawing.Point(404, 197);
             this.txtPrcVenda.Name = "txtPrcVenda";
             this.txtPrcVenda.Size = new System.Drawing.Size(114, 25);
             this.txtPrcVenda.TabIndex = 15;
             // 
             // txtQtdEstoque
             // 
-            this.txtQtdEstoque.Location = new System.Drawing.Point(628, 85);
+            this.txtQtdEstoque.Location = new System.Drawing.Point(614, 197);
             this.txtQtdEstoque.Name = "txtQtdEstoque";
-            this.txtQtdEstoque.Size = new System.Drawing.Size(65, 25);
+            this.txtQtdEstoque.Size = new System.Drawing.Size(48, 25);
             this.txtQtdEstoque.TabIndex = 5;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(478, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(449, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(215, 57);
             this.pictureBox1.TabIndex = 16;
@@ -241,7 +241,7 @@
             // 
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnSalvar.Location = new System.Drawing.Point(451, 179);
+            this.btnSalvar.Location = new System.Drawing.Point(422, 238);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(118, 55);
             this.btnSalvar.TabIndex = 16;
@@ -253,7 +253,7 @@
             // 
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnCancelar.Location = new System.Drawing.Point(575, 179);
+            this.btnCancelar.Location = new System.Drawing.Point(546, 238);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(118, 55);
             this.btnCancelar.TabIndex = 17;
@@ -267,7 +267,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(724, 264);
+            this.ClientSize = new System.Drawing.Size(687, 305);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.label10);
@@ -280,7 +280,7 @@
             this.Controls.Add(this.txtDescricao);
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.txtCodBarras);
-            this.Controls.Add(this.label8);
+            this.Controls.Add(this.lblQtdEstoque);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -310,7 +310,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lblQtdEstoque;
         private System.Windows.Forms.TextBox txtCodBarras;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.TextBox txtDescricao;

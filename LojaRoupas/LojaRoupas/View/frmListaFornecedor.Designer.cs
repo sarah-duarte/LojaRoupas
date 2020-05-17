@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmListaFornecedor));
             this.lstListaFornecedor = new System.Windows.Forms.ListView();
             this.id = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.razaosocial = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -37,6 +36,8 @@
             this.telefone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lstListaFornecedor
@@ -48,12 +49,12 @@
             this.cnpj,
             this.endereco,
             this.telefone});
-            this.lstListaFornecedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lstListaFornecedor.ForeColor = System.Drawing.Color.BurlyWood;
+            this.lstListaFornecedor.FullRowSelect = true;
             this.lstListaFornecedor.HideSelection = false;
             this.lstListaFornecedor.Location = new System.Drawing.Point(0, 0);
             this.lstListaFornecedor.Name = "lstListaFornecedor";
-            this.lstListaFornecedor.Size = new System.Drawing.Size(824, 450);
+            this.lstListaFornecedor.Size = new System.Drawing.Size(679, 450);
             this.lstListaFornecedor.TabIndex = 0;
             this.lstListaFornecedor.UseCompatibleStateImageBehavior = false;
             this.lstListaFornecedor.View = System.Windows.Forms.View.Details;
@@ -89,9 +90,9 @@
             this.btnNovo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNovo.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnNovo.Location = new System.Drawing.Point(685, 29);
+            this.btnNovo.Location = new System.Drawing.Point(687, 12);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(127, 55);
+            this.btnNovo.Size = new System.Drawing.Size(125, 55);
             this.btnNovo.TabIndex = 20;
             this.btnNovo.Text = "NOVO";
             this.btnNovo.UseVisualStyleBackColor = false;
@@ -103,13 +104,40 @@
             this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnCancelar.Location = new System.Drawing.Point(685, 90);
+            this.btnCancelar.Location = new System.Drawing.Point(687, 195);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(127, 55);
+            this.btnCancelar.Size = new System.Drawing.Size(125, 55);
             this.btnCancelar.TabIndex = 21;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcluir.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.ForeColor = System.Drawing.Color.BurlyWood;
+            this.btnExcluir.Location = new System.Drawing.Point(687, 134);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(125, 55);
+            this.btnExcluir.TabIndex = 27;
+            this.btnExcluir.Text = "EXCLUIR";
+            this.btnExcluir.UseVisualStyleBackColor = false;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEditar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.ForeColor = System.Drawing.Color.BurlyWood;
+            this.btnEditar.Location = new System.Drawing.Point(687, 73);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(125, 55);
+            this.btnEditar.TabIndex = 26;
+            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // frmListaFornecedor
             // 
@@ -117,6 +145,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(824, 450);
+            this.Controls.Add(this.btnExcluir);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.lstListaFornecedor);
@@ -138,5 +168,7 @@
         private System.Windows.Forms.ColumnHeader cnpj;
         private System.Windows.Forms.ColumnHeader endereco;
         private System.Windows.Forms.ColumnHeader telefone;
+        private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnEditar;
     }
 }

@@ -271,6 +271,21 @@
     <EmbeddedResource Include="View\frmFornecedor.resx">
       <DependentUpon>frmFornecedor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmListaCliente.resx">
+      <DependentUpon>frmListaCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmListaFornecedor.resx">
+      <DependentUpon>frmListaFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmListaOperador.resx">
+      <DependentUpon>frmListaOperador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmListaProdutos.resx">
+      <DependentUpon>frmListaProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmListaUsuario.resx">
+      <DependentUpon>frmListaUsuario.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>

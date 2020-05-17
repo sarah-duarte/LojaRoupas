@@ -14,10 +14,23 @@ namespace LojaRoupas.Controller
         public void EditarOperador(Operador Operador) => conexao.EditarOperador(Operador);
         public void ExcluirOperador(int idOperador) => conexao.ExcluirOperador(idOperador);
         public List<Operador> ListarOperador() => conexao.ListarOperador();
+        public Operador GetOperador(int id) => conexao.getOperador(id);
         public String GetNomeOperador(int id) => conexao.getNomeOperador(id);
-        public void TelaOperador()
+        public void SalvarOperador(Operador Operador)
+        {
+            if (GetOperador(Operador.getId()).getId() == 0)
+            {
+                InserirOperador(Operador);
+            }
+            else
+            {
+                EditarOperador(Operador);
+            }
+        }
+        public void TelaOperador(int idOperador)
         {
             frmOperador telaOperador = new frmOperador();
+            telaOperador.Operador = GetOperador(idOperador);
             telaOperador.ShowDialog();
         }
         public void TelaListaOperador()

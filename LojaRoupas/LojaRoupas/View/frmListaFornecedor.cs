@@ -38,7 +38,7 @@ namespace LojaRoupas
         }
         private void btnNovo_Click(object sender, EventArgs e)
         {
-            f.TelaFornecedor();
+            f.TelaFornecedor(0);
             MontaLista();
             AtualizaLista();
         }
@@ -56,6 +56,19 @@ namespace LojaRoupas
 
         private void frmListaFornecedor_Load(object sender, EventArgs e)
         {
+            MontaLista();
+            AtualizaLista();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection Selecionado =
+                this.lstListaFornecedor.SelectedItems;
+
+            foreach (ListViewItem item in Selecionado)
+            {
+                f.TelaFornecedor(int.Parse(item.SubItems[0].Text));
+            }
             MontaLista();
             AtualizaLista();
         }

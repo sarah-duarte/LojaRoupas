@@ -15,8 +15,9 @@ namespace LojaRoupas
 {   
     public partial class frmFornecedor : Form
     {
-        Fornecedor fornecedor = new Fornecedor();
         CFornecedor f = new CFornecedor();
+        private Fornecedor fornecedor = new Fornecedor();
+        internal Fornecedor Fornecedor { get => fornecedor; set => fornecedor = value; }        
         public frmFornecedor()
         {
             InitializeComponent();
@@ -27,15 +28,15 @@ namespace LojaRoupas
         }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            fornecedor.setId(int.Parse(lblID.Text));
-            fornecedor.setCnpj(txtCnpj.Text);
-            fornecedor.setRazaosocial(txtRazaoSocial.Text);
-            fornecedor.setEndereco(txtEndereco.Text);
-            fornecedor.setTelefone(txtTelefone.Text);
+            Fornecedor.setId(int.Parse(lblID.Text));
+            Fornecedor.setCnpj(txtCnpj.Text);
+            Fornecedor.setRazaosocial(txtRazaoSocial.Text);
+            Fornecedor.setEndereco(txtEndereco.Text);
+            Fornecedor.setTelefone(txtTelefone.Text);
             try
             {
-                f.InserirFornecedor(fornecedor);
-                MessageBox.Show("Fornecedor Cadastrado com Sucesso!", "Fornecedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                f.SalvarFornecedor(Fornecedor);
+                MessageBox.Show("Fornecedor Salvo com Sucesso!", "Fornecedor", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             catch (IOException erro)
@@ -46,7 +47,18 @@ namespace LojaRoupas
 
         private void frmFornecedor_Load(object sender, EventArgs e)
         {
-            lblID.Text = Convert.ToString(f.NovoId());
+            if (Fornecedor.getId() != 0)
+            {
+                lblID.Text = Fornecedor.getId().ToString();
+                txtCnpj.Text = Fornecedor.getCnpj();
+                txtRazaoSocial.Text = Fornecedor.getRazaosocial();
+                txtEndereco.Text = Fornecedor.getEndereco();
+                txtTelefone.Text = Fornecedor.getTelefone();
+            }
+            else
+            {
+                lblID.Text = Convert.ToString(f.NovoId());
+            }
         }
     }
 }
