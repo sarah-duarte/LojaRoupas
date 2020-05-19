@@ -62,5 +62,22 @@ namespace LojaRoupas.Model
             this.Desconect();
             return Lista;
         }
+        public int QtdCompraProduto(int idProduto)
+        {
+            int qtdCompras = 0;
+            this.Conect();
+            sql = "SELECT Count(*) as total FROM tbitemcompra where idproduto = @idProduto";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("idProduto", idProduto);
+            cmd.Prepare();
+            rdr = cmd.ExecuteReader();
+
+            while (rdr.Read())
+            {
+                qtdCompras = rdr.GetInt32(0);
+            }
+            this.Desconect();
+            return qtdCompras;
+        }
     }
 }

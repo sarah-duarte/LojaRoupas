@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LojaRoupas.Controller;
+using System;
 using System.Windows.Forms;
 
 namespace LojaRoupas
@@ -18,6 +19,12 @@ namespace LojaRoupas
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void llblNovoLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CUsuario cUsuario = new CUsuario();
+            cUsuario.TelaUsuario(0);
         }
     }
 }

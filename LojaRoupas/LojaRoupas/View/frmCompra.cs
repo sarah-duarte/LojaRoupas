@@ -63,13 +63,14 @@ namespace LojaRoupas
         }
         private void ListarFornecedorComboBox()
         {
+            int i = 0;
             try
             {
                 ListaFornecedor = Fornecedor.ListarFornecedor();
                 foreach (Fornecedor c in ListaFornecedor)
                 {
-                    Console.WriteLine("{0}", c.getId().ToString());
-                    cmbFornecedor.Items.Insert(c.getId() - 1, c.getRazaosocial());
+                    cmbFornecedor.Items.Insert(i, c.getRazaosocial());
+                    i++;
                 }
             }
             catch (IOException erro)
@@ -79,7 +80,7 @@ namespace LojaRoupas
         }
         private void MontaCompra()
         {
-            Compra.setIdFornecedor(cmbFornecedor.SelectedIndex + 1);
+            Compra.setIdFornecedor(Fornecedor.GetIdFornecedor(cmbFornecedor.Text));
             Compra.setItensCompra(itensCompra);
             Compra.setData(DateTime.Today.ToString("d"));
             Compra.setQtdItens(GetTotalQtdItens());

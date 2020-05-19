@@ -104,13 +104,14 @@ namespace LojaRoupas
         }
         private void ListarClienteComboBox()
         {
+            int i = 0;
             try
             {
                 ListarClientes = cCliente.ListarCliente();
                 foreach (Cliente c in ListarClientes)
                 {
-                    Console.WriteLine("{0}", c.getId().ToString());
-                    cmbCliente.Items.Insert(c.getId() - 1, c.getNome());
+                    cmbCliente.Items.Insert(i, c.getNome());
+                    i++;
                 }
             }
             catch (IOException erro)
@@ -120,20 +121,20 @@ namespace LojaRoupas
         }
         private void ListarOperadorComboBox()
         {
+            int i = 0;
             try 
             {
                 ListaOperador = cOperador.ListarOperador();
                 foreach (Operador c in ListaOperador)
                 {
-                    Console.WriteLine("{0}", c.getId().ToString());
-                    cmbOperador.Items.Insert(c.getId() - 1, c.getNome());
+                    cmbOperador.Items.Insert(i, c.getNome());
+                    i++;
                 }
             }
             catch (IOException erro)
             {
                 MessageBox.Show(erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            
+            }            
         }
         private void frmVenda_Load(object sender, EventArgs e)
         {
@@ -146,8 +147,8 @@ namespace LojaRoupas
         }
         private void MontaVenda()
         {
-            venda.setIdCliente(cmbCliente.SelectedIndex + 1);
-            venda.setIdOperador(cmbOperador.SelectedIndex + 1);
+            venda.setIdCliente(cCliente.GetIdCliente(cmbCliente.Text));
+            venda.setIdOperador(cOperador.GetIDOperador(cmbOperador.Text));
             venda.setItensVenda(itensVenda);
             venda.setData(DateTime.Today.ToString("d"));
             venda.setQtdItens(GetTotalQtdItens());

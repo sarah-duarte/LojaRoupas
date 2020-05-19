@@ -126,7 +126,6 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 fornecedor.setId(rdr.GetInt32(0));
                 fornecedor.setRazaosocial(rdr.GetString(1));
                 fornecedor.setCnpj(rdr.GetString(2));
@@ -135,6 +134,27 @@ namespace LojaRoupas.Model
             }
             this.Desconect();
             return fornecedor.getRazaosocial();
+        }
+        public int GetIdFornecedor(string NomeFornecedor)
+        {
+            Conect();
+            Fornecedor fornecedor = new Fornecedor();
+            sql = "SELECT id, razaosocial, cnpj, telefone, endereco FROM tbfornecedor where razaosocial = @razaosocial";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("razaosocial", NomeFornecedor);
+            cmd.Prepare();
+            rdr = cmd.ExecuteReader();
+
+            while (rdr.Read())
+            {
+                fornecedor.setId(rdr.GetInt32(0));
+                fornecedor.setRazaosocial(rdr.GetString(1));
+                fornecedor.setCnpj(rdr.GetString(2));
+                fornecedor.setTelefone(rdr.GetString(3));
+                fornecedor.setEndereco(rdr.GetString(4));
+            }
+            this.Desconect();
+            return fornecedor.getId();
         }
     }
 }

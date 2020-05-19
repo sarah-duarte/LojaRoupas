@@ -84,5 +84,22 @@ namespace LojaRoupas.Model
             this.Desconect();
             return qtdVendas;
         }
+        public int QtdVendaOperador(int idOperador)
+        {
+            int qtdVendas = 0;
+            this.Conect();
+            sql = "SELECT count(*) as total FROM tbvenda WHERE idoperador = @idOperador";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("idOperador", idOperador);
+            cmd.Prepare();
+            rdr = cmd.ExecuteReader();
+
+            while (rdr.Read())
+            {
+                qtdVendas = rdr.GetInt32(0);
+            }
+            this.Desconect();
+            return qtdVendas;
+        }
     }
 }

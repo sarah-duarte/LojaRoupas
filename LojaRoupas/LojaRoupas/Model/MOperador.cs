@@ -100,7 +100,7 @@ namespace LojaRoupas.Model
             this.Desconect();
             return Lista;
         }
-        public Operador getOperador(int idOperador)
+        public Operador GetOperador(int idOperador)
         {
             this.Conect();
             Operador o = new Operador();
@@ -125,7 +125,7 @@ namespace LojaRoupas.Model
             this.Desconect();
             return o;
         }
-        public String getNomeOperador(int idOperador)
+        public String GetNomeOperador(int idOperador)
         {
             this.Conect();
             Operador o = new Operador();
@@ -137,7 +137,6 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 o.setId(rdr.GetInt32(0));
                 o.setNome(rdr.GetString(1));
                 o.setCpf(rdr.GetString(2));
@@ -149,6 +148,30 @@ namespace LojaRoupas.Model
             }
             this.Desconect();
             return o.getNome();
+        }
+        public int GetIDOperador(string NomeOperador)
+        {
+            this.Conect();
+            Operador o = new Operador();
+            sql = "SELECT id, nome, cpf, email, telefone, nascimento, endereco, turno FROM tboperador where nome = @nome;";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("nome", NomeOperador);
+            cmd.Prepare();
+            rdr = cmd.ExecuteReader();
+
+            while (rdr.Read())
+            {
+                o.setId(rdr.GetInt32(0));
+                o.setNome(rdr.GetString(1));
+                o.setCpf(rdr.GetString(2));
+                o.setEmail(rdr.GetString(3));
+                o.setTelefone(rdr.GetString(4));
+                o.setNascimento(rdr.GetString(5));
+                o.setEndereco(rdr.GetString(6));
+                o.setTurno(rdr.GetString(7));
+            }
+            this.Desconect();
+            return o.getId();
         }
     }
 }

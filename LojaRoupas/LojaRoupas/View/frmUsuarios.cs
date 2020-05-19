@@ -40,24 +40,39 @@ namespace LojaRoupas
         }
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Usuario.setId(int.Parse(lblID.Text));
-            Usuario.setCpf(txtCPF.Text);
-            Usuario.setNome(txtNome.Text);
-            Usuario.setLogin(txtLogin.Text);
-            Usuario.setSenha(txtSenha.Text);
-            Usuario.setEmail(txtEmail.Text);
-            Usuario.setEndereco(txtEndereco.Text);
-            Usuario.setNascimento(txtNascimento.Text);
-            Usuario.setTelefone(txtTelefone.Text);
-            try
+            if (txtSenha.Text != String.Empty & txtConfirmaSenha.Text != String.Empty & txtLogin.Text != String.Empty)
             {
-                u.SalvarUsuario(Usuario);
-                MessageBox.Show("Usuario Salvo com Sucesso!", "Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Close();
+                if (txtSenha.Text == txtConfirmaSenha.Text)
+                {
+                    Usuario.setId(int.Parse(lblID.Text));
+                    Usuario.setCpf(txtCPF.Text);
+                    Usuario.setNome(txtNome.Text);
+                    Usuario.setLogin(txtLogin.Text);
+                    Usuario.setSenha(txtSenha.Text);
+                    Usuario.setEmail(txtEmail.Text);
+                    Usuario.setEndereco(txtEndereco.Text);
+                    Usuario.setNascimento(txtNascimento.Text);
+                    Usuario.setTelefone(txtTelefone.Text);
+                    try
+                    {
+                        u.SalvarUsuario(Usuario);
+                        MessageBox.Show("Usuario Salvo com Sucesso!", "Usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Close();
+                    }
+                    catch (IOException erro)
+                    {
+                        MessageBox.Show(erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Confirmação de Senha incorreta", "Usuário", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    txtConfirmaSenha.Focus();
+                }
             }
-            catch (IOException erro)
+            else
             {
-                MessageBox.Show(erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Login e Senha devem estar preenchido", "Usuário", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
     }    

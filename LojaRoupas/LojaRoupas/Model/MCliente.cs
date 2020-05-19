@@ -97,7 +97,7 @@ namespace LojaRoupas.Model
             this.Desconect();
             return Lista;
         }
-        public Cliente getCliente(int idCliente)
+        public Cliente GetCliente(int idCliente)
         {
             this.Conect();
             Cliente c = new Cliente();            
@@ -121,7 +121,7 @@ namespace LojaRoupas.Model
             this.Desconect();
             return c;
         }
-        public String getNomeCliente(int idCliente)
+        public String GetNomeCliente(int idCliente)
         {
             this.Conect();
             Cliente c = new Cliente();
@@ -144,6 +144,30 @@ namespace LojaRoupas.Model
             }
             this.Desconect();
             return c.getNome();
+        }
+        public int GetIdCliente(string NomeCliente)
+        {
+            this.Conect();
+            Cliente c = new Cliente();
+            sql = "SELECT id, nome, cpf, email, telefone, nascimento, endereco, comprasrealizadas FROM tbcliente where nome = @nome;";
+            cmd = new NpgsqlCommand(sql, con);
+            cmd.Parameters.AddWithValue("nome", NomeCliente);
+            cmd.Prepare();
+            rdr = cmd.ExecuteReader();
+
+            while (rdr.Read())
+            {
+                c.setId(rdr.GetInt32(0));
+                c.setNome(rdr.GetString(1));
+                c.setCpf(rdr.GetString(2));
+                c.setEmail(rdr.GetString(3));
+                c.setTelefone(rdr.GetString(4));
+                c.setNascimento(rdr.GetString(5));
+                c.setEndereco(rdr.GetString(6));
+                c.setComprasRealizadas(rdr.GetInt32(7));
+            }
+            this.Desconect();
+            return c.getId();
         }
     }
 }

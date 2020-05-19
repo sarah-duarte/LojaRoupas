@@ -69,5 +69,18 @@ namespace LojaRoupas
             MontaLista();
             AtualizaLista();
         }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection Selecionado =
+                this.lstListaOperador.SelectedItems;
+
+            foreach (ListViewItem item in Selecionado)
+            {
+                o.ExcluirOperador(int.Parse(item.SubItems[0].Text));
+            }
+            MontaLista();
+            AtualizaLista();
+        }
     }
 }

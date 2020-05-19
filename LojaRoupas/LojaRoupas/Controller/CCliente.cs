@@ -34,10 +34,10 @@ namespace LojaRoupas.Controller
                 MessageBox.Show("Cliente possui vendas e não pode ser excluído", "Exclusão", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
-
         public List<Cliente> ListarCliente() => conexao.ListarCliente();
-        public Cliente GetCliente(int id) => conexao.getCliente(id);
-        public String GetNomeCliente(int id) => conexao.getNomeCliente(id);
+        public Cliente GetCliente(int id) => conexao.GetCliente(id);
+        public String GetNomeCliente(int id) => conexao.GetNomeCliente(id);
+        public int GetIdCliente(string NomeCliente) => conexao.GetIdCliente(NomeCliente);
         public void SalvarCliente(Cliente cliente)
         {
             if (GetCliente(cliente.getId()).getId() == 0)
