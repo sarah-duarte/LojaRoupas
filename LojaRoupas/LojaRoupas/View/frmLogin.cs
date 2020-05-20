@@ -6,15 +6,30 @@ namespace LojaRoupas
 {
     public partial class frmLogin : Form
     {
+        CUsuario u = new CUsuario();
         public frmLogin()
         {
             InitializeComponent();
         }
         private void btnEntrar_Click(object sender, EventArgs e)
         {
-            frmPrincipal telaPrincipal = new frmPrincipal();
-            telaPrincipal.ShowDialog();
-            this.Close();
+            if (txtSenha.Text != String.Empty & txtLogin.Text != String.Empty)
+            {
+                if (u.GetSenhaUsuario(txtLogin.Text) == txtSenha.Text)
+                {
+                    frmPrincipal telaPrincipal = new frmPrincipal();
+                    telaPrincipal.ShowDialog();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Login ou Senha incorretos", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Login e Senha devem estar preenchido", "Login", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }            
         }
         private void btnCancelar_Click(object sender, EventArgs e)
         {
@@ -23,8 +38,7 @@ namespace LojaRoupas
 
         private void llblNovoLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            CUsuario cUsuario = new CUsuario();
-            cUsuario.TelaUsuario(0);
+            u.TelaUsuario(0);
         }
     }
 }

@@ -116,7 +116,6 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 c.setId(rdr.GetInt32(0));
                 c.setNome(rdr.GetString(1));
                 c.setCpf(rdr.GetString(2));
@@ -136,13 +135,12 @@ namespace LojaRoupas.Model
             Usuario c = new Usuario();
             sql = "SELECT id, nome, cpf, email, telefone, nascimento, endereco, login, senha FROM tbusuario where login = @Login;";
             cmd = new NpgsqlCommand(sql, con);
-            cmd.Parameters.AddWithValue("id", Login);
+            cmd.Parameters.AddWithValue("login", Login);
             cmd.Prepare();
             rdr = cmd.ExecuteReader();
 
             while (rdr.Read())
             {
-                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 c.setId(rdr.GetInt32(0));
                 c.setNome(rdr.GetString(1));
                 c.setCpf(rdr.GetString(2));
@@ -168,7 +166,6 @@ namespace LojaRoupas.Model
 
             while (rdr.Read())
             {
-                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 c.setId(rdr.GetInt32(0));
                 c.setNome(rdr.GetString(1));
                 c.setCpf(rdr.GetString(2));
@@ -188,13 +185,12 @@ namespace LojaRoupas.Model
             Usuario c = new Usuario();
             sql = "SELECT id, nome, cpf, email, telefone, nascimento, endereco, login, senha FROM tbusuario where login = @Login;";
             cmd = new NpgsqlCommand(sql, con);
-            cmd.Parameters.AddWithValue("id", Login);
+            cmd.Parameters.AddWithValue("login", Login);
             cmd.Prepare();
             rdr = cmd.ExecuteReader();
 
             while (rdr.Read())
             {
-                //Console.WriteLine("{0}", rdr.GetInt32(0));
                 c.setId(rdr.GetInt32(0));
                 c.setNome(rdr.GetString(1));
                 c.setCpf(rdr.GetString(2));
