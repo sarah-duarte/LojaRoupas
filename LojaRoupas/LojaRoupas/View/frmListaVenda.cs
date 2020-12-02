@@ -66,5 +66,10 @@ namespace LojaRoupas
                 iv.TelaItemVenda(iv.ListarItemVenda(int.Parse(item.SubItems[0].Text)));
             }
         }
+
+        private void lstListaVenda_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

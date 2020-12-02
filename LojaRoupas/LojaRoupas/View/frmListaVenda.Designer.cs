@@ -88,6 +88,7 @@
             this.lstListaVenda.TabIndex = 24;
             this.lstListaVenda.UseCompatibleStateImageBehavior = false;
             this.lstListaVenda.View = System.Windows.Forms.View.Details;
+            this.lstListaVenda.SelectedIndexChanged += new System.EventHandler(this.lstListaVenda_SelectedIndexChanged);
             // 
             // id
             // 

@@ -214,6 +214,7 @@
             this.txtQtdEstoque.Name = "txtQtdEstoque";
             this.txtQtdEstoque.Size = new System.Drawing.Size(48, 25);
             this.txtQtdEstoque.TabIndex = 5;
+            this.txtQtdEstoque.TextChanged += new System.EventHandler(this.txtQtdEstoque_TextChanged);
             // 
             // pictureBox1
             // 

@@ -44,7 +44,7 @@
             // 
             // lstListaCliente
             // 
-            this.lstListaCliente.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lstListaCliente.BackColor = System.Drawing.Color.Silver;
             this.lstListaCliente.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.id,
             this.nome,
@@ -53,7 +53,7 @@
             this.telefone,
             this.nascimento,
             this.endereco});
-            this.lstListaCliente.ForeColor = System.Drawing.Color.BurlyWood;
+            this.lstListaCliente.ForeColor = System.Drawing.Color.Peru;
             this.lstListaCliente.FullRowSelect = true;
             this.lstListaCliente.HideSelection = false;
             this.lstListaCliente.Location = new System.Drawing.Point(0, 0);
@@ -101,56 +101,61 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCancelar.BackColor = System.Drawing.Color.Blue;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnCancelar.Location = new System.Drawing.Point(864, 195);
+            this.btnCancelar.Location = new System.Drawing.Point(878, 141);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(125, 55);
+            this.btnCancelar.Size = new System.Drawing.Size(111, 26);
             this.btnCancelar.TabIndex = 23;
-            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnNovo
             // 
             this.btnNovo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnNovo.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnNovo.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btnNovo.BackColor = System.Drawing.Color.Blue;
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNovo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNovo.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnNovo.Location = new System.Drawing.Point(864, 12);
+            this.btnNovo.Location = new System.Drawing.Point(878, 12);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(125, 55);
+            this.btnNovo.Size = new System.Drawing.Size(111, 24);
             this.btnNovo.TabIndex = 22;
-            this.btnNovo.Text = "NOVO";
+            this.btnNovo.Text = "Novo";
             this.btnNovo.UseVisualStyleBackColor = false;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // btnEditar
             // 
             this.btnEditar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEditar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnEditar.BackColor = System.Drawing.Color.Blue;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnEditar.Location = new System.Drawing.Point(864, 73);
+            this.btnEditar.Location = new System.Drawing.Point(878, 56);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(125, 55);
+            this.btnEditar.Size = new System.Drawing.Size(111, 26);
             this.btnEditar.TabIndex = 24;
-            this.btnEditar.Text = "EDITAR";
+            this.btnEditar.Text = "Editar";
             this.btnEditar.UseVisualStyleBackColor = false;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnExcluir
             // 
             this.btnExcluir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnExcluir.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnExcluir.BackColor = System.Drawing.Color.Blue;
             this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnExcluir.Location = new System.Drawing.Point(864, 134);
+            this.btnExcluir.Location = new System.Drawing.Point(878, 98);
             this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(125, 55);
+            this.btnExcluir.Size = new System.Drawing.Size(111, 28);
             this.btnExcluir.TabIndex = 25;
-            this.btnExcluir.Text = "EXCLUIR";
+            this.btnExcluir.Text = "Excluir";
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
@@ -159,13 +164,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.Peru;
             this.ClientSize = new System.Drawing.Size(1001, 450);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.lstListaCliente);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmListaCliente";

@@ -291,6 +291,7 @@
             this.cmbOperador.Name = "cmbOperador";
             this.cmbOperador.Size = new System.Drawing.Size(272, 28);
             this.cmbOperador.TabIndex = 31;
+            this.cmbOperador.SelectedIndexChanged += new System.EventHandler(this.cmbOperador_SelectedIndexChanged);
             // 
             // label4
             // 

@@ -1,0 +1,52 @@
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\Sinistros LTDA.exe.config
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\Sinistros LTDA.exe
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\Sinistros LTDA.pdb
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\EntityFramework.dll
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\Npgsql.dll
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\System.Buffers.dll
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\System.Memory.dll
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\System.Text.Json.dll
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\System.ValueTuple.dll
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\EntityFramework.xml
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\Npgsql.pdb
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\Npgsql.xml
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\System.Buffers.xml
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\System.Memory.xml
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\System.Text.Json.xml
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\System.ValueTuple.xml
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.csprojAssemblyReference.cache
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmCliente.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmFornecedor.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmListaCliente.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmListaFornecedor.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmListaOperador.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmListaProdutos.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmListaUsuario.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmOperador.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmPrincipal.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmProduto.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmUsuarios.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.Properties.Resources.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.csproj.GenerateResource.cache
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.csproj.CoreCompileInputs.cache
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.csproj.CopyComplete
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\Sinistros LTDA.exe
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\Sinistros LTDA.pdb
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmLogin.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmListaVenda.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmCompra.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmVenda.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmPesquisaProduto.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\FontAwesome.Sharp.dll

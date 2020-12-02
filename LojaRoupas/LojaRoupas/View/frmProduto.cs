@@ -57,5 +57,10 @@ namespace LojaRoupas
                 txtQtdEstoque.Visible = false;
             }
         }
+
+        private void txtQtdEstoque_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -28,11 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmCliente));
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtEndereco = new System.Windows.Forms.TextBox();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lblID = new System.Windows.Forms.Label();
@@ -47,62 +45,55 @@
             this.txtNascimento = new System.Windows.Forms.MaskedTextBox();
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Transparent;
+            this.btnCancelar.BackColor = System.Drawing.Color.Blue;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnCancelar.Location = new System.Drawing.Point(555, 205);
+            this.btnCancelar.ForeColor = System.Drawing.Color.Peru;
+            this.btnCancelar.Location = new System.Drawing.Point(564, 255);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(118, 55);
+            this.btnCancelar.Size = new System.Drawing.Size(94, 26);
             this.btnCancelar.TabIndex = 8;
-            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnSalvar
             // 
-            this.btnSalvar.BackColor = System.Drawing.Color.Transparent;
+            this.btnSalvar.BackColor = System.Drawing.Color.Blue;
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSalvar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnSalvar.Location = new System.Drawing.Point(431, 205);
+            this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalvar.ForeColor = System.Drawing.Color.Peru;
+            this.btnSalvar.Location = new System.Drawing.Point(456, 255);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(118, 55);
+            this.btnSalvar.Size = new System.Drawing.Size(96, 25);
             this.btnSalvar.TabIndex = 7;
-            this.btnSalvar.Text = "SALVAR";
+            this.btnSalvar.Text = "Salvar";
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.BackColor = System.Drawing.Color.Transparent;
-            this.label10.Font = new System.Drawing.Font("Sylfaen", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label10.Location = new System.Drawing.Point(13, 17);
+            this.label10.BackColor = System.Drawing.Color.Silver;
+            this.label10.Font = new System.Drawing.Font("Microsoft JhengHei", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Peru;
+            this.label10.Location = new System.Drawing.Point(11, 48);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(372, 39);
+            this.label10.Size = new System.Drawing.Size(320, 40);
             this.label10.TabIndex = 1;
-            this.label10.Text = "CADASTRO DE CLIENTE";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Location = new System.Drawing.Point(458, 17);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(215, 57);
-            this.pictureBox1.TabIndex = 36;
-            this.pictureBox1.TabStop = false;
+            this.label10.Text = "Cadastro Investidor";
             // 
             // txtEndereco
             // 
             this.txtEndereco.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtEndereco.Location = new System.Drawing.Point(144, 169);
+            this.txtEndereco.ForeColor = System.Drawing.Color.Blue;
+            this.txtEndereco.Location = new System.Drawing.Point(144, 205);
             this.txtEndereco.Name = "txtEndereco";
             this.txtEndereco.Size = new System.Drawing.Size(459, 20);
             this.txtEndereco.TabIndex = 6;
@@ -110,7 +101,8 @@
             // txtEmail
             // 
             this.txtEmail.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtEmail.Location = new System.Drawing.Point(116, 143);
+            this.txtEmail.ForeColor = System.Drawing.Color.Blue;
+            this.txtEmail.Location = new System.Drawing.Point(116, 179);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(487, 20);
             this.txtEmail.TabIndex = 5;
@@ -118,20 +110,21 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.BackColor = System.Drawing.Color.Transparent;
-            this.lblID.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.ForeColor = System.Drawing.Color.BurlyWood;
-            this.lblID.Location = new System.Drawing.Point(71, 90);
+            this.lblID.BackColor = System.Drawing.Color.Silver;
+            this.lblID.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold);
+            this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.lblID.Location = new System.Drawing.Point(71, 126);
             this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(46, 22);
+            this.lblID.Size = new System.Drawing.Size(50, 21);
             this.lblID.TabIndex = 2;
             this.lblID.Text = "0001";
             // 
             // txtNome
             // 
             this.txtNome.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtNome.Location = new System.Drawing.Point(187, 92);
+            this.txtNome.ForeColor = System.Drawing.Color.Blue;
+            this.txtNome.Location = new System.Drawing.Point(187, 128);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(416, 20);
             this.txtNome.TabIndex = 1;
@@ -139,97 +132,98 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.Transparent;
-            this.label8.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label8.Location = new System.Drawing.Point(454, 115);
+            this.label8.BackColor = System.Drawing.Color.Lavender;
+            this.label8.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label8.Location = new System.Drawing.Point(454, 151);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(42, 22);
+            this.label8.Size = new System.Drawing.Size(44, 21);
             this.label8.TabIndex = 27;
             this.label8.Text = "CPF:";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label6.Location = new System.Drawing.Point(40, 169);
+            this.label6.BackColor = System.Drawing.Color.Silver;
+            this.label6.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label6.Location = new System.Drawing.Point(40, 205);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(97, 22);
+            this.label6.Size = new System.Drawing.Size(81, 21);
             this.label6.TabIndex = 25;
-            this.label6.Text = "ENDEREÇO:";
+            this.label6.Text = "Endereço";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.Transparent;
-            this.label5.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label5.Location = new System.Drawing.Point(247, 118);
+            this.label5.BackColor = System.Drawing.Color.Lavender;
+            this.label5.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label5.Location = new System.Drawing.Point(247, 154);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(118, 22);
+            this.label5.Size = new System.Drawing.Size(102, 21);
             this.label5.TabIndex = 24;
-            this.label5.Text = "NASCIMENTO:";
+            this.label5.Text = "Nascimento";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label4.Location = new System.Drawing.Point(40, 144);
+            this.label4.BackColor = System.Drawing.Color.Silver;
+            this.label4.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label4.Location = new System.Drawing.Point(40, 180);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(69, 22);
+            this.label4.Size = new System.Drawing.Size(58, 21);
             this.label4.TabIndex = 23;
-            this.label4.Text = "E-MAIL:";
+            this.label4.Text = "E-mail";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label3.Location = new System.Drawing.Point(40, 118);
+            this.label3.BackColor = System.Drawing.Color.Silver;
+            this.label3.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label3.Location = new System.Drawing.Point(40, 154);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 22);
+            this.label3.Size = new System.Drawing.Size(76, 21);
             this.label3.TabIndex = 22;
-            this.label3.Text = "TELEFONE:";
+            this.label3.Text = "Telefone";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label2.Location = new System.Drawing.Point(118, 90);
+            this.label2.BackColor = System.Drawing.Color.Silver;
+            this.label2.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label2.Location = new System.Drawing.Point(118, 126);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 22);
+            this.label2.Size = new System.Drawing.Size(61, 21);
             this.label2.TabIndex = 21;
-            this.label2.Text = "NOME:";
+            this.label2.Text = "Nome:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label1.Location = new System.Drawing.Point(40, 90);
+            this.label1.BackColor = System.Drawing.Color.Silver;
+            this.label1.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label1.Location = new System.Drawing.Point(40, 126);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 22);
+            this.label1.Size = new System.Drawing.Size(25, 21);
             this.label1.TabIndex = 20;
-            this.label1.Text = "ID:";
+            this.label1.Text = "Id";
             // 
             // txtNascimento
             // 
-            this.txtNascimento.Location = new System.Drawing.Point(372, 118);
+            this.txtNascimento.ForeColor = System.Drawing.Color.Blue;
+            this.txtNascimento.Location = new System.Drawing.Point(372, 154);
             this.txtNascimento.Mask = "00/00/0000";
             this.txtNascimento.Name = "txtNascimento";
             this.txtNascimento.Size = new System.Drawing.Size(75, 20);
@@ -238,8 +232,9 @@
             // 
             // txtTelefone
             // 
+            this.txtTelefone.ForeColor = System.Drawing.Color.Blue;
             this.txtTelefone.ImeMode = System.Windows.Forms.ImeMode.Disable;
-            this.txtTelefone.Location = new System.Drawing.Point(140, 118);
+            this.txtTelefone.Location = new System.Drawing.Point(140, 154);
             this.txtTelefone.Mask = "(99) 00000-0000";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(100, 20);
@@ -247,11 +242,24 @@
             // 
             // txtCPF
             // 
-            this.txtCPF.Location = new System.Drawing.Point(503, 118);
+            this.txtCPF.ForeColor = System.Drawing.Color.Blue;
+            this.txtCPF.Location = new System.Drawing.Point(503, 154);
             this.txtCPF.Mask = "000.000.000-00";
             this.txtCPF.Name = "txtCPF";
             this.txtCPF.Size = new System.Drawing.Size(100, 20);
             this.txtCPF.TabIndex = 4;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.btnSalvar);
+            this.panel1.Controls.Add(this.btnCancelar);
+            this.panel1.Controls.Add(this.label10);
+            this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.panel1.Location = new System.Drawing.Point(2, 1);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(729, 310);
+            this.panel1.TabIndex = 28;
             // 
             // frmCliente
             // 
@@ -259,14 +267,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlText;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(686, 275);
+            this.ClientSize = new System.Drawing.Size(733, 309);
             this.Controls.Add(this.txtCPF);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.txtNascimento);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtEndereco);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lblID);
@@ -278,12 +282,16 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Controls.Add(this.panel1);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MaximizeBox = false;
             this.Name = "frmCliente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Cliente";
             this.Load += new System.EventHandler(this.frmCliente_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,7 +302,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtEndereco;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblID;
@@ -309,5 +316,6 @@
         private System.Windows.Forms.MaskedTextBox txtNascimento;
         private System.Windows.Forms.MaskedTextBox txtTelefone;
         private System.Windows.Forms.MaskedTextBox txtCPF;
+        private System.Windows.Forms.Panel panel1;
     }
 }

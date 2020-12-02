@@ -207,5 +207,10 @@ namespace LojaRoupas
         {
             txtCodBarras.Text = cProduto.TelaPesquisaProduto();
         }
+
+        private void txtCodBarras_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

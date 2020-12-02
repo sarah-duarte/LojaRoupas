@@ -67,7 +67,7 @@
             // pnlDesconto
             // 
             this.pnlDesconto.Controls.Add(this.groupBox1);
-            this.pnlDesconto.Location = new System.Drawing.Point(258, 152);
+            this.pnlDesconto.Location = new System.Drawing.Point(268, 150);
             this.pnlDesconto.Name = "pnlDesconto";
             this.pnlDesconto.Size = new System.Drawing.Size(355, 200);
             this.pnlDesconto.TabIndex = 58;
@@ -392,6 +392,7 @@
             this.txtCodBarras.Name = "txtCodBarras";
             this.txtCodBarras.Size = new System.Drawing.Size(258, 32);
             this.txtCodBarras.TabIndex = 37;
+            this.txtCodBarras.TextChanged += new System.EventHandler(this.txtCodBarras_TextChanged);
             // 
             // btnPesqProduto
             // 

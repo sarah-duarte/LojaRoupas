@@ -234,5 +234,10 @@ namespace LojaRoupas
         {
             txtCodBarras.Text = cProduto.TelaPesquisaProduto();
         }
+
+        private void cmbOperador_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

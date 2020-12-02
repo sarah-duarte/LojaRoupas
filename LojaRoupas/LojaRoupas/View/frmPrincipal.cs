@@ -24,5 +24,20 @@ namespace LojaRoupas
         private void usuarioToolStripMenuItem_Click(object sender, EventArgs e) => u.TelaListaUsuario();
         private void vendaToolStripMenuItem_Click(object sender, EventArgs e) => v.TelaListaVenda();
         private void compraToolStripMenuItem_Click(object sender, EventArgs e) => cm.TelaListaCompra();
+
+        private void frmPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

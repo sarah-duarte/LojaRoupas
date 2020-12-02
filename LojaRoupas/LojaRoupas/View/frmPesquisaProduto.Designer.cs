@@ -55,7 +55,7 @@
             // 
             // lstListaProduto
             // 
-            this.lstListaProduto.BackColor = System.Drawing.Color.Black;
+            this.lstListaProduto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.lstListaProduto.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.id,
             this.codigoBarras,
@@ -280,9 +280,9 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lstListaProduto);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "frmPesquisaProduto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pesquisa Produto";
             this.ResumeLayout(false);
             this.PerformLayout();
 
