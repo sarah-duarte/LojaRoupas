@@ -280,8 +280,17 @@
     <EmbeddedResource Include="View\frmListaCliente.resx">
       <DependentUpon>frmListaCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmListaCompra.resx">
+      <DependentUpon>frmListaCompra.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmListaFornecedor.resx">
       <DependentUpon>frmListaFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmListaItensCompra.resx">
+      <DependentUpon>frmListaItensCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\frmListaItensVenda.resx">
+      <DependentUpon>frmListaItensVenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmListaOperador.resx">
       <DependentUpon>frmListaOperador.cs</DependentUpon>

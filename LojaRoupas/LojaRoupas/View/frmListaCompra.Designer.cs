@@ -43,33 +43,39 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCancelar.BackColor = System.Drawing.Color.Blue;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnCancelar.Location = new System.Drawing.Point(581, 134);
+            this.btnCancelar.Location = new System.Drawing.Point(678, 90);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(109, 55);
+            this.btnCancelar.Size = new System.Drawing.Size(127, 28);
             this.btnCancelar.TabIndex = 29;
-            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnNovo
             // 
             this.btnNovo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNovo.BackColor = System.Drawing.Color.Blue;
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNovo.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnNovo.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnNovo.Location = new System.Drawing.Point(581, 12);
+            this.btnNovo.Location = new System.Drawing.Point(678, 15);
+            this.btnNovo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(109, 55);
+            this.btnNovo.Size = new System.Drawing.Size(127, 32);
             this.btnNovo.TabIndex = 28;
-            this.btnNovo.Text = "REALIZAR COMPRA";
-            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Text = "Comprar";
+            this.btnNovo.UseVisualStyleBackColor = false;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // lstListaCompra
             // 
-            this.lstListaCompra.BackColor = System.Drawing.Color.Black;
+            this.lstListaCompra.BackColor = System.Drawing.Color.Silver;
+            this.lstListaCompra.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lstListaCompra.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.id,
             this.data,
@@ -78,12 +84,13 @@
             this.qtditens,
             this.fornecedor});
             this.lstListaCompra.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lstListaCompra.ForeColor = System.Drawing.Color.BurlyWood;
+            this.lstListaCompra.ForeColor = System.Drawing.Color.Blue;
             this.lstListaCompra.FullRowSelect = true;
             this.lstListaCompra.HideSelection = false;
             this.lstListaCompra.Location = new System.Drawing.Point(0, 0);
+            this.lstListaCompra.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.lstListaCompra.Name = "lstListaCompra";
-            this.lstListaCompra.Size = new System.Drawing.Size(565, 450);
+            this.lstListaCompra.Size = new System.Drawing.Size(659, 554);
             this.lstListaCompra.TabIndex = 27;
             this.lstListaCompra.UseCompatibleStateImageBehavior = false;
             this.lstListaCompra.View = System.Windows.Forms.View.Details;
@@ -121,26 +128,33 @@
             // btnItensDoc
             // 
             this.btnItensDoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnItensDoc.BackColor = System.Drawing.Color.Blue;
             this.btnItensDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnItensDoc.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold);
             this.btnItensDoc.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnItensDoc.Location = new System.Drawing.Point(581, 73);
+            this.btnItensDoc.Location = new System.Drawing.Point(678, 54);
+            this.btnItensDoc.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnItensDoc.Name = "btnItensDoc";
-            this.btnItensDoc.Size = new System.Drawing.Size(109, 55);
+            this.btnItensDoc.Size = new System.Drawing.Size(127, 28);
             this.btnItensDoc.TabIndex = 30;
-            this.btnItensDoc.Text = "ITENS DA COMPRA";
-            this.btnItensDoc.UseVisualStyleBackColor = true;
+            this.btnItensDoc.Text = "Criptomoedas";
+            this.btnItensDoc.UseVisualStyleBackColor = false;
             this.btnItensDoc.Click += new System.EventHandler(this.btnItensDoc_Click);
             // 
             // frmListaCompra
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(702, 450);
+            this.BackColor = System.Drawing.Color.Peru;
+            this.ClientSize = new System.Drawing.Size(819, 554);
             this.Controls.Add(this.btnItensDoc);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.lstListaCompra);
+            this.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.Peru;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmListaCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Compras";

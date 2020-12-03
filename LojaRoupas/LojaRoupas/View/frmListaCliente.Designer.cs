@@ -53,6 +53,7 @@
             this.telefone,
             this.nascimento,
             this.endereco});
+            this.lstListaCliente.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lstListaCliente.ForeColor = System.Drawing.Color.Peru;
             this.lstListaCliente.FullRowSelect = true;
             this.lstListaCliente.HideSelection = false;

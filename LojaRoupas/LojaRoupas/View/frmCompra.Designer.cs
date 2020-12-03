@@ -66,8 +66,9 @@
             // 
             // pnlDesconto
             // 
+            this.pnlDesconto.BackColor = System.Drawing.Color.Blue;
             this.pnlDesconto.Controls.Add(this.groupBox1);
-            this.pnlDesconto.Location = new System.Drawing.Point(268, 150);
+            this.pnlDesconto.Location = new System.Drawing.Point(223, 194);
             this.pnlDesconto.Name = "pnlDesconto";
             this.pnlDesconto.Size = new System.Drawing.Size(355, 200);
             this.pnlDesconto.TabIndex = 58;
@@ -75,23 +76,25 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.Peru;
             this.groupBox1.Controls.Add(this.btnOK);
             this.groupBox1.Controls.Add(this.label7);
             this.groupBox1.Controls.Add(this.txtDesconto);
             this.groupBox1.Controls.Add(this.rdbValor);
             this.groupBox1.Controls.Add(this.rdbPerc);
             this.groupBox1.ForeColor = System.Drawing.Color.BurlyWood;
-            this.groupBox1.Location = new System.Drawing.Point(20, 18);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(318, 156);
+            this.groupBox1.Size = new System.Drawing.Size(349, 194);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             // 
             // btnOK
             // 
             this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnOK.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnOK.Location = new System.Drawing.Point(247, 59);
+            this.btnOK.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnOK.ForeColor = System.Drawing.Color.Blue;
+            this.btnOK.Location = new System.Drawing.Point(233, 71);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(53, 38);
             this.btnOK.TabIndex = 36;
@@ -102,12 +105,12 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.BurlyWood;
-            this.label7.Location = new System.Drawing.Point(94, 49);
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.Blue;
+            this.label7.Location = new System.Drawing.Point(103, 58);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(95, 22);
+            this.label7.Size = new System.Drawing.Size(103, 22);
             this.label7.TabIndex = 23;
             this.label7.Text = "DESCONTO";
             // 
@@ -115,7 +118,8 @@
             // 
             this.txtDesconto.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtDesconto.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDesconto.Location = new System.Drawing.Point(98, 74);
+            this.txtDesconto.ForeColor = System.Drawing.Color.Blue;
+            this.txtDesconto.Location = new System.Drawing.Point(98, 84);
             this.txtDesconto.Name = "txtDesconto";
             this.txtDesconto.Size = new System.Drawing.Size(116, 32);
             this.txtDesconto.TabIndex = 22;
@@ -125,6 +129,7 @@
             this.rdbValor.AutoSize = true;
             this.rdbValor.Checked = true;
             this.rdbValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbValor.ForeColor = System.Drawing.Color.Blue;
             this.rdbValor.Location = new System.Drawing.Point(23, 45);
             this.rdbValor.Name = "rdbValor";
             this.rdbValor.Size = new System.Drawing.Size(39, 28);
@@ -137,6 +142,7 @@
             // 
             this.rdbPerc.AutoSize = true;
             this.rdbPerc.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbPerc.ForeColor = System.Drawing.Color.Blue;
             this.rdbPerc.Location = new System.Drawing.Point(23, 88);
             this.rdbPerc.Name = "rdbPerc";
             this.rdbPerc.Size = new System.Drawing.Size(44, 28);
@@ -146,31 +152,34 @@
             // 
             // btnDesconto
             // 
+            this.btnDesconto.BackColor = System.Drawing.Color.Blue;
             this.btnDesconto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDesconto.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnDesconto.Location = new System.Drawing.Point(667, 15);
+            this.btnDesconto.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnDesconto.ForeColor = System.Drawing.Color.Peru;
+            this.btnDesconto.Location = new System.Drawing.Point(667, 82);
             this.btnDesconto.Name = "btnDesconto";
-            this.btnDesconto.Size = new System.Drawing.Size(118, 55);
+            this.btnDesconto.Size = new System.Drawing.Size(118, 31);
             this.btnDesconto.TabIndex = 57;
-            this.btnDesconto.Text = "DESCONTO";
-            this.btnDesconto.UseVisualStyleBackColor = true;
+            this.btnDesconto.Text = "Desconto";
+            this.btnDesconto.UseVisualStyleBackColor = false;
             this.btnDesconto.Click += new System.EventHandler(this.btnDesconto_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.BurlyWood;
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Blue;
             this.label4.Location = new System.Drawing.Point(14, 64);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(115, 22);
+            this.label4.Size = new System.Drawing.Size(104, 22);
             this.label4.TabIndex = 54;
-            this.label4.Text = "FORNECEDOR";
+            this.label4.Text = "Comprador";
             // 
             // cmbFornecedor
             // 
             this.cmbFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbFornecedor.ForeColor = System.Drawing.Color.Blue;
             this.cmbFornecedor.FormattingEnabled = true;
             this.cmbFornecedor.Location = new System.Drawing.Point(14, 89);
             this.cmbFornecedor.Name = "cmbFornecedor";
@@ -180,42 +189,46 @@
             // lblID
             // 
             this.lblID.AutoSize = true;
-            this.lblID.Font = new System.Drawing.Font("Sylfaen", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.ForeColor = System.Drawing.Color.BurlyWood;
-            this.lblID.Location = new System.Drawing.Point(170, 7);
+            this.lblID.Font = new System.Drawing.Font("Microsoft YaHei UI", 21F, System.Drawing.FontStyle.Bold);
+            this.lblID.ForeColor = System.Drawing.Color.Peru;
+            this.lblID.Location = new System.Drawing.Point(141, 7);
             this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(81, 39);
+            this.lblID.Size = new System.Drawing.Size(85, 37);
             this.lblID.TabIndex = 52;
             this.lblID.Text = "0001";
             // 
             // btnCancelar
             // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Blue;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnCancelar.Location = new System.Drawing.Point(668, 137);
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.ForeColor = System.Drawing.Color.Peru;
+            this.btnCancelar.Location = new System.Drawing.Point(667, 128);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(118, 55);
+            this.btnCancelar.Size = new System.Drawing.Size(118, 31);
             this.btnCancelar.TabIndex = 51;
-            this.btnCancelar.Text = "CANCELAR";
-            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnFinalizarCompra
             // 
+            this.btnFinalizarCompra.BackColor = System.Drawing.Color.Blue;
             this.btnFinalizarCompra.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFinalizarCompra.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnFinalizarCompra.Location = new System.Drawing.Point(668, 76);
+            this.btnFinalizarCompra.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.btnFinalizarCompra.ForeColor = System.Drawing.Color.Peru;
+            this.btnFinalizarCompra.Location = new System.Drawing.Point(666, 38);
             this.btnFinalizarCompra.Name = "btnFinalizarCompra";
-            this.btnFinalizarCompra.Size = new System.Drawing.Size(118, 55);
+            this.btnFinalizarCompra.Size = new System.Drawing.Size(117, 31);
             this.btnFinalizarCompra.TabIndex = 50;
-            this.btnFinalizarCompra.Text = "FINALIZAR COMPRA";
-            this.btnFinalizarCompra.UseVisualStyleBackColor = true;
+            this.btnFinalizarCompra.Text = "Finalizar Compra";
+            this.btnFinalizarCompra.UseVisualStyleBackColor = false;
             this.btnFinalizarCompra.Click += new System.EventHandler(this.btnFinalizarCompra_Click);
             // 
             // lblDesconto
             // 
-            this.lblDesconto.Font = new System.Drawing.Font("Sylfaen", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDesconto.Font = new System.Drawing.Font("Microsoft YaHei UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblDesconto.ForeColor = System.Drawing.Color.Coral;
             this.lblDesconto.Location = new System.Drawing.Point(585, 443);
             this.lblDesconto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -227,8 +240,8 @@
             // 
             // label8
             // 
-            this.label8.Font = new System.Drawing.Font("Sylfaen", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.BurlyWood;
+            this.label8.Font = new System.Drawing.Font("Microsoft YaHei UI", 20F, System.Drawing.FontStyle.Bold);
+            this.label8.ForeColor = System.Drawing.Color.Blue;
             this.label8.Location = new System.Drawing.Point(585, 399);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
@@ -239,7 +252,7 @@
             // 
             // lblQtdItens
             // 
-            this.lblQtdItens.Font = new System.Drawing.Font("Sylfaen", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQtdItens.Font = new System.Drawing.Font("Microsoft YaHei UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblQtdItens.ForeColor = System.Drawing.Color.Coral;
             this.lblQtdItens.Location = new System.Drawing.Point(585, 355);
             this.lblQtdItens.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -251,8 +264,8 @@
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Sylfaen", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.BurlyWood;
+            this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 20F, System.Drawing.FontStyle.Bold);
+            this.label6.ForeColor = System.Drawing.Color.Blue;
             this.label6.Location = new System.Drawing.Point(585, 311);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
@@ -263,7 +276,7 @@
             // 
             // lblTotal
             // 
-            this.lblTotal.Font = new System.Drawing.Font("Sylfaen", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTotal.Font = new System.Drawing.Font("Microsoft YaHei UI", 20F, System.Drawing.FontStyle.Bold);
             this.lblTotal.ForeColor = System.Drawing.Color.Coral;
             this.lblTotal.Location = new System.Drawing.Point(585, 267);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
@@ -275,8 +288,8 @@
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Sylfaen", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.BurlyWood;
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 20F, System.Drawing.FontStyle.Bold);
+            this.label2.ForeColor = System.Drawing.Color.Blue;
             this.label2.Location = new System.Drawing.Point(585, 223);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
@@ -288,38 +301,38 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.BurlyWood;
+            this.label3.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.Color.Blue;
             this.label3.Location = new System.Drawing.Point(315, 137);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(116, 22);
+            this.label3.Size = new System.Drawing.Size(123, 22);
             this.label3.TabIndex = 43;
             this.label3.Text = "QUANTIDADE";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sylfaen", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.BurlyWood;
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.Color.Blue;
             this.label1.Location = new System.Drawing.Point(14, 137);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(165, 22);
+            this.label1.Size = new System.Drawing.Size(82, 22);
             this.label1.TabIndex = 42;
-            this.label1.Text = "CÓDIGO DE BARRAS:";
+            this.label1.Text = "CÓDIGO:";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Sylfaen", 22F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.ForeColor = System.Drawing.Color.BurlyWood;
+            this.label10.Font = new System.Drawing.Font("Microsoft YaHei UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Peru;
             this.label10.Location = new System.Drawing.Point(11, 7);
             this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(151, 39);
+            this.label10.Size = new System.Drawing.Size(132, 39);
             this.label10.TabIndex = 41;
-            this.label10.Text = "COMPRA";
+            this.label10.Text = "Compra";
             // 
             // lstListaItensCompra
             // 
@@ -329,8 +342,10 @@
             this.Preco,
             this.Qtde,
             this.Total});
+            this.lstListaItensCompra.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.lstListaItensCompra.ForeColor = System.Drawing.Color.Blue;
             this.lstListaItensCompra.HideSelection = false;
-            this.lstListaItensCompra.Location = new System.Drawing.Point(14, 211);
+            this.lstListaItensCompra.Location = new System.Drawing.Point(21, 211);
             this.lstListaItensCompra.Name = "lstListaItensCompra";
             this.lstListaItensCompra.Size = new System.Drawing.Size(557, 294);
             this.lstListaItensCompra.TabIndex = 40;
@@ -364,20 +379,23 @@
             // 
             // btnAddItem
             // 
+            this.btnAddItem.BackColor = System.Drawing.Color.Blue;
             this.btnAddItem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddItem.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnAddItem.Location = new System.Drawing.Point(449, 137);
+            this.btnAddItem.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddItem.ForeColor = System.Drawing.Color.Peru;
+            this.btnAddItem.Location = new System.Drawing.Point(449, 160);
             this.btnAddItem.Name = "btnAddItem";
-            this.btnAddItem.Size = new System.Drawing.Size(118, 55);
+            this.btnAddItem.Size = new System.Drawing.Size(118, 34);
             this.btnAddItem.TabIndex = 39;
-            this.btnAddItem.Text = "ADICIONAR ITEM";
-            this.btnAddItem.UseVisualStyleBackColor = true;
+            this.btnAddItem.Text = "Adicionar Item";
+            this.btnAddItem.UseVisualStyleBackColor = false;
             this.btnAddItem.Click += new System.EventHandler(this.btnAddItem_Click);
             // 
             // txtQtd
             // 
             this.txtQtd.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtQtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtQtd.ForeColor = System.Drawing.Color.Blue;
             this.txtQtd.Location = new System.Drawing.Point(315, 162);
             this.txtQtd.Name = "txtQtd";
             this.txtQtd.Size = new System.Drawing.Size(116, 32);
@@ -387,6 +405,7 @@
             // 
             this.txtCodBarras.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.txtCodBarras.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodBarras.ForeColor = System.Drawing.Color.Blue;
             this.txtCodBarras.Location = new System.Drawing.Point(14, 162);
             this.txtCodBarras.MaxLength = 15;
             this.txtCodBarras.Name = "txtCodBarras";
@@ -397,7 +416,7 @@
             // btnPesqProduto
             // 
             this.btnPesqProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPesqProduto.ForeColor = System.Drawing.Color.BurlyWood;
+            this.btnPesqProduto.ForeColor = System.Drawing.Color.Blue;
             this.btnPesqProduto.Location = new System.Drawing.Point(278, 163);
             this.btnPesqProduto.Name = "btnPesqProduto";
             this.btnPesqProduto.Size = new System.Drawing.Size(30, 29);
@@ -410,7 +429,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(799, 517);
             this.Controls.Add(this.pnlDesconto);
             this.Controls.Add(this.btnPesqProduto);
@@ -433,6 +452,8 @@
             this.Controls.Add(this.btnAddItem);
             this.Controls.Add(this.txtQtd);
             this.Controls.Add(this.txtCodBarras);
+            this.ForeColor = System.Drawing.Color.Silver;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Compra";

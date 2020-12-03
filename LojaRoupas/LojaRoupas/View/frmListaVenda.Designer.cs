@@ -44,33 +44,36 @@
             // btnCancelar
             // 
             this.btnCancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnCancelar.BackColor = System.Drawing.Color.Blue;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnCancelar.Location = new System.Drawing.Point(644, 134);
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.Peru;
+            this.btnCancelar.Location = new System.Drawing.Point(644, 92);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(109, 55);
+            this.btnCancelar.Size = new System.Drawing.Size(109, 28);
             this.btnCancelar.TabIndex = 26;
-            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnNovo
             // 
             this.btnNovo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnNovo.BackColor = System.Drawing.Color.Blue;
             this.btnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNovo.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnNovo.Location = new System.Drawing.Point(644, 12);
+            this.btnNovo.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNovo.ForeColor = System.Drawing.Color.Peru;
+            this.btnNovo.Location = new System.Drawing.Point(644, 24);
             this.btnNovo.Name = "btnNovo";
-            this.btnNovo.Size = new System.Drawing.Size(109, 55);
+            this.btnNovo.Size = new System.Drawing.Size(109, 28);
             this.btnNovo.TabIndex = 25;
-            this.btnNovo.Text = "REALIZAR VENDA";
-            this.btnNovo.UseVisualStyleBackColor = true;
+            this.btnNovo.Text = "Realizar Venda";
+            this.btnNovo.UseVisualStyleBackColor = false;
             this.btnNovo.Click += new System.EventHandler(this.btnNovo_Click);
             // 
             // lstListaVenda
             // 
-            this.lstListaVenda.BackColor = System.Drawing.Color.Black;
+            this.lstListaVenda.BackColor = System.Drawing.Color.Silver;
             this.lstListaVenda.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.id,
             this.data,
@@ -79,7 +82,8 @@
             this.qtditens,
             this.cliente,
             this.operador});
-            this.lstListaVenda.ForeColor = System.Drawing.Color.BurlyWood;
+            this.lstListaVenda.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstListaVenda.ForeColor = System.Drawing.Color.Blue;
             this.lstListaVenda.FullRowSelect = true;
             this.lstListaVenda.HideSelection = false;
             this.lstListaVenda.Location = new System.Drawing.Point(0, 0);
@@ -128,26 +132,30 @@
             // btnItensDoc
             // 
             this.btnItensDoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnItensDoc.BackColor = System.Drawing.Color.Blue;
             this.btnItensDoc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnItensDoc.ForeColor = System.Drawing.Color.BurlyWood;
-            this.btnItensDoc.Location = new System.Drawing.Point(644, 73);
+            this.btnItensDoc.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnItensDoc.ForeColor = System.Drawing.Color.Peru;
+            this.btnItensDoc.Location = new System.Drawing.Point(644, 58);
             this.btnItensDoc.Name = "btnItensDoc";
-            this.btnItensDoc.Size = new System.Drawing.Size(109, 55);
+            this.btnItensDoc.Size = new System.Drawing.Size(109, 28);
             this.btnItensDoc.TabIndex = 27;
-            this.btnItensDoc.Text = "ITENS DA VENDA";
-            this.btnItensDoc.UseVisualStyleBackColor = true;
+            this.btnItensDoc.Text = "Itens da Venda";
+            this.btnItensDoc.UseVisualStyleBackColor = false;
             this.btnItensDoc.Click += new System.EventHandler(this.btnItensDoc_Click);
             // 
             // frmListaVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.Peru;
             this.ClientSize = new System.Drawing.Size(765, 450);
             this.Controls.Add(this.btnItensDoc);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnNovo);
             this.Controls.Add(this.lstListaVenda);
+            this.ForeColor = System.Drawing.Color.Peru;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmListaVenda";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vendas";

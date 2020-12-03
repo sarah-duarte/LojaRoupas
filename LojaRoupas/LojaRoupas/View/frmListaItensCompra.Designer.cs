@@ -41,7 +41,7 @@
             // 
             // lstListaItensCompra
             // 
-            this.lstListaItensCompra.BackColor = System.Drawing.Color.Black;
+            this.lstListaItensCompra.BackColor = System.Drawing.Color.Silver;
             this.lstListaItensCompra.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.id,
             this.codigoBarras,
@@ -52,7 +52,8 @@
             this.precoVenda,
             this.qtdEstProduto});
             this.lstListaItensCompra.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lstListaItensCompra.ForeColor = System.Drawing.Color.BurlyWood;
+            this.lstListaItensCompra.Font = new System.Drawing.Font("Microsoft YaHei UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstListaItensCompra.ForeColor = System.Drawing.Color.Blue;
             this.lstListaItensCompra.HideSelection = false;
             this.lstListaItensCompra.Location = new System.Drawing.Point(0, 0);
             this.lstListaItensCompra.Name = "lstListaItensCompra";
@@ -105,9 +106,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(636, 223);
             this.Controls.Add(this.lstListaItensCompra);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "frmListaItensCompra";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Itens da Compra";
             this.Load += new System.EventHandler(this.frmListaItensCompra_Load);
             this.ResumeLayout(false);
 

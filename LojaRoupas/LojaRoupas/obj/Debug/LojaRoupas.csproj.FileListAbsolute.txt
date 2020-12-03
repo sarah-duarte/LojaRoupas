@@ -50,3 +50,6 @@ C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\D
 C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmVenda.resources
 C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmPesquisaProduto.resources
 C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmListaCompra.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmListaItensCompra.resources
+C:\Users\rafae\OneDrive\Documentos\GitHub\LojaRoupas\LojaRoupas\LojaRoupas\obj\Debug\LojaRoupas.frmListaItensVenda.resources

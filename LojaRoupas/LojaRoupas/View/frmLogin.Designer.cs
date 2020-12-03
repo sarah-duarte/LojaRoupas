@@ -42,11 +42,11 @@
             // btnCancelar
             // 
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.ForeColor = System.Drawing.Color.Peru;
             this.btnCancelar.Location = new System.Drawing.Point(441, 168);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(115, 38);
+            this.btnCancelar.Size = new System.Drawing.Size(115, 30);
             this.btnCancelar.TabIndex = 4;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -55,11 +55,11 @@
             // btnEntrar
             // 
             this.btnEntrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEntrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEntrar.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEntrar.ForeColor = System.Drawing.Color.Peru;
             this.btnEntrar.Location = new System.Drawing.Point(441, 121);
             this.btnEntrar.Name = "btnEntrar";
-            this.btnEntrar.Size = new System.Drawing.Size(115, 41);
+            this.btnEntrar.Size = new System.Drawing.Size(115, 36);
             this.btnEntrar.TabIndex = 3;
             this.btnEntrar.Text = "ENTRAR";
             this.btnEntrar.UseVisualStyleBackColor = true;
@@ -79,24 +79,24 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft YaHei UI", 16F);
             this.label4.ForeColor = System.Drawing.Color.Peru;
-            this.label4.Location = new System.Drawing.Point(63, 167);
+            this.label4.Location = new System.Drawing.Point(86, 168);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(116, 31);
+            this.label4.Size = new System.Drawing.Size(93, 30);
             this.label4.TabIndex = 49;
             this.label4.Text = "SENHA:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 16F);
             this.label1.ForeColor = System.Drawing.Color.Peru;
-            this.label1.Location = new System.Drawing.Point(72, 126);
+            this.label1.Location = new System.Drawing.Point(92, 127);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(107, 31);
+            this.label1.Size = new System.Drawing.Size(87, 30);
             this.label1.TabIndex = 48;
             this.label1.Text = "LOGIN:";
             // 
@@ -114,11 +114,11 @@
             // 
             this.llblNovoLogin.ActiveLinkColor = System.Drawing.Color.BurlyWood;
             this.llblNovoLogin.AutoSize = true;
-            this.llblNovoLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.llblNovoLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.llblNovoLogin.LinkColor = System.Drawing.Color.White;
             this.llblNovoLogin.Location = new System.Drawing.Point(270, 226);
             this.llblNovoLogin.Name = "llblNovoLogin";
-            this.llblNovoLogin.Size = new System.Drawing.Size(88, 20);
+            this.llblNovoLogin.Size = new System.Drawing.Size(80, 17);
             this.llblNovoLogin.TabIndex = 50;
             this.llblNovoLogin.TabStop = true;
             this.llblNovoLogin.Text = "Novo Login";
@@ -133,12 +133,12 @@
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft YaHei UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.label2.ForeColor = System.Drawing.Color.Peru;
             this.label2.Location = new System.Drawing.Point(228, 62);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 31);
+            this.label2.Size = new System.Drawing.Size(177, 36);
             this.label2.TabIndex = 51;
             this.label2.Text = "Cripy Invest";
             // 

@@ -79,7 +79,7 @@
             this.fornecedorToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
             this.fornecedorToolStripMenuItem.Name = "fornecedorToolStripMenuItem";
             this.fornecedorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.fornecedorToolStripMenuItem.Text = "Fornecedor";
+            this.fornecedorToolStripMenuItem.Text = "Vendedor";
             this.fornecedorToolStripMenuItem.Click += new System.EventHandler(this.fornecedorToolStripMenuItem_Click);
             // 
             // clienteToolStripMenuItem
@@ -95,7 +95,7 @@
             this.operadorToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
             this.operadorToolStripMenuItem.Name = "operadorToolStripMenuItem";
             this.operadorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.operadorToolStripMenuItem.Text = "Operador";
+            this.operadorToolStripMenuItem.Text = "Mentor";
             this.operadorToolStripMenuItem.Click += new System.EventHandler(this.operadorToolStripMenuItem_Click);
             // 
             // usuarioToolStripMenuItem
@@ -110,8 +110,8 @@
             // 
             this.compraToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
             this.compraToolStripMenuItem.Name = "compraToolStripMenuItem";
-            this.compraToolStripMenuItem.Size = new System.Drawing.Size(141, 20);
-            this.compraToolStripMenuItem.Text = "Compra de Mercadoria";
+            this.compraToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
+            this.compraToolStripMenuItem.Text = "Compra";
             this.compraToolStripMenuItem.Click += new System.EventHandler(this.compraToolStripMenuItem_Click);
             // 
             // vendaToolStripMenuItem
@@ -119,8 +119,8 @@
             this.vendaToolStripMenuItem.BackColor = System.Drawing.Color.Transparent;
             this.vendaToolStripMenuItem.ForeColor = System.Drawing.Color.Blue;
             this.vendaToolStripMenuItem.Name = "vendaToolStripMenuItem";
-            this.vendaToolStripMenuItem.Size = new System.Drawing.Size(130, 20);
-            this.vendaToolStripMenuItem.Text = "Venda de Mercadoria";
+            this.vendaToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.vendaToolStripMenuItem.Text = "Venda";
             this.vendaToolStripMenuItem.Click += new System.EventHandler(this.vendaToolStripMenuItem_Click);
             // 
             // label1
