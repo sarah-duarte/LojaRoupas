@@ -505,9 +505,9 @@
             this.label9.Location = new System.Drawing.Point(153, 21);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(127, 19);
+            this.label9.Size = new System.Drawing.Size(163, 19);
             this.label9.TabIndex = 23;
-            this.label9.Text = "DIGITE A CHAVE";
+            this.label9.Text = "INSIRA SUA Cripycoin";
             // 
             // frmVenda
             // 

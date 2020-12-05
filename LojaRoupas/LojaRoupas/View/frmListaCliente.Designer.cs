@@ -227,9 +227,9 @@
             this.label7.Location = new System.Drawing.Point(187, 21);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 19);
+            this.label7.Size = new System.Drawing.Size(74, 19);
             this.label7.TabIndex = 23;
-            this.label7.Text = "CHAVE";
+            this.label7.Text = "Cripycoin";
             // 
             // txtChave
             // 
