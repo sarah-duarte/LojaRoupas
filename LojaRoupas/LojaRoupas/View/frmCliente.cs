@@ -25,6 +25,8 @@ namespace LojaRoupas
             Cliente.setEndereco(txtEndereco.Text);
             Cliente.setNascimento(txtNascimento.Text);
             Cliente.setTelefone(txtTelefone.Text);
+            Cliente.setConta(txtConta.Text);
+            Cliente.setCarteira(Double.Parse(txtCarteira.Text));
             try
             {
                 ccliente.SalvarCliente(Cliente);
@@ -48,6 +50,8 @@ namespace LojaRoupas
                 txtEndereco.Text = Cliente.getEndereco();
                 txtNascimento.Text = Cliente.getNascimento();
                 txtTelefone.Text = Cliente.getTelefone();
+                txtConta.Text = Cliente.getConta();
+                txtCarteira.Text = Cliente.getCarteira().ToString();
             }
             else
             {

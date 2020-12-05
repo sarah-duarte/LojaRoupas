@@ -28,6 +28,24 @@ namespace LojaRoupas
                 lstListaCliente.Items.Add(item);
             }
         }
+
+        private void AtualizaLista1()
+        {
+            List<Cliente> lista = c.ListarCliente();
+            foreach (Cliente c in lista)
+            {
+                ListViewItem item = new ListViewItem(c.getId().ToString());
+                item.SubItems.Add(c.getEndereco());
+                lstListaCliente.Items.Add(item);
+            }
+        }
+        private void MontaLista1()
+        {
+            lstListaCliente.Clear();
+            lstListaCliente.View = View.Details;
+            lstListaCliente.Columns.Add("ID", 26);
+ 
+        }
         private void MontaLista()
         {
             lstListaCliente.Clear();
@@ -75,6 +93,20 @@ namespace LojaRoupas
             }
             MontaLista();
             AtualizaLista();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ListView.SelectedListViewItemCollection Selecionado =
+                this.lstListaCliente.SelectedItems;
+
+            foreach (ListViewItem item in Selecionado)
+            {
+                c.TelaCliente(int.Parse(item.SubItems[0].Text));
+            }
+            AtualizaLista1();
+            MontaLista1();
+            
         }
     }
 }

@@ -8,10 +8,12 @@ namespace LojaRoupas.Controller
     {
         MVenda conexao = new MVenda();
         CItemVenda iv = new CItemVenda();
+        CCliente cc = new CCliente();
         public int NovoId() => conexao.GetNovoId();
         public void InserirVenda(Venda venda)
         {
             conexao.InserirVenda(venda);
+            cc.AjustarSaldo(venda.getIdCliente(), venda.getVlrTotal());
             foreach (ItemVenda i in venda.getItensVenda())
             {
                 iv.InserirItemVenda(i);

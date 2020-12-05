@@ -40,13 +40,15 @@ ALTER TABLE public.tbproduto
 CREATE TABLE public.tbcliente
 (
     id serial NOT NULL,
-    nome "varchar"
-    cpf "varchar"
-    email "varchar"
-    telefone "varchar"
-    nascimento "varchar"
-    endereco "varchar"
+    nome "varchar",
+    cpf "varchar",
+    email "varchar",
+    telefone "varchar",
+    nascimento "varchar",
+    endereco "varchar",
     comprasrealizadas integer,
+    conta "varchar",
+    carteira double precision,
     PRIMARY KEY (id)
 )
 

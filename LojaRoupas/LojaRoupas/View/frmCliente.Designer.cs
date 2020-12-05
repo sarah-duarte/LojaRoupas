@@ -46,6 +46,10 @@
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtConta = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtCarteira = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,7 +58,7 @@
             this.btnCancelar.BackColor = System.Drawing.Color.Blue;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.Peru;
-            this.btnCancelar.Location = new System.Drawing.Point(564, 255);
+            this.btnCancelar.Location = new System.Drawing.Point(507, 270);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(94, 26);
             this.btnCancelar.TabIndex = 8;
@@ -68,7 +72,7 @@
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.ForeColor = System.Drawing.Color.Peru;
-            this.btnSalvar.Location = new System.Drawing.Point(456, 255);
+            this.btnSalvar.Location = new System.Drawing.Point(399, 270);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(96, 25);
             this.btnSalvar.TabIndex = 7;
@@ -252,14 +256,63 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.txtCarteira);
+            this.panel1.Controls.Add(this.label9);
+            this.panel1.Controls.Add(this.txtConta);
+            this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.btnSalvar);
             this.panel1.Controls.Add(this.btnCancelar);
             this.panel1.Controls.Add(this.label10);
             this.panel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.panel1.Location = new System.Drawing.Point(2, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(729, 310);
+            this.panel1.Size = new System.Drawing.Size(642, 320);
             this.panel1.TabIndex = 28;
+            // 
+            // txtConta
+            // 
+            this.txtConta.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtConta.ForeColor = System.Drawing.Color.Blue;
+            this.txtConta.Location = new System.Drawing.Point(104, 230);
+            this.txtConta.Name = "txtConta";
+            this.txtConta.Size = new System.Drawing.Size(243, 20);
+            this.txtConta.TabIndex = 22;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Silver;
+            this.label7.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label7.Location = new System.Drawing.Point(38, 228);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 21);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Conta:";
+            // 
+            // txtCarteira
+            // 
+            this.txtCarteira.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtCarteira.ForeColor = System.Drawing.Color.Blue;
+            this.txtCarteira.Location = new System.Drawing.Point(474, 230);
+            this.txtCarteira.Name = "txtCarteira";
+            this.txtCarteira.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.txtCarteira.Size = new System.Drawing.Size(127, 20);
+            this.txtCarteira.TabIndex = 24;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.Silver;
+            this.label9.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label9.Location = new System.Drawing.Point(354, 231);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(113, 21);
+            this.label9.TabIndex = 25;
+            this.label9.Text = "Invest. Inicial:";
             // 
             // frmCliente
             // 
@@ -317,5 +370,9 @@
         private System.Windows.Forms.MaskedTextBox txtTelefone;
         private System.Windows.Forms.MaskedTextBox txtCPF;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox txtCarteira;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox txtConta;
+        private System.Windows.Forms.Label label7;
     }
 }

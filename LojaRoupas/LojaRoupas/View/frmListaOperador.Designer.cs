@@ -65,6 +65,7 @@
             this.lstListaOperador.TabIndex = 0;
             this.lstListaOperador.UseCompatibleStateImageBehavior = false;
             this.lstListaOperador.View = System.Windows.Forms.View.Details;
+            this.lstListaOperador.SelectedIndexChanged += new System.EventHandler(this.lstListaOperador_SelectedIndexChanged);
             // 
             // id
             // 
