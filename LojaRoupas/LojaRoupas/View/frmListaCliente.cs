@@ -95,18 +95,24 @@ namespace LojaRoupas
             AtualizaLista();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnChave_Click(object sender, EventArgs e)
         {
+            String chave = "";
             ListView.SelectedListViewItemCollection Selecionado =
                 this.lstListaCliente.SelectedItems;
 
             foreach (ListViewItem item in Selecionado)
             {
-                c.TelaCliente(int.Parse(item.SubItems[0].Text));
+                chave = c.GetMoedaCliente(int.Parse(item.SubItems[0].Text));
             }
-            AtualizaLista1();
-            MontaLista1();
-            
+            pnlChave.Visible = true;
+            txtChave.Text = chave;
+        }
+
+        private void btnOK_Click(object sender, EventArgs e)
+        {
+            pnlChave.Visible = false;
+            txtChave.Text = "";
         }
     }
 }

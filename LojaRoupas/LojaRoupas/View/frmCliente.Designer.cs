@@ -46,10 +46,10 @@
             this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
             this.txtCPF = new System.Windows.Forms.MaskedTextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txtConta = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.txtCarteira = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.txtConta = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -132,6 +132,7 @@
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(416, 20);
             this.txtNome.TabIndex = 1;
+            this.txtNome.TextChanged += new System.EventHandler(this.txtNome_TextChanged);
             // 
             // label8
             // 
@@ -269,28 +270,6 @@
             this.panel1.Size = new System.Drawing.Size(642, 320);
             this.panel1.TabIndex = 28;
             // 
-            // txtConta
-            // 
-            this.txtConta.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtConta.ForeColor = System.Drawing.Color.Blue;
-            this.txtConta.Location = new System.Drawing.Point(104, 230);
-            this.txtConta.Name = "txtConta";
-            this.txtConta.Size = new System.Drawing.Size(243, 20);
-            this.txtConta.TabIndex = 22;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Silver;
-            this.label7.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label7.Location = new System.Drawing.Point(38, 228);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(60, 21);
-            this.label7.TabIndex = 23;
-            this.label7.Text = "Conta:";
-            // 
             // txtCarteira
             // 
             this.txtCarteira.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -313,6 +292,28 @@
             this.label9.Size = new System.Drawing.Size(113, 21);
             this.label9.TabIndex = 25;
             this.label9.Text = "Invest. Inicial:";
+            // 
+            // txtConta
+            // 
+            this.txtConta.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtConta.ForeColor = System.Drawing.Color.Blue;
+            this.txtConta.Location = new System.Drawing.Point(104, 230);
+            this.txtConta.Name = "txtConta";
+            this.txtConta.Size = new System.Drawing.Size(243, 20);
+            this.txtConta.TabIndex = 22;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Silver;
+            this.label7.Font = new System.Drawing.Font("Microsoft JhengHei", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label7.Location = new System.Drawing.Point(38, 228);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(60, 21);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "Conta:";
             // 
             // frmCliente
             // 

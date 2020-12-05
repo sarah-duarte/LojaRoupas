@@ -40,7 +40,14 @@
             this.btnNovo = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnChave = new System.Windows.Forms.Button();
+            this.pnlChave = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtChave = new System.Windows.Forms.TextBox();
+            this.pnlChave.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lstListaCliente
@@ -161,20 +168,77 @@
             this.btnExcluir.UseVisualStyleBackColor = false;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
-            // button1
+            // btnChave
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.Blue;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.BurlyWood;
-            this.button1.Location = new System.Drawing.Point(878, 182);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(111, 26);
-            this.button1.TabIndex = 26;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnChave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnChave.BackColor = System.Drawing.Color.Blue;
+            this.btnChave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnChave.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChave.ForeColor = System.Drawing.Color.BurlyWood;
+            this.btnChave.Location = new System.Drawing.Point(878, 182);
+            this.btnChave.Name = "btnChave";
+            this.btnChave.Size = new System.Drawing.Size(111, 26);
+            this.btnChave.TabIndex = 26;
+            this.btnChave.Text = "Chave";
+            this.btnChave.UseVisualStyleBackColor = false;
+            this.btnChave.Click += new System.EventHandler(this.btnChave_Click);
+            // 
+            // pnlChave
+            // 
+            this.pnlChave.BackColor = System.Drawing.Color.Blue;
+            this.pnlChave.Controls.Add(this.groupBox1);
+            this.pnlChave.Location = new System.Drawing.Point(258, 124);
+            this.pnlChave.Name = "pnlChave";
+            this.pnlChave.Size = new System.Drawing.Size(441, 146);
+            this.pnlChave.TabIndex = 37;
+            this.pnlChave.Visible = false;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Peru;
+            this.groupBox1.Controls.Add(this.txtChave);
+            this.groupBox1.Controls.Add(this.btnOK);
+            this.groupBox1.Controls.Add(this.label7);
+            this.groupBox1.ForeColor = System.Drawing.Color.BurlyWood;
+            this.groupBox1.Location = new System.Drawing.Point(8, 10);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(423, 127);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            // 
+            // btnOK
+            // 
+            this.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOK.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnOK.ForeColor = System.Drawing.Color.Blue;
+            this.btnOK.Location = new System.Drawing.Point(343, 80);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(71, 38);
+            this.btnOK.TabIndex = 36;
+            this.btnOK.Text = "OK";
+            this.btnOK.UseVisualStyleBackColor = true;
+            this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold);
+            this.label7.ForeColor = System.Drawing.Color.Blue;
+            this.label7.Location = new System.Drawing.Point(187, 21);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(59, 19);
+            this.label7.TabIndex = 23;
+            this.label7.Text = "CHAVE";
+            // 
+            // txtChave
+            // 
+            this.txtChave.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold);
+            this.txtChave.Location = new System.Drawing.Point(6, 43);
+            this.txtChave.Name = "txtChave";
+            this.txtChave.Size = new System.Drawing.Size(408, 31);
+            this.txtChave.TabIndex = 37;
+            this.txtChave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // frmListaCliente
             // 
@@ -183,7 +247,8 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.Peru;
             this.ClientSize = new System.Drawing.Size(1001, 450);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pnlChave);
+            this.Controls.Add(this.btnChave);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnCancelar);
@@ -196,6 +261,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista Clientes";
             this.Load += new System.EventHandler(this.frmListaCliente_Load);
+            this.pnlChave.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -214,6 +282,11 @@
         private System.Windows.Forms.Button btnNovo;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnChave;
+        private System.Windows.Forms.Panel pnlChave;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox txtChave;
+        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Label label7;
     }
 }

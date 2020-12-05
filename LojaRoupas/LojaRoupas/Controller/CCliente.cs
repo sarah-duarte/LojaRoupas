@@ -38,6 +38,7 @@ namespace LojaRoupas.Controller
         public Cliente GetCliente(int id) => conexao.GetCliente(id);
         public String GetNomeCliente(int id) => conexao.GetNomeCliente(id);
         public int GetIdCliente(string NomeCliente) => conexao.GetIdCliente(NomeCliente);
+        public String GetMoedaCliente(int idCliente) => conexao.GetMoedaCliente(idCliente);
         public void SalvarCliente(Cliente cliente)
         {
             if (GetCliente(cliente.getId()).getId() == 0)

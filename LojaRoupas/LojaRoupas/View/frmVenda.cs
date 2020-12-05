@@ -167,25 +167,13 @@ namespace LojaRoupas
             {
                 MessageBox.Show("Produto deve ser escolhido!", "Validações", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 retorno = false;
-            }
+            }            
             return retorno;
         }
+
         private void btnFinalizarVenda_Click(object sender, EventArgs e)
         {
-            if (Validacoes())
-            {
-                MontaVenda();
-                try
-                {
-                    cVenda.InserirVenda(venda);
-                    MessageBox.Show("Venda Realizada com Sucesso!", "Venda", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Close();
-                }
-                catch (IOException erro)
-                {
-                    MessageBox.Show(erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+            pnlChave.Visible = true;
         }
         private void btnCancelar_Click(object sender, EventArgs e) => Close();
         private void btnDesconto_Click(object sender, EventArgs e)
@@ -235,9 +223,31 @@ namespace LojaRoupas
             txtCodBarras.Text = cProduto.TelaPesquisaProduto();
         }
 
-        private void cmbOperador_SelectedIndexChanged(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            if (txtChave.Text == cCliente.GetMoedaCliente(cCliente.GetIdCliente(cmbCliente.Text)))
+            {
+                if (Validacoes())
+                {
+                    MontaVenda();
+                    try
+                    {
+                        cVenda.InserirVenda(venda);
+                        MessageBox.Show("Venda Realizada com Sucesso!", "Venda", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Close();
+                    }
+                    catch (IOException erro)
+                    {
+                        MessageBox.Show(erro.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                pnlChave.Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Chave Invalida!", "Validacao", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                txtChave.Text = "";
+            }
         }
     }
 }

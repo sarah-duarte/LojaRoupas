@@ -58,5 +58,10 @@ namespace LojaRoupas
                 lblID.Text = Convert.ToString(ccliente.NovoId());
             }            
         }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

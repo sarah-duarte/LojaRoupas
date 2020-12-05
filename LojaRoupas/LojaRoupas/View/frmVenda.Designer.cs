@@ -62,8 +62,15 @@
             this.rdbValor = new System.Windows.Forms.RadioButton();
             this.rdbPerc = new System.Windows.Forms.RadioButton();
             this.btnPesqProduto = new System.Windows.Forms.Button();
+            this.pnlChave = new System.Windows.Forms.Panel();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtChave = new System.Windows.Forms.TextBox();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.pnlDesconto.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.pnlChave.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtCodBarras
@@ -298,7 +305,6 @@
             this.cmbOperador.Name = "cmbOperador";
             this.cmbOperador.Size = new System.Drawing.Size(272, 28);
             this.cmbOperador.TabIndex = 31;
-            this.cmbOperador.SelectedIndexChanged += new System.EventHandler(this.cmbOperador_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -446,6 +452,63 @@
             this.btnPesqProduto.UseVisualStyleBackColor = true;
             this.btnPesqProduto.Click += new System.EventHandler(this.btnPesqProduto_Click);
             // 
+            // pnlChave
+            // 
+            this.pnlChave.BackColor = System.Drawing.Color.Blue;
+            this.pnlChave.Controls.Add(this.groupBox2);
+            this.pnlChave.Location = new System.Drawing.Point(180, 186);
+            this.pnlChave.Name = "pnlChave";
+            this.pnlChave.Size = new System.Drawing.Size(441, 146);
+            this.pnlChave.TabIndex = 61;
+            this.pnlChave.Visible = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Peru;
+            this.groupBox2.Controls.Add(this.txtChave);
+            this.groupBox2.Controls.Add(this.button1);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.ForeColor = System.Drawing.Color.BurlyWood;
+            this.groupBox2.Location = new System.Drawing.Point(8, 10);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(423, 127);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            // 
+            // txtChave
+            // 
+            this.txtChave.Font = new System.Drawing.Font("Microsoft YaHei UI", 14F, System.Drawing.FontStyle.Bold);
+            this.txtChave.Location = new System.Drawing.Point(6, 43);
+            this.txtChave.Name = "txtChave";
+            this.txtChave.Size = new System.Drawing.Size(408, 31);
+            this.txtChave.TabIndex = 37;
+            this.txtChave.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.Blue;
+            this.button1.Location = new System.Drawing.Point(343, 80);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(71, 38);
+            this.button1.TabIndex = 36;
+            this.button1.Text = "OK";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F, System.Drawing.FontStyle.Bold);
+            this.label9.ForeColor = System.Drawing.Color.Blue;
+            this.label9.Location = new System.Drawing.Point(153, 21);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(127, 19);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "DIGITE A CHAVE";
+            // 
             // frmVenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -453,6 +516,7 @@
             this.BackColor = System.Drawing.Color.Silver;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(800, 518);
+            this.Controls.Add(this.pnlChave);
             this.Controls.Add(this.pnlDesconto);
             this.Controls.Add(this.btnPesqProduto);
             this.Controls.Add(this.btnDesconto);
@@ -485,6 +549,9 @@
             this.pnlDesconto.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.pnlChave.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -526,5 +593,10 @@
         private System.Windows.Forms.RadioButton rdbValor;
         private System.Windows.Forms.RadioButton rdbPerc;
         private System.Windows.Forms.Button btnPesqProduto;
+        private System.Windows.Forms.Panel pnlChave;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TextBox txtChave;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label9;
     }
 }
